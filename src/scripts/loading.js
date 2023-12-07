@@ -3,6 +3,61 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Word spliting animation and video fade in animation
+document.addEventListener("DOMContentLoaded", function() {
+  const tl = gsap.timeline();
+
+  // Animate the video
+  tl.from('.bg-video', {
+      duration: 2,
+      opacity: 0,
+      x: -40,
+      scale: 1.1,
+      ease: 'power2.out'
+  });
+
+ // Animate h1 .fill element
+ tl.from('h1 .fill', {
+  y: 200,
+  clipPath: "inset(0 0 100% 0)",
+  duration: 1,
+  ease: "power3.out"
+}, "1"); 
+
+  // Animate scroll-down text
+  tl.from('.scroll-down p', {
+    duration: 0.8,
+    opacity: 0,
+    y: -20,
+    ease: 'power3.out'
+});
+
+// Animate each dot sequentially
+tl.from('.scroll-down .dot-1', {
+    duration: 0.5,
+    opacity: 0,
+    scale: 0,
+    ease: 'back.out'
+})
+.from('.scroll-down .dot-2', {
+    duration: 0.5,
+    opacity: 0,
+    scale: 0,
+    ease: 'back.out'
+}, '-=0.3') // Overlap with the previous animation for smooth transition
+.from('.scroll-down .dot-3', {
+    duration: 0.5,
+    opacity: 0,
+    scale: 0,
+    ease: 'back.out'
+}, '-=0.3'); // Overlap with the previous animation
+
+
+});
+
+
+
+
 // Animation to fade out the '.scroll-down' element
 let tl = gsap.timeline({ 
   scrollTrigger: { 
