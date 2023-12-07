@@ -52,6 +52,7 @@ header {
     grid-auto-rows: 430px;
     color: var(--blue-dark);
 
+
     @media (max-width: 1000px){
         grid-template-columns: repeat(4, 300px);
     }
