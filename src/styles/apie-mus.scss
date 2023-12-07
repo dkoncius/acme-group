@@ -132,9 +132,9 @@ main {
         .dates {
         display: flex;
         height: 245px;
-        margin-bottom: 150px;
+        margin-bottom: 50px;
         position: relative;
-        overflow: auto;
+        overflow: hidden;
 
         .date {
             cursor: url('/icons/pointer-green.svg'), pointer;
@@ -142,6 +142,16 @@ main {
             transform: rotate(-90deg);
             position: relative;
             transition: 0.3s;
+
+            &.selected {
+                p {
+                    transform: scale(1.5);
+                }
+
+                .line {
+                    height: 3px; /* Directly adjust height */
+                }
+            }
 
             &:hover {
                 z-index: 1;
