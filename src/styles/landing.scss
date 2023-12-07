@@ -13,6 +13,7 @@ button, a, .logo, .right {
 }
 
 header {
+    mix-blend-mode: multiply;
     .logo {
         transform: translateY(0%);
         clip-path: inset(0 0 0% 0);
