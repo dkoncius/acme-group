@@ -217,9 +217,8 @@ h1 {
         height: 100%;
         color: white;
         position: relative;
-        transition: 0.3s;
 
-        &:hover {
+        &:hover .left-img {
             transform: scale(1.1);
         }
 
@@ -229,6 +228,7 @@ h1 {
             position: absolute;
             object-fit: cover;
             z-index: -1;
+            transition: 0.3s;
         }
 
         .content {
@@ -280,9 +280,9 @@ h1 {
         height: 100%;
         color: white;
         position: relative;
-        transition: 0.3s;
+        
 
-        &:hover {
+        &:hover .right-img {
             transform: scale(1.1);
         }
 
@@ -292,6 +292,7 @@ h1 {
             position: absolute;
             object-fit: cover;
             z-index: -1;
+            transition: 0.3s;
         }
     }
 

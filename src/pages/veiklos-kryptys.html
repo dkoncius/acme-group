@@ -154,5 +154,23 @@
 
     <script type="module" src="/src/scripts/navigation.js"></script>
     <script type="module" src="/src/scripts/animated-words.js"></script>
+    <script type="module">
+      import gsap from "gsap";
+      import ScrollTrigger from "gsap/ScrollTrigger";
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Landing
+      document.addEventListener("DOMContentLoaded", function() {
+          gsap.from('.section-1 .content', {
+              x: -500,
+              opacity: 0,
+              duration: 1,
+              ease: "power3.inOut",
+              clipPath: "inset(0 0 0 100%)",
+              stagger: 0.5
+            }, "<");  
+            
+      });
+    </script>
     </body>
 </html>
