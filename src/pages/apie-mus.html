@@ -82,6 +82,11 @@
             </div>
         </section>
 
+        <div class="video-section">
+          <video class="video" src="/apie-mus/video.mp4"></video>
+          <div class="video-play-icon"></div>
+        </div>
+
         <section class="timeline">
             <div class="dates"></div> <!-- Container for dates -->
             <div class="dates-content"></div> <!-- Container for content -->
@@ -133,5 +138,28 @@
 
     <script type="module" src="/src/scripts/navigation.js"></script>
     <script type="module" src="/src/scripts/timeline.js"></script>
+    <script type="module">
+    const video = document.querySelector(".video-section video");
+    const videoIcon = document.querySelector(".video-section .video-play-icon");
+    let play = false;
+
+    function toggleVideoPlayback() {
+      if (!play) {
+        video.play();
+        videoIcon.classList.add("hidden");
+        play = true;
+      } else {
+        video.pause();
+        videoIcon.classList.remove("hidden");
+        play = false;
+      }
+    }
+
+    video.addEventListener("click", toggleVideoPlayback);
+    videoIcon.addEventListener("click", toggleVideoPlayback);
+
+
+
+    </script>
     </body>
 </html>
