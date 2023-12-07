@@ -1,0 +1,129 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1600px;
+    margin: auto;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.logo {
+    transform: translateY(50px);
+    clip-path: inset(0 0 100% 0);
+    cursor: url("/icons/cursor-green.svg"), pointer;
+
+    img {
+        width: 130px;
+    }
+}
+
+header .right {
+    color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(50px);
+    clip-path: inset(0 0 100% 0);
+  
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    
+         
+        .line {
+            display: inline-block;
+            height: 2px;
+            width: 30px;
+            background: var(--dark-green);
+        }
+
+        .bubble {
+            width: 31px;
+            height: 31px;
+            background: var(--dark-green);
+            border-radius: 31px;
+            position: relative;
+
+            .x {
+                .line {
+                    position: absolute;
+                    bottom: 48%;
+                    left: 10%;
+                    width: 80%;
+                    height: 1px;
+                    background: var(--green-light);
+
+                    &:nth-of-type(1){
+                        transform: rotate(45deg);
+                    }
+
+                    &:nth-of-type(2){
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .language {
+        width: 31px;
+        height: 31px;
+        background: var(--dark-green);
+        color: var(--green-light);
+        border-radius: 31px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
+
+.expanded-menu {
+    height: 100vh;
+    display: none;
+    background: var(--green-light);
+    z-index: 900;
+    transition: 0.3s;
+
+    nav {
+        position: relative;
+        padding-top: 15vh;
+        text-align: center;
+    }
+
+    nav .link {
+        display: flex;
+        gap: 20px;
+        font-size: clamp(30px, 4.5vw, 60px);
+        color: var(--dark-green);
+        padding-left: 20%;
+        line-height: 100px;
+
+        p {
+            transition: 0.3s;
+        }
+
+        svg {
+            width: 0.7em;
+            height: 2em;
+            position: relative;
+            top: -1em;
+            left: 0.2em;
+            transition: 0.3s;
+           
+        }
+
+        svg .fill {
+            fill: #01494e;
+            transition: 0.3s;
+        }
+    }
+}

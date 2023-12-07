@@ -1,0 +1,102 @@
+@font-face {
+	font-family: "CircularXXWeb-Book";
+	src: url("/fonts/CircularXXWeb-Book.woff") format("woff");
+	}
+	
+	@font-face {
+	font-family: "CircularXXWeb-Book";
+	src: url("/fonts/CircularXXWeb-Book.woff2") format("woff2");
+	}
+	
+	
+	/* subset */
+	@font-face {
+	font-family: "CircularXXSub-Book";
+	src: url("/fonts/CircularXXSub-Book.woff") format("woff");
+	}
+	
+	@font-face {
+	font-family: "CircularXXSub-Book";
+	src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
+	}
+	
+	
+	// Variables
+	 :root {
+		// Green
+		--green-light: #e5f5e5;
+		--green-spot: #a4f0ba;
+		--green-bright: #008f7f;
+		--dark-green: #01494e;
+	
+		// Blue
+		--blue-dark: #15276A;
+		--blue-spot: #307FEA;
+		--blue-light: #B4D7F6;
+		--blue-extra-light: #E7ECFF;
+	
+	}
+	
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		text-decoration: none;
+	}
+	
+	body {
+		background: var(--green-light);
+		font-family: "CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
+		position: relative;
+		min-height: 350vh;
+		cursor: url("/icons/cursor-green.svg"), pointer;
+	}
+	
+	body::-webkit-scrollbar {
+		display: none;
+	}
+	
+	button {
+		font-family: "CircularXXWeb-Book";
+		height: 50px;
+		font-size: 1.2em;
+	}
+	
+	button, p {
+		font-size: clamp(16px, 1.2vw, 25px);
+		font-family: 'CircularXXWeb-Book';
+	}
+
+	h1 {
+		font-size: clamp(58px, 7.2vw, 112px);
+	}
+
+	h2 {
+		font-size: clamp(40px, 3vw, 54px);
+        font-weight: 400;
+	}
+
+	h3 {
+		font-weight: 400;
+		font-size: clamp(40px, 3vw, 54px);
+	}
+
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 220px;
+		height: 50px;
+		border-radius: 0px 0px 26.5px 0px;
+		background:  var(--green-light);
+		color: var(--green-bright);
+		font-size: 14px;
+		border: none;
+		transition: 0.3s;
+	}
+
+	.button:hover {
+		cursor: url('/icons/pointer-green.svg'),pointer;
+		border-radius: 0;
+	}
