@@ -30,9 +30,22 @@ document.addEventListener("DOMContentLoaded", function() {
           opacity: 0,
           x: -50,
           duration: 1,
-          ease: 'back.in',
-          stagger: 0.1,
+          ease: "power3.out"
         });
+      });
+
+
+      gsap.from('.news .content', {
+        scrollTrigger: {
+          trigger: '.news .content', // Use the class selector directly
+          start: 'top 85%',
+          end: 'bottom top',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        x: -50,
+        duration: 1,
+        ease: 'power3.out'
       });
       
       
