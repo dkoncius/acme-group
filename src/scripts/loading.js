@@ -3,6 +3,9 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Disable scrolling initially
+document.body.style.overflow = 'hidden';
+
 // Word spliting animation and video fade in animation
 document.addEventListener("DOMContentLoaded", function() {
   const tl = gsap.timeline();
@@ -52,6 +55,10 @@ tl.from('.scroll-down .dot-1', {
     ease: 'back.out'
 }, '-=0.3'); // Overlap with the previous animation
 
+ // Enable scrolling after the animation is complete
+ tl.eventCallback("onComplete", () => {
+  document.body.style.overflow = 'auto';
+});
 
 });
 
