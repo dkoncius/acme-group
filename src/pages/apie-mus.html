@@ -286,5 +286,30 @@
     <script type="module" src="/src/scripts/navigation.js"></script>
     <script type="module" src="/src/scripts/timeline.js"></script>
     <script type="module" src="/src/scripts/apie-mus.js"></script>
+      <!-- Loading animation -->
+      <script type="module">
+        import gsap from "gsap";
+        import ScrollTrigger from "gsap/ScrollTrigger";
+        gsap.registerPlugin(ScrollTrigger);
+  
+        // Landing
+        document.addEventListener("DOMContentLoaded", function() {
+          gsap.from('.section-1', {
+                x: -300,
+                duration: 1,
+                ease: "power3.inOut",
+                clipPath: "inset(0 0 0 100%)"
+              }, "0.5");  
+  
+            gsap.from('.section-1 .content', {
+                x: -500,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.inOut",
+                clipPath: "inset(0 0 0 100%)",
+                stagger: 0.5
+              }, "0.9");     
+        });
+      </script>
     </body>
 </html>

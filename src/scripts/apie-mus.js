@@ -1,3 +1,4 @@
+// Video play function
 const video = document.querySelector(".video-section video");
 const videoIcon = document.querySelector(".video-section .video-play-icon");
 let play = false;
