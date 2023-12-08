@@ -20,38 +20,38 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
  // Animate h1 .fill element
- tl.from('h1 .fill', {
-  y: 200,
-  clipPath: "inset(0 0 100% 0)",
+ tl.to('h1 .fill', {
+  y: 0,
+  clipPath: "inset(0 0 0% 0)",
   duration: 1,
   ease: "power3.out"
 }, "1"); 
 
   // Animate scroll-down text
-  tl.from('.scroll-down p', {
+  tl.to('.scroll-down p', {
     duration: 0.8,
-    opacity: 0,
-    y: -20,
+    opacity: 1,
+    y: 0,
     ease: 'power3.out'
 });
 
 // Animate each dot sequentially
-tl.from('.scroll-down .dot-1', {
+tl.to('.scroll-down .dot-1', {
     duration: 0.5,
-    opacity: 0,
-    scale: 0,
+    opacity: 1,
+    scale: 1,
     ease: 'back.out'
 })
-.from('.scroll-down .dot-2', {
+.to('.scroll-down .dot-2', {
     duration: 0.5,
-    opacity: 0,
-    scale: 0,
+    opacity: 1,
+    scale: 1,
     ease: 'back.out'
 }, '-=0.3') // Overlap with the previous animation for smooth transition
-.from('.scroll-down .dot-3', {
+.to('.scroll-down .dot-3', {
     duration: 0.5,
-    opacity: 0,
-    scale: 0,
+    opacity: 1,
+    scale: 1,
     ease: 'back.out'
 }, '-=0.3'); // Overlap with the previous animation
 
@@ -79,10 +79,51 @@ let tl = gsap.timeline({
     // Kill the timeline to prevent further animations
     tl.kill();
 
-    // Redirect after a slight delay
+
+    document.querySelector('.loading-background').remove()
+    document.querySelector('.loading-section').style.position = "relative"
+
+    document.getElementById('mainContent').classList.remove('animation');
+
+    // Function to dynamically load a stylesheet
+    function loadStylesheet(path) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = path;
+      document.head.appendChild(link);
+    }
+
+    // Load the stylesheets
+    loadStylesheet('/src/styles/landing.scss');
+    loadStylesheet('/src/styles/tabs.scss');
+
+
+    // Function to dynamically load a JavaScript module
+    function loadScriptModule(path) {
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = path;
+      document.body.appendChild(script);
+    }
+
+    // Load the JavaScript modules
+    loadScriptModule('/src/scripts/landing-swiper.js');
+    loadScriptModule('/src/scripts/landing-tabs.js');
+    loadScriptModule('/src/scripts/landing-scroll.js');
+
+
+    // 300s pauzė onload
+    window.scrollTo(0,0)
     setTimeout(() => {
-        window.location.href = '/src/pages/landing.html';
-    });
+      if(window.scrollY < 200){
+        window.scrollTo({
+          top: 200, // Vertical scroll position
+          left: 0,  // Horizontal scroll position
+          behavior: 'smooth'  // Smooth scroll behavior
+        });
+      }
+    
+    }); // Delay of 300 seconds (adjust as needed)
   }
 })
   .to(".form-1", { scale: 1, duration: 1, ease: "sine.out" })
