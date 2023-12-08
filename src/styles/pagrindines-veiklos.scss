@@ -38,6 +38,8 @@ main {
     color: var(--dark-green);
     margin: auto;
     position: relative;
+    clip-path: inset(0 0 0 100%);
+    transform: translateX(-300px);
 
     .shape-1 {
         background: url('/pagrindines-veiklos/shape-1.svg');
@@ -139,15 +141,15 @@ main {
     
     .foto-1 {
         position: absolute;
-        top: -105px;
+        top: -96px;
         right: 18px;
         width: 728.018px;
         height: 728.019px;
 
         .shape-2 {
             position: absolute;
-            right: -180px;
-            top: 5px;
+            right: -187px;
+            top: -4px;
             width: 120%;
             height: 100px;
             background: url('/pagrindines-veiklos/shape-2.svg');

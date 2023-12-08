@@ -295,21 +295,34 @@
       import ScrollTrigger from "gsap/ScrollTrigger";
       gsap.registerPlugin(ScrollTrigger);
 
+         //   Scroll to top after refresh
+         window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        }
+
+    document.body.style.overflow = 'hidden';
+
       // Landing
       document.addEventListener("DOMContentLoaded", function() {
-        gsap.from('.section-1', {
+        const tl = gsap.timeline();
+ 
+        tl.from('.section-1', {
               duration: 1,
               ease: "power3.inOut",
               scale: 1.1
             }, "<");  
 
-          gsap.from('.section-1 .content', {
+          tl.from('.section-1 .content', {
               x: -300,
               opacity: 0,
               duration: 1,
               ease: "power3.inOut",
               clipPath: "inset(0 0 0 100%)"
             }, "0.5");  
+
+            tl.eventCallback("onComplete", () => {
+        document.body.style.overflow = 'auto';
+      });
             
       });
     </script>

@@ -28,6 +28,8 @@ header {
     color: var(--blue-dark);
     max-width: 2560px;
     margin: auto;
+    clip-path: inset(0 0 0 100%);
+    transform: translateX(-300px);
 
 
     .forma-1 {
