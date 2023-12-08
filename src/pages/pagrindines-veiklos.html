@@ -87,11 +87,11 @@
         </section>
 
         <section class="section-2">
-            <div class="shape-3">
-                <!-- <img src="/images/activities-2.jpg" alt=""> -->
-            </div>
-            
-
+          <div class="foto-1">
+            <img src="/pagrindines-veiklos/foto-1.png" alt="">
+            <div class="shape-2"></div>
+          </div>
+ 
             <div class="content">
                 <h2>Acme film</h2>
                 <p>Viena iš didžiausių kino platintojų Baltijos šalyse „ACME Film“ savąją istoriją skaičiuoja nuo 1999 m. kovo 5 dienos. Jau pirmaisiais veiklos metais kompanija sėkmingai augo, plėtė veiklą Lietuvoje, o vėliau žengė į Latvijos ir Estijos kino rinką.</p>
@@ -111,8 +111,8 @@
         </section>
 
         <section class="section-3">
-          <div class="shape-4">
-              <!-- <img src="/images/activities-3.jpg" alt=""> -->
+          <div class="foto-2">
+            <img src="/pagrindines-veiklos/foto-2.jpg" alt="">
           </div>
           
 
@@ -177,5 +177,29 @@
     </main>
 
     <script type="module" src="/src/scripts/navigation.js"></script>
+    <script type="module">
+      import gsap from "gsap";
+      import ScrollTrigger from "gsap/ScrollTrigger";
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Landing
+      document.addEventListener("DOMContentLoaded", function() {
+        gsap.from('.section-1', {
+              x: -300,
+              duration: 1,
+              ease: "power3.inOut",
+              clipPath: "inset(0 0 0 100%)"
+            }, "0.5");  
+
+          gsap.from('.section-1 .content', {
+              x: -500,
+              opacity: 0,
+              duration: 1,
+              ease: "power3.inOut",
+              clipPath: "inset(0 0 0 100%)",
+              stagger: 0.5
+            }, "0.9");     
+      });
+    </script>
     </body>
 </html>
