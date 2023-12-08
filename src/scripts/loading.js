@@ -20,38 +20,38 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
  // Animate h1 .fill element
- tl.to('h1 .fill', {
-  y: 0,
-  clipPath: "inset(0 0 0% 0)",
+ tl.from('h1 .fill', {
+  y: 200,
+  clipPath: "inset(0 0 100% 0)",
   duration: 1,
   ease: "power3.out"
 }, "1"); 
 
   // Animate scroll-down text
-  tl.to('.scroll-down p', {
+  tl.from('.scroll-down p', {
     duration: 0.8,
-    opacity: 1,
-    y: 0,
+    opacity: 0,
+    y: -20,
     ease: 'power3.out'
 });
 
 // Animate each dot sequentially
-tl.to('.scroll-down .dot-1', {
+tl.from('.scroll-down .dot-1', {
     duration: 0.5,
-    opacity: 1,
-    scale: 1,
+    opacity: 0,
+    scale: 0,
     ease: 'back.out'
 })
-.to('.scroll-down .dot-2', {
+.from('.scroll-down .dot-2', {
     duration: 0.5,
-    opacity: 1,
-    scale: 1,
+    opacity: 0,
+    scale: 0,
     ease: 'back.out'
 }, '-=0.3') // Overlap with the previous animation for smooth transition
-.to('.scroll-down .dot-3', {
+.from('.scroll-down .dot-3', {
     duration: 0.5,
-    opacity: 1,
-    scale: 1,
+    opacity: 0,
+    scale: 0,
     ease: 'back.out'
 }, '-=0.3'); // Overlap with the previous animation
 
@@ -79,64 +79,10 @@ let tl = gsap.timeline({
     // Kill the timeline to prevent further animations
     tl.kill();
 
-
-    document.querySelector('.loading-background').remove()
-    document.querySelector('.loading-section').style.position = "relative"
-
-    document.getElementById('mainContent').classList.remove('animation');
-
-// Function to dynamically load a stylesheet
-function loadStylesheet(path) {
-  return new Promise((resolve, reject) => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = path;
-    link.onload = resolve;
-    link.onerror = reject;
-    document.head.appendChild(link);
-  });
-}
-
-// Load the stylesheets sequentially
-loadStylesheet('/src/css/landing.css')
-  .then(() => loadStylesheet('/src/css/tabs.css'))
-  .then(() => {
-    // Stylesheets are loaded successfully
-    console.log('Stylesheets loaded.');
-  })
-  .catch((error) => {
-    // Handle errors if any stylesheet fails to load
-    console.error('Error loading stylesheets:', error);
-  });
-
-
-
-    // Function to dynamically load a JavaScript module
-    function loadScriptModule(path) {
-      const script = document.createElement('script');
-      script.type = 'module';
-      script.src = path;
-      document.body.appendChild(script);
-    }
-
-    // Load the JavaScript modules
-    loadScriptModule('/src/scripts/landing-swiper.js');
-    loadScriptModule('/src/scripts/landing-tabs.js');
-    loadScriptModule('/src/scripts/landing-scroll.js');
-
-
-    // 300s pauzė onload
-    window.scrollTo(0,0)
+    // Redirect after a slight delay
     setTimeout(() => {
-      if(window.scrollY < 200){
-        window.scrollTo({
-          top: 200, // Vertical scroll position
-          left: 0,  // Horizontal scroll position
-          behavior: 'smooth'  // Smooth scroll behavior
-        });
-      }
-    
-    }); // Delay of 300 seconds (adjust as needed)
+        window.location.href = '/src/pages/landing.html';
+    });
   }
 })
   .to(".form-1", { scale: 1, duration: 1, ease: "sine.out" })

@@ -20,94 +20,8 @@
     z-index: 1;
   }
 
-//  New
 
 .loading-section {
-    // position: relative;
-    display: grid;
-    grid-template-columns: repeat(6, 250px);
-    grid-auto-rows: 267px;
-    position: fixed;
-    top: -100px;
-    width: 100%;
-
-    .form-1 {
-        width: 120%;
-        height: 800px;
-        grid-column: 1/4;
-        grid-row: 1/4;
-        background: var(--green-spot);
-        border-radius: 0 0 20% 0;
-        position: relative;
-        border-radius: 0% 0% 32% 0% / 33% 34% 29% 27%;
-        overflow: hidden;
-
-        
-        .fill {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: var(--green-bright);
-            transform: translate(38%, 64.5%);
-            clip-path: inset(2.1% 0% 22% 16.4% round 228px 0);
-        }
-
-    }
-
-    .form-2 {
-        grid-column: 3;
-        grid-row: 3/6;
-        width: 100vw;
-        height: 100%;
-        max-height: 903px;
-        background: var(--dark-green);
-        border-radius: 200px 0 0 0;
-        position: relative;
-        top: -1px;
-        left: 1px;
-        z-index: -1;
-
-        &::before {
-            content: "";
-            width: 50%;
-            height: 100%;
-            position: absolute;
-            top: 60px;
-            left: -24px;
-            background: var(--dark-green);
-            transform: rotate(4deg);
-            border-radius: 200px 0 0 0;
-            z-index: -1;
-        }
-    }
-
-    // Landing brands swiper
-    .swiper {
-        width: 70%;
-
-        img {
-            position: relative;
-            width: 10vw;
-            height: 100px;
-        }
-        
-        img:nth-of-type(odd){
-            position: relative;
-            top: -50px;
-        }
-        .swiper-slide { 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 300px;
-        }
-    }
-
-}
-
-
-//   Old
-.animation {
     display: grid;
     grid-template-columns: repeat(6, 250px);
     grid-auto-rows: 267px;
@@ -177,10 +91,6 @@
         border-radius: 100%;
         z-index: -2;
     }
-
-    .active-areas, .partnership, .news, footer {
-        display: none;
-    }
 }
 
 
@@ -205,8 +115,6 @@ h1 span {
 h1 .fill {
     color: var(--green-light);
     z-index: 1;
-    clip-path: inset(0 0 100% 0);
-    transform: translateY(200px);
 }
 
 h1 .outline {
@@ -254,11 +162,6 @@ h1 .outline {
     right: 0;
     margin: auto;
 
-    p {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
     .dot-1 {
         width: 20px;
         height: 20px;
@@ -266,8 +169,6 @@ h1 .outline {
         border-radius: 30px;
         animation: 1s dots infinite alternate;
         animation-delay: 0.2s;
-        opacity: 0;
-        transform: scale(0);
     }
 
     .dot-2 {
@@ -277,8 +178,6 @@ h1 .outline {
         border-radius: 20px;
         animation: 1s dots infinite alternate;
         animation-delay: 0.4s;
-        opacity: 0;
-        transform: scale(0);
     }
 
     .dot-3 {
@@ -288,8 +187,6 @@ h1 .outline {
         border-radius: 10px;
         animation: 1s dots infinite alternate;
         animation-delay: 0.6s;
-        opacity: 0;
-        transform: scale(0);
     }
 }
 
