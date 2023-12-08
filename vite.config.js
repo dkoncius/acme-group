@@ -16,9 +16,11 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         landing: path.resolve(__dirname, 'src/pages/landing.html'),
+        apieMus: path.resolve(__dirname, 'src/pages/apie-mus.html'),
         tvarumas: path.resolve(__dirname, 'src/pages/tvarumas.html'),
         veiklosKryptys: path.resolve(__dirname, 'src/pages/veiklos-kryptys.html'),
         pagrindinesVeiklos: path.resolve(__dirname, 'src/pages/pagrindines-veiklos.html'),
+       
       }
     }
   },
