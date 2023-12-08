@@ -85,17 +85,30 @@ let tl = gsap.timeline({
 
     document.getElementById('mainContent').classList.remove('animation');
 
-    // Function to dynamically load a stylesheet
-    function loadStylesheet(path) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = path;
-      document.head.appendChild(link);
-    }
+// Function to dynamically load a stylesheet
+function loadStylesheet(path) {
+  return new Promise((resolve, reject) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = path;
+    link.onload = resolve;
+    link.onerror = reject;
+    document.head.appendChild(link);
+  });
+}
 
-    // Load the stylesheets
-    loadStylesheet('/src/styles/landing.scss');
-    loadStylesheet('/src/styles/tabs.scss');
+// Load the stylesheets sequentially
+loadStylesheet('/src/css/landing.css')
+  .then(() => loadStylesheet('/src/css/tabs.css'))
+  .then(() => {
+    // Stylesheets are loaded successfully
+    console.log('Stylesheets loaded.');
+  })
+  .catch((error) => {
+    // Handle errors if any stylesheet fails to load
+    console.error('Error loading stylesheets:', error);
+  });
+
 
 
     // Function to dynamically load a JavaScript module
