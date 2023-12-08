@@ -294,35 +294,55 @@
 
         
         //   Scroll to top after refresh
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-          }
+      //   window.onbeforeunload = function () {
+      //       window.scrollTo(0, 0);
+      //     }
 
-      document.body.style.overflow = 'hidden';
+      // document.body.style.overflow = 'hidden';
 
-      document.addEventListener("DOMContentLoaded", function() {
-        const tl = gsap.timeline();
+      // document.addEventListener("DOMContentLoaded", function() {
+      //   const tl = gsap.timeline();
 
-        tl.to('.section-1', {
-          x: 0,
-          duration: 1,
-          ease: "power3.inOut",
-          clipPath: "inset(0 0 0 0%)"
-        }, "0.5");  
+      //   tl.to('.section-1', {
+      //     x: 0,
+      //     duration: 1,
+      //     ease: "power3.inOut",
+      //     clipPath: "inset(0 0 0 0%)"
+      //   }, "0.5");  
 
-        tl.from('.section-1 .content', {
-          x: -500,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.inOut",
-          clipPath: "inset(0 0 0 100%)",
-          stagger: 0.5
-        }, "0.9");
+      //   tl.from('.section-1 .content', {
+      //     x: -500,
+      //     opacity: 0,
+      //     duration: 1,
+      //     ease: "power3.inOut",
+      //     clipPath: "inset(0 0 0 100%)",
+      //     stagger: 0.5
+      //   }, "0.9");
 
-        tl.eventCallback("onComplete", () => {
-          document.body.style.overflow = 'auto';
+      //   tl.eventCallback("onComplete", () => {
+      //     document.body.style.overflow = 'auto';
+      //   });
+      // });
+
+
+    // Scroll animations for multiple '.manager' elements inside '.management'
+      gsap.utils.toArray('.managers .manager').forEach((manager, index) => {
+        gsap.from(manager, {
+          scrollTrigger: {
+            trigger: manager, // Target each '.manager' element
+            start: 'top 85%', // Start the animation when the top of the trigger hits 85% of the viewport height
+            end: 'bottom top', // End the animation when the bottom of the trigger hits the top of the viewport
+            toggleActions: 'play none none none', // Define actions on scroll, "play" animation on enter
+          },
+          opacity: 0, // Initial opacity
+          y: 50, // Start position (50px above the final position)
+          duration: 1, // Animation duration in seconds
+          ease: "power3.out", // Easing function
+          stagger: 0.3 * index
         });
       });
+
+
       </script>
     </body>
 </html>
