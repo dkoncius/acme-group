@@ -54,12 +54,12 @@ main {
         &::before {
             content: "";
             position: absolute;
-            top: 16.6%;
+            top: 17%;
             left: -60%;
             width: 85%;
             height: 83.4%;
             background: var(--green-spot);
-            transform: rotate(-3deg);
+            transform: rotate(-3.6deg);
             z-index: -1;
         }
 
