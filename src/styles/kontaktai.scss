@@ -1,0 +1,135 @@
+body {
+    background: var(--green-light);
+    min-height: auto;
+    & > *,
+    a {
+        cursor: url('/icons/cursor-green.svg'), pointer;
+    }
+}
+
+button, a, .logo, .right {
+    cursor: url('/icons/pointer-green.svg'), pointer;
+}
+
+header {
+    .logo {
+        transform: translateY(0%);
+        clip-path: inset(0 0 0% 0);
+    }
+
+    .right {
+        transform: translateY(0px);
+        clip-path: inset(0 0 0% 0);
+    }
+}
+
+
+main {
+    min-height: 100vh;
+    max-width: 2560px;
+    margin: auto;
+}
+
+.section-1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 0.3fr;
+    color: var(--dark-green);
+    max-width: 2043px;
+    margin: auto;
+    position: relative;
+    clip-path: inset(0 0 0 100%);
+    transform: translateX(-300px);
+
+    .shape-1 {
+        background: url('/kontaktai/shape-1.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: -100px;
+        right: 13px;
+        width: 1600px;
+        height: 1700px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 16.6%;
+            left: -60%;
+            width: 85%;
+            height: 83.4%;
+            background: var(--green-spot);
+            transform: rotate(-3deg);
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 1.3%;
+            right: -25.8%;
+            width: 30%;
+            height: 50.5%;
+            background: var(--green-spot);
+            transform: rotate(-4deg);
+            z-index: -1;
+        }
+    }
+
+    .content {
+        font-weight: 400;
+        grid-column: 2/5;
+        grid-row: 1;
+        max-width: 800px;
+        transform: translate(0, 290px);
+        right: 1116px;
+        color: var(--dark-green);
+
+        h1 {
+           font-weight: normal;
+           margin-bottom: 200px;
+        }
+
+        h2 {
+            margin: 50px 0;
+        }
+
+
+        .info-content {
+            display: flex;
+            gap: 5vw;
+            max-width: 1000px;
+        }
+
+        .info-content .contact {
+            width: 50%;
+            min-width: 250px;
+            .contact-title {
+                border-bottom: 3px solid var(--dark-green);
+                margin-bottom: 25px;
+                padding-bottom: 25px;
+            }
+        }
+
+
+        .info-2 {
+            margin-bottom: 50px;
+            .contact-2-title {
+                border-bottom: 3px solid var(--dark-green);
+                margin-bottom: 25px;
+                padding-bottom: 25px;
+            }
+
+            .info-content-2 {
+                display: flex;
+                gap: 5vw;
+                max-width: 1000px;
+            }
+
+            .info-content-2 .contact {
+                width: 50%;
+                min-width: 250px;
+            }
+        }
+    }
+}
