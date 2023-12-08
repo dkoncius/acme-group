@@ -19,7 +19,7 @@ export default defineConfig({
         apieMus: path.resolve(__dirname, 'src/pages/apie-mus.html'),
         tvarumas: path.resolve(__dirname, 'src/pages/tvarumas.html'),
         veiklosKryptys: path.resolve(__dirname, 'src/pages/veiklos-kryptys.html'),
-        veiklosKryptys: path.resolve(__dirname, 'src/pages/kontaktai.html'),
+        kontaktai: path.resolve(__dirname, 'src/pages/kontaktai.html'),
         pagrindinesVeiklos: path.resolve(__dirname, 'src/pages/pagrindines-veiklos.html'),
        
       }
