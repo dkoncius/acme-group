@@ -329,13 +329,13 @@
       gsap.utils.toArray('.managers .manager').forEach((manager, index) => {
         gsap.from(manager, {
           scrollTrigger: {
-            trigger: manager, // Target each '.manager' element
-            start: 'top 85%', // Start the animation when the top of the trigger hits 85% of the viewport height
-            end: 'bottom top', // End the animation when the bottom of the trigger hits the top of the viewport
-            toggleActions: 'play none none none', // Define actions on scroll, "play" animation on enter
+            trigger: manager,
+            start: 'top 85%',
+            end: 'bottom top',
+            toggleActions: 'play none none none',
           },
-          opacity: 0, // Initial opacity
-          y: 50, // Start position (50px above the final position)
+          clipPath: "inset(0 0 100% 0)",
+          y: 300, // Start position (50px above the final position)
           duration: 1, // Animation duration in seconds
           ease: "power3.out", // Easing function
           stagger: 0.3 * index
