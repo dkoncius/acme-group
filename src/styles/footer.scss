@@ -130,16 +130,18 @@ footer {
 
     @media (max-width: 900px){
         .description {
+            width: 80%;
             font-size: 12px;
         }
 
-        .contact-1, .contact-2 {
-            font-size: 8px;
-    }
-
-        .contact-2-img, .contact-2 {
-            transform: translate(0);
+        .contact-1, .contact-1-img {
+            transform: translate(-70px, 0);
         }
+
+        .contact-2, .contact-2-img {
+            transform: translate(-140px, 0);
+        }
+
     }
 
 

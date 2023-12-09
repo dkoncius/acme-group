@@ -353,10 +353,12 @@ h1 {
     position: relative;
     transform: rotate(-4deg) translate(0px, -335px);
     overflow: hidden;
-    
     padding-bottom: 30px;
 
-   
+    .news-category {
+        color: var(--dark-green);
+        text-decoration: underline;
+    }
 
     .form-7 {
         width: 1557px;
@@ -411,11 +413,6 @@ h1 {
         font-weight: normal;
         color: var(--dark-green);
         transform: rotate(4deg);
-
-        a {
-            text-decoration: underline;
-            color: var(--dark-green)
-        }
 
         h2 {
             line-height: 60px;
