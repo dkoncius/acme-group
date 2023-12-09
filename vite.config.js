@@ -20,6 +20,8 @@ export default defineConfig({
         tvarumas: path.resolve(__dirname, 'src/pages/tvarumas.html'),
         veiklosKryptys: path.resolve(__dirname, 'src/pages/veiklos-kryptys.html'),
         kontaktai: path.resolve(__dirname, 'src/pages/kontaktai.html'),
+        naujienos: path.resolve(__dirname, 'src/pages/naujienos.html'),
+        naujienosVidus: path.resolve(__dirname, 'src/pages/naujienos-vidus.html'),
         pagrindinesVeiklos: path.resolve(__dirname, 'src/pages/pagrindines-veiklos.html'),
        
       }
