@@ -39,7 +39,7 @@ main {
 .news-content {
     display: grid;
     grid-template-columns: repeat(6, minmax(230px, 1fr));
-    grid-auto-rows: 280px;
+    grid-auto-rows: minmax(280px, auto);
     color: var(--dark-green);
     max-width: 2043px;
     margin: auto;
@@ -54,10 +54,30 @@ main {
         right: 1116px;
         color: var(--dark-green);
 
+        .button-left {
+            margin-bottom: 30px;
+        }
+
         h2 {
             margin: 50px 0;
         }
+
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            font-size: clamp(16px, 1.2vw, 25px);
+        }
+
+        p, ul {
+            font-size: clamp(14px, 1vw, 21px);
+            margin-bottom: 30px;
+            list-style-position: inside;
+        }
     }
+
+   
 
   
 }

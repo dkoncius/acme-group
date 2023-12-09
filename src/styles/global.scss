@@ -151,5 +151,10 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 
 	.button-left:hover {
 		cursor: url('/icons/pointer-green.svg'),pointer;
-		border-radius: 0;
+		background: var(--dark-green);
+		color: var(--green-light);
+
+		svg path {
+			fill:  var(--green-light);
+		}
 	}
