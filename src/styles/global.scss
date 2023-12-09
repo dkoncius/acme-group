@@ -3,22 +3,22 @@
 	src: url("/fonts/CircularXXWeb-Book.woff") format("woff");
 	}
 	
-	@font-face {
-	font-family: "CircularXXWeb-Book";
-	src: url("/fonts/CircularXXWeb-Book.woff2") format("woff2");
-	}
-	
-	
-	/* subset */
-	@font-face {
-	font-family: "CircularXXSub-Book";
-	src: url("/fonts/CircularXXSub-Book.woff") format("woff");
-	}
-	
-	@font-face {
-	font-family: "CircularXXSub-Book";
-	src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
-	}
+@font-face {
+font-family: "CircularXXWeb-Book";
+src: url("/fonts/CircularXXWeb-Book.woff2") format("woff2");
+}
+
+
+/* subset */
+@font-face {
+font-family: "CircularXXSub-Book";
+src: url("/fonts/CircularXXSub-Book.woff") format("woff");
+}
+
+@font-face {
+font-family: "CircularXXSub-Book";
+src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
+}
 	
 	
 	// Variables
@@ -58,14 +58,14 @@
 	}
 	
 	button {
-		font-family: "CircularXXSub-Book";
+		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
 		height: 50px;
 		font-size: 1.2em;
 	}
 	
 	button, p, a {
 		font-size: clamp(16px, 1.2vw, 25px);
-		font-family: "CircularXXSub-Book";
+		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
 	}
 
 	h1 {
@@ -83,6 +83,7 @@
 	}
 
 	.button {
+		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -91,7 +92,7 @@
 		border-radius: 0px 0px 26.5px 0px;
 		background:  var(--green-light);
 		color: var(--green-bright);
-		font-size: 14px;
+		font-size: clamp(16px, 1.2vw, 25px);
 		border: none;
 		transition: 0.3s;
 	}
@@ -102,6 +103,7 @@
 	}
 
 	.button-outline {
+		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
 		text-decoration: none;
 		display: flex;
 		justify-content: center;
@@ -109,9 +111,10 @@
 		background: none;
 		border: 1px solid var(--dark-green);
 		color: var(--dark-green);
-		width: 150px;
+		width: 165px;
 		height: 50px;
 		position: relative;
+		font-size: clamp(16px, 1.2vw, 25px);
 		transition: 0.3s;
 
 
@@ -127,4 +130,26 @@
 	.button-outline:hover {
 		background: var(--dark-green);
 		color: var(--green-light);
+	}
+
+
+	.button-left {
+		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		width: 150px;
+		height: 50px;
+		border: 1px solid var(--dark-green);
+		border-radius:  26.5px 0px 0px 0px;
+		color: var(--dark-green);
+		font-size: clamp(16px, 1.2vw, 25px);
+		transition: 0.3s;
+	}
+
+	.button-left:hover {
+		cursor: url('/icons/pointer-green.svg'),pointer;
+		border-radius: 0;
 	}
