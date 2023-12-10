@@ -77,7 +77,7 @@
         
         <section class="news-content">
           <div class="content">
-            <a href="naujienos.html" class="button-left">
+            <a href="naujienos.html" class="button-left next-page-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="52" height="15" viewBox="0 0 52 15" fill="none">
                 <path d="M0.785927 6.79993C0.399288 7.1943 0.405557 7.82743 0.799929 8.21407L7.22658 14.5147C7.62096 14.9014 8.25409 14.8951 8.64073 14.5007C9.02737 14.1063 9.0211 13.4732 8.62673 13.0866L2.91414 7.486L8.51472 1.77342C8.90135 1.37904 8.89509 0.74591 8.50071 0.359271C8.10634 -0.0273674 7.47321 -0.0210987 7.08657 0.373273L0.785927 6.79993ZM51.9901 6.00005L1.4901 6.50005L1.5099 8.49995L52.0099 7.99995L51.9901 6.00005Z" fill="#004A4E"/>
                 </svg>
@@ -122,6 +122,55 @@
 
             <p>„ACME Grupę“ sudaro 37 bendrovės, veikiančios Lietuvoje, Latvijoje ir Estijoje, tarp kurių žinomiausios technologinių įrenginių didmenine distribucija užsiimanti „ACC Distribution“, „AVAD Baltic“, kino filmus platinanti „ACME Film“, tvarios energetikos bendrovė „ACME Solar Group“, nekilnojamo turto administravimo ir priežiūros bendrovė „ACME NT“, „Drąseikių karjeras“, įrenginių priežiūra ir remontu užsiimanti „Servisa ICT“, vidinis kompetencijų centras „ACME Valda“. „ACME Grupės“ bendrovėse Baltijos šalyse dirba per 430 darbuotojų.</p>
           </div>
+
+          <div class="gallery">
+            <div class="gallery-shape">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1326" viewBox="0 0 1180 1326" fill="none">
+                <path d="M587.208 948.111L616.925 467.922L642.947 47.5406C859.445 31.9245 1075.94 16.3085 1292.44 0.692398C1292.44 0.651678 1292.44 0.600778 1292.44 0.560059C929.191 26.7633 565.931 52.9665 202.682 79.1697C96.876 86.8047 13.0194 171.512 6.47334 277.384L0.609375 372.19C91.1545 365.654 181.7 359.129 272.245 352.593C367.28 345.742 446.3 424.749 439.449 519.789C420.065 788.438 400.692 1057.09 381.308 1325.75C654.379 1308.84 927.45 1291.94 1200.51 1275.03C1200.51 1274.99 1200.51 1274.94 1200.51 1274.9C988.523 1288.02 776.535 1301.14 564.547 1314.27L587.208 948.132V948.111Z" fill="#00917D"/>
+                </svg>
+            </div>
+            <div class="left">
+              <video src="/landing/bg-video.mp4"></video>
+            </div>
+            <div class="right">
+              <div class="right-image gallery-item">
+                <img src="/images/activities-1.jpg" alt="activities-1">
+                <div class="icon"></div>
+              </div>
+              <div class="right-image gallery-item">
+                <img src="/images/activities-2.jpg" alt="activities-2">
+              </div>
+              <div class="right-image gallery-item">
+                <img src="/images/activities-3.jpg" alt="activities-3">
+              </div>
+            </div>
+          </div>
+
+            <!-- Gallery swiper -->
+            <div class="swiper gallery-swiper">
+              <div class="swiper-exit">
+                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                  <path opacity="1" fill="#E6F5E4" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/>
+                </svg>
+              </div>
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <video controls src="/landing/bg-video.mp4" type="video/mp4"></video>
+                </div>
+                <div class="swiper-slide"><img src="/images/activities-1.jpg" alt="Image 1"></div>
+                <div class="swiper-slide"><img src="/images/activities-2.jpg" alt="Image 2"></div>
+                <div class="swiper-slide"><img src="/images/activities-3.jpg" alt="Image 3"></div>
+                <!-- ... more slides ... -->
+              </div>
+              
+              <!-- If you want navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- Pagination -->
+              <div class="pagination"></div>
+            </div>
        
         </section>
 
@@ -169,8 +218,9 @@
     </main>
 
     <script type="module" src="/src/scripts/navigation.js"></script>
+    <script type="module" src="/src/scripts/gallery.js"></script>
       <!-- Loading animation -->
-      <script type="module">
+      <!-- <script type="module">
         import gsap from "gsap";
         import ScrollTrigger from "gsap/ScrollTrigger";
         gsap.registerPlugin(ScrollTrigger);
@@ -207,6 +257,22 @@
         });
       });
 
-      </script>
+
+      document.addEventListener("DOMContentLoaded", function() { 
+        document.querySelectorAll('.next-page-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = this.href;
+  
+          gsap.to('#mainContent', {
+            opacity: 0,
+            duration: 1,
+            ease: "power3.inOut",
+            onComplete: () => window.location.href = url
+          });
+        });
+      });
+      })
+      </script> -->
     </body>
 </html>

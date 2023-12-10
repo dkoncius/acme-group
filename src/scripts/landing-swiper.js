@@ -4,6 +4,29 @@
  // import styles bundle
  import 'swiper/css/bundle';
 
+
+ const swiper = new Swiper('.mySwiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If you want navigation buttons
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // If you want pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // If you want scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
  const brandImages = [
   { default: "/svg/bbc.svg", alt: "bbc", small: "/landing/brand-1.svg" },
   { default: "/svg/unilven.svg", alt: "unilven", small: "/landing/brand-2.svg" },
