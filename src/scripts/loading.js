@@ -71,7 +71,7 @@ let tl = gsap.timeline({
       trigger: '.loading-section', 
       scrub: 0.3, 
       start: "top+=200", 
-      end: "+=1500",
+      end: "bottom-=50",
       markers: false,
       onEnter: () => gsap.set(".scroll-down", { opacity: 0, immediateRender: false }) // Instantly hides the element when scrolling starts
   },
