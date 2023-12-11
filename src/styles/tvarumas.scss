@@ -80,24 +80,9 @@ header {
         }
 
         .button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 220px;
-            height: 50px;
-            border-radius: 0px 0px 26.5px 0px;
-            background: var(--blue-dark, #15276A);
-            color: var(--blue-light);
-            font-size: 14px;
-            border: none;
-            box-shadow: 0 0 2px black;
-            transition: 0.3s;
+            background: var(--blue-dark);
+            color: var(--blue-extra-light);
         }
-
-        .button:hover {
-            border-radius: 0;
-        }
-
     }
 
     .tvarumas-1 {

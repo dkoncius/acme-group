@@ -92,7 +92,7 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 		border-radius: 0px 0px 26.5px 0px;
 		background:  var(--green-light);
 		color: var(--green-bright);
-		font-size: clamp(16px, 1.2vw, 25px);
+		font-size: clamp(16px, 0.8vw, 25px);
 		border: none;
 		transition: 0.3s;
 	}

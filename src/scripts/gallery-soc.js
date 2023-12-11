@@ -70,7 +70,7 @@ galleryItems.forEach((item, index) => {
 
 function createIcon(item) {
   const icon = document.createElement("img");
-  icon.src = item.tagName.toLowerCase() === 'img' ? "/naujienos/image-icon.svg" : "/naujienos/video-icon.svg";
+  icon.src = item.tagName.toLowerCase() === 'img' ? "/tvarumas/image-icon.svg" : "/tvarumas/video-icon.svg";
   icon.classList.add("icon-overlay");
   icon.style.display = 'none'; // Initially hide the icon
   return icon;

@@ -1,3 +1,21 @@
+.body-overlay {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Changed to viewport height */
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 74, 78, 0.8);
+    }
+}
+
 .gallery {
     display: grid;
     grid-template-rows: 500px 500px;
@@ -10,7 +28,7 @@
     .icon-overlay {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 40%;
         transform: translate(-50%, -50%);
         width: 50px;
         height: 50px;
@@ -41,8 +59,12 @@
         position: absolute;
         top: 350px;
         right: 960px;
-        width: 50%;
+        width: 80%;
         height: 809.95px;
+
+        .icon-overlay {
+            left: 60%;
+        }
 
         & > *:not(.icon-overlay) {
             width: 100%;
@@ -62,8 +84,11 @@
 
         .right-image {
             transform: rotate(-4deg);
-            width: 120%;
+            width: 130%;
             height: 370px;
+            position: relative;
+            top: -7px;
+            right: -5%;
 
             & > *:not(.icon-overlay) {
                 width: 100%;
@@ -86,6 +111,10 @@
        .right {
             width: 500px;
             top: 24px;
+
+            .right-image {
+                top: -4.5px;
+            }
        }
 
        .gallery-shape {
@@ -99,23 +128,48 @@
 .swiper.gallery-swiper {
     position: fixed;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
     z-index: 1000;
     visibility: hidden;
+    background: rgb(0, 74, 78, 0.8);
+    user-select: none;
 
 
 
     .swiper-button-prev,
     .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) scale(0.7);
+        transition: 0.3s;
+        z-index: 1002; /* Ensure they are above the swiper content */
         cursor: url("/icons/pointer-green.svg"), pointer;
         color: var(--green-light);
-        margin: 0 100px;
     }
+
+    .swiper-button-prev {
+        left: calc(50% - 600px - 29px); /* Half of viewport - half of slide width - offset */
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 600px - 29px); /* Half of viewport - half of slide width - offset */
+    }
+    
 
     .swiper-button-prev:hover,
     .swiper-button-next:hover {
-        color: var(--dark-green);
+        transform: translateY(-50%) scale(0.8);
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        content: url("/naujienos/swiper-next-icon.svg");
+       
     }
 
     .swiper-pagination-bullet {
@@ -132,12 +186,14 @@
 
     .swiper-exit {
         position: absolute;
-        top: 120px;
+        top: 70px;
         left: 120px;
         z-index: 1001;
 
         svg {
             transform: scale(3);
+            width: 20px;
+            height: 20px;
         }
 
         svg:hover path {
@@ -146,15 +202,69 @@
     }
 
     .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Center content vertically */
+        width: 1200px; /* Width of each slide */
 
         & > * {
             width: 100%;
-            height: 100%;
+            height: 70%;
             object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100px;
         }
     }
 }
 
 .swiper.gallery-swiper.show {
     visibility: visible;
+}
+
+
+// Soc atsakmoybė
+.socialine-atsakomybe {
+    .gallery {
+        .gallery-shape::before {
+            background: var(--blue-extra-light);
+        }
+
+        .left, .right .right-image {
+            & > * {
+                cursor: url("/icons/pointer-blue.svg"), pointer;
+            }
+        }
+    }
+
+
+    .swiper {
+        .swiper-button-prev,
+        .swiper-button-next {
+            cursor: url("/icons/pointer-blue.svg"), pointer;
+            color: var(--blue-extra-light);
+            margin: 0 100px;
+        }
+    
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            color: var(--blue-dark);
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--blue-dark);
+        }
+
+        .swiper-exit {
+            cursor: url("/icons/pointer-blue.svg"), pointer;
+
+            svg:hover path {
+                fill: var(--blue-dark);
+            }
+        } 
+    }
 }

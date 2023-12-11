@@ -86,7 +86,7 @@
         margin-bottom: 30px;
     }
 
-    button {
+    .button {
         font-family: "CircularXXWeb-Book";
         cursor: url('/icons/cursor-green.svg'), pointer;
         width: 271px;
@@ -99,7 +99,7 @@
         transition: 0.3s;
     }
 
-    button:hover {
+    .button:hover {
         cursor: url('/icons/pointer-green.svg'), pointer;
         border-radius: 0;
     }

@@ -24,6 +24,7 @@ export default defineConfig({
         naujienosVidus: path.resolve(__dirname, 'src/pages/naujienos-vidus.html'),
         pagrindinesVeiklos: path.resolve(__dirname, 'src/pages/pagrindines-veiklos.html'),
         privatumoPolitika: path.resolve(__dirname, 'src/pages/privatumo-politika.html'),
+        socialineAtsakomybe: path.resolve(__dirname, 'src/pages/socialine-atsakomybe.html'),
         page404: path.resolve(__dirname, 'src/pages/404.html'),
        
       }

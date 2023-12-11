@@ -30,6 +30,25 @@ footer {
         padding-bottom: 30px;
     }
     
+    .contact-icon-1 {
+        width: 2vw;
+        height: 2vw;
+        align-self: end;
+        margin-bottom: 5px;
+        grid-column: 3/4;
+        grid-row: 1;
+    }
+
+    .contact-icon-2 {
+        width: 2vw;
+        height: 2vw;
+        align-self: end;
+        margin-bottom: 5px;
+        grid-column: 4/5;
+        grid-row: 1;
+        transform: translate(-78px, 0);
+    }
+
     .contact-1-img {
         width: 2vw;
         height: 2vw;
