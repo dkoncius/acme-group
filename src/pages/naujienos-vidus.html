@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-  <html lang="en">
+  <html lang="lt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!-- Add meto info -->
-    <title>Acme group: veiklos kryptys</title>
+    <meta name="description" content="Acme Group business website, here you can read about our company and the achievements we have accomplished">
+
+    <!-- Meta for social media like Facebook -->
+    <meta property="og:title" content="Acme Group - Achievements and Company Information">
+    <meta property="og:description" content="Acme Group business website, here you can read about our company and the achievements we have accomplished">
+    <meta property="og:image" content="https://example.com/your-image.jpg"> <!-- Replace with the URL to your website's image -->
+    <meta property="og:url" content="https://example.com"> <!-- Replace with your website URL -->
+    <meta property="og:type" content="website">
+
+    <!-- Meta for X (twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Acme Group - Achievements and Company Information">
+    <meta name="twitter:description" content="Acme Group business website, here you can read about our company and the achievements we have accomplished">
+    <meta name="twitter:image" content="https://example.com/your-image.jpg"> <!-- Replace with the URL to your website's image -->
+
+    <!-- RSS and Sitemap -->
+    <link rel="alternate" type="application/rss+xml" title="Acme Group RSS Feed" href="/your-rss-feed-url.xml">
+    <link rel="sitemap" type="application/xml" title="Acme Group Sitemap" href="/your-sitemap.xml">
+
+    <!-- Tab icon -->
+    <link rel="icon" href="/path-to-your-favicon.ico" type="image/x-icon">
+    <title>Acme group: naujienos pavadinimas</title>
     
     <!-- Google font fallback -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap">
@@ -13,6 +33,7 @@
     <link rel="stylesheet" href="/src/styles/global.scss">
     <link rel="stylesheet" href="/src/styles/header.scss">
     <link rel="stylesheet" href="/src/styles/naujienos-vidus.scss">
+    <link rel="stylesheet" href="/src/styles/gallery.scss">
     <link rel="stylesheet" href="/src/styles/footer.scss">
   </head>
   <body>
@@ -169,7 +190,7 @@
               <div class="swiper-button-next"></div>
 
               <!-- Pagination -->
-              <div class="pagination"></div>
+              <div class="swiper-pagination"></div>
             </div>
        
         </section>
