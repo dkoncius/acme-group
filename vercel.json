@@ -1,10 +1,6 @@
 {
-    "version": 2,
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/404.html"
-      }
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/404.html", "status": 404 }
     ]
   }
   
