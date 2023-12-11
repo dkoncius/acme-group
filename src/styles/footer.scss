@@ -126,8 +126,10 @@ footer {
         font-size: clamp(11px, 1.2vw, 21px);
 
         a {
-            cursor: url("/icons/cursor-green.svg"), pointer;
+            cursor: url("/icons/pointer-green.svg"), pointer;
             color: var(--green-light);
+            position: relative;
+            top: 2px;
         }
     }
 

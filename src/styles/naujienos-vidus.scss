@@ -44,7 +44,6 @@ main {
     max-width: 2043px;
     margin: auto;
     position: relative;
-    // clip-path: inset(0 0 0 100%);
     margin-bottom: 50px;
 
     .content {
@@ -55,9 +54,17 @@ main {
         grid-column: 2/6;
         grid-row: 2;
         color: var(--dark-green);
+        opacity: 0;
+        clip-path: inset(0 0 0 100%);
+        transform: translate(-500px, 0);
 
         .button-left {
             margin-bottom: 30px;
+        }
+
+        h1 {
+            font-weight: normal;
+            margin-bottom: 100px;
         }
 
         h2 {

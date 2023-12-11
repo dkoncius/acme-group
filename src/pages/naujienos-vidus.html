@@ -231,9 +231,9 @@
             <hr>
 
             <div class="copywrites">
-                <p>@ 2023 ACME grupė. Visos teisės saugomos</p>
-                <a href="#">Privatumo politika</a>
-            </div>
+              <p>@ 2023 ACME grupė. Visos teisės saugomos</p>
+              <a href="privatumo-politika.html">Privatumo politika</a>
+          </div>
         </footer>
 
     </main>
@@ -241,7 +241,7 @@
     <script type="module" src="/src/scripts/navigation.js"></script>
     <script type="module" src="/src/scripts/gallery.js"></script>
       <!-- Loading animation -->
-      <!-- <script type="module">
+      <script type="module">
         import gsap from "gsap";
         import ScrollTrigger from "gsap/ScrollTrigger";
         gsap.registerPlugin(ScrollTrigger);
@@ -257,19 +257,12 @@
       document.addEventListener("DOMContentLoaded", function() {
         const tl = gsap.timeline();
 
-        tl.to('.news-content', {
+        tl.to('.news-content .content', {
           x: 0,
+          opacity: 1,
           duration: 1,
           ease: "power3.inOut",
-          clipPath: "inset(0 0 0 -13%)"
-        }, "0.5");  
-
-        tl.from('.news-content .content', {
-          x: -500,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.inOut",
-          clipPath: "inset(0 0 0 100%)",
+          clipPath: "inset(0 0 0 0%)",
           stagger: 0.5
         }, "0.9");
 
@@ -294,6 +287,6 @@
         });
       });
       })
-      </script> -->
+      </script>
     </body>
 </html>
