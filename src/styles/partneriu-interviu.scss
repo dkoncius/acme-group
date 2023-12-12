@@ -39,247 +39,188 @@ main {
 
 .section-1 {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 532px 640px 100px;
-    color: var(--dark-green);
-    margin: auto;
-    position: relative;
-    clip-path: inset(0 0 0 100%);
-    transform: translateX(-300px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 772px;
+    color: var(--blue-extra-light);
 
-    h1 {
-        color: var(--blue-dark);
+
+    @media (max-width: 1000px){
+        grid-template-columns: repeat(4, 300px);
+    }
+
+    .content {
         grid-column: 1/3;
         font-weight: 400;
         grid-column: 1;
         grid-row: 1;
         max-width: 500px;
         transform: translate(300px, 200px);
-        position: absolute;
         right: 1116px;
+
+        h1 {
+            font-weight: 400;
+        }
     }
 
     .shape-1 {
-        background: url('/tvarumas/verslo-inovaciju-labaratorija.svg');
+        background: url('/tvarumas/partneriu-interviu-shape-1.svg');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
-        top: -50px;
-        right: -182px;
-        width: 1924.42px;
-        height: 1362.1px;
+        right: 600px;
+        width: 1142.87px;
+        height: 756.34px;
         z-index: -1;
 
         &::before {
             content: "";
             position: absolute;
+            top: -50px;
             left: -60%;
             width: 100%;
-            height: 54%;
-            background: var(--blue-bright);
+            height: 100%;
+            background: var(--blue-dark);
             transform: rotate(-4deg);
             z-index: -1;
         }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 32.59%;
-            right: -26%;
-            width: 32%;
-            height: 54.7%;
-            background: var(--dark-blue);
-            transform: rotate(-3deg);
-            z-index: -1;
-        }
     }
+}
 
-    .shape-2 {
-        width: 86%;
-        height: 735px;
-        object-fit: cover;
-        object-position: center;
-        position: absolute;
-        top: 577px;
-        right: 685px;
-        z-index: -2;
-    }
+.news {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(230px, 1fr));
+    grid-auto-rows: minmax(420px, auto);
+    color: var(--blue-dark);
+    max-width: 2043px;
+    margin: auto;
+    position: relative;
+    // clip-path: inset(0 0 0 100%);
+    // margin-bottom: 50px;
+
+    h1 {
+        font-weight: normal;
+        grid-column: 2/5;
+        grid-row: 1;
+        align-self: end;
+     }
 
     .content {
-        grid-row: 2;
-        grid-column: 4/7;
-        color: var(--blue-extra-light);
-        width: 70%;
-        position: absolute;
-        top: 100px;
-        right: 42px;
+        display: grid;
+        grid-template-columns: repeat(6, 250px);
+        width: 100%;
+        font-weight: 400;
+        right: 1116px;
+        color: var(--blue-dark);
 
         h2 {
-            margin-bottom: 30px;
+            margin: 50px 0;
         }
 
-        p {
-            margin-bottom: 20px;
+        .categories {
+            display: flex;
+            gap: 10px;
+            grid-column: 3;
+            align-self: end;
+            margin-bottom: 50px;
+        }
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(6, 250px);
+        grid-auto-rows: minmax(100px, 1fr);
+        grid-column: span 4;
+        width: 100vw;
+
+        &:first-of-type {
+            .article-image {
+                border-radius: 0 200px 0 0;
+                overflow: hidden;
+            }
         }
 
-        .button {
-            background:  var(--blue-extra-light);
+        .article-category {
+            text-decoration: underline;
             color: var(--blue-dark);
         }
-    }
-}
+        
 
-.section-2 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 400px 400px;
-    color: var(--blue-dark);
-    margin: auto;
-    position: relative;
-    background: var(--blue-extra-light);
-    transform: rotate(-3deg);
-    width: 120%;
-    left: -100px;
-
-    .shape-3 {
-        position: absolute;
-        top: 50px;
-        right: 221px;
-        width: 511px;
-        height: 506px;
-        object-fit: cover;
-        overflow: hidden;
-    }
-    
-    .foto-1 {
-        position: absolute;
-        top: -96px;
-        right: 18px;
-        width: 728.018px;
-        height: 728.019px;
-
-        .shape-2 {
-            position: absolute;
-            right: -187px;
-            top: -4px;
-            width: 120%;
-            height: 100px;
-            background: url('/tvarumas/inovaciju-shape-2.svg');
-            background-repeat: no-repeat;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .brands {
-        display: flex;
-        gap: 30px;
-        margin-bottom: 30px;
-
-        img {
-            width: 19%;
-            height: 25px;
-            object-fit: contain;
-        }
-    }
-
-    .content {
-        grid-row: 1;
-        grid-column: 1/4;
-        width: 60%;
-        position: absolute;
-        top: 132px;
-        right: -15px;
-        transform: rotate(3deg);
-
-        h2 {
-            margin-bottom: 30px;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        .button {
-            background: var(--blue-dark);
-            color: var(--blue-extra-light);
-        }
-    }
-
-   
-}
-
-
-
-.section-3 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 400px 400px;
-    color: var(--dark-green);
-    margin: auto;
-    position: relative;
-    background: var(--blue-extra-light);
-    transform: rotate(-3deg);
-    width: 120%;
-    left: -100px;
-
-    .foto-2 {
-        position: absolute;
-        top: 100px;
-        left: 18px;
-        width: 800px;
-        height: 1027.163px;
-        border-radius: 0 200px 0 0;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
+        .article-image {
+            grid-column: 1/4;
+            width: 90%;
+            max-height: 550px;
             object-fit: cover;
+            position: relative;
+            top: -100px;
+        
+            img {
+                width: 100%;
+                object-fit: contain; /* Changed from cover to contain */
+            }
+        
+            .shape-3 {
+                background: url('/tvarumas/partneriu-interviu-shape-2.svg');
+                position: absolute;
+                top: -41.5px;
+                width: 102%;
+                height: 99%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 1;
+            }
+        }
+
+        .article-content {
+            grid-column: 4/6;
+            width: 130%;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px; 
+        }
+
+        .button-outline {
+            border-color: var(--blue-dark);
+            color: var(--blue-dark);
+
+            &:hover {
+                background: var(--blue-dark);
+                color: var(--blue-extra-light);
+            }
         }
     }
 
+    article:first-of-type img {
+        border-radius: 0 115px 0 0;
+        transform: translate(0, 10px);
+    }
 
-    .brands {
-        display: flex;
-        gap: 30px;
-        margin-bottom: 30px;
+    article:last-of-type img {
+        border-radius: 0 0 300px 0;
 
-        img {
-            width: 19%;
-            height: 25px;
-            object-fit: contain;
+        &::before {
+            content: ""
         }
     }
 
-    .content {
-        grid-row: 1;
-        grid-column: 3/5;
-        width: 90%;
-        position: absolute;
-        top: 132px;
-        right: -250px;
-        transform: rotate(3deg);
-
-        h2 {
-            margin-bottom: 30px;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        .button {
-            background: var(--blue-dark);
-            color: var(--blue-extra-light);
-        }
+    .more {
+        color: var(--blue-dark);
+        text-decoration: underline;
+        grid-column: 4;
+        grid-row: 4;
+        position: relative;
+        top: -100px;
     }
 
-   
+    @media (max-width: 900px) {
+        article .article-content {
+            gap: 15px;
+        }
+    }
 }
+
+
+
 
 
 footer {
@@ -293,62 +234,5 @@ footer {
 
     .copywrites a {
         color: var(--blue-extra-light);
-    }
-}
-
-@media (max-width: 1200px) {
-    .section-1 {
-
-        grid-template-columns: repeat(6, 190px);
-        .shape-1 {
-            left: -775px;
-        }
-
-        .content {
-            grid-column: 4/7;
-        }
-    }
-    
-}
-
-@media (max-width: 1600px) {
-    .section-1 {
-        grid-template-columns: repeat(6, 250px);
-
-        .shape-1 {
-            left: -200px;
-        }
-
-        h1 {
-            left: -55px;
-        }
-
-        .content {
-            left: 54px;
-            top: 104px;
-        }
-    }
-}
-
-@media (min-width: 1201px) and (max-width: 1600px) {
-        .section-1 .content {
-            grid-column: 4/7;
-        }
-}
-
-
-@media (min-width: 1800px){
-    .section-1 {
-        h1 {
-            left: 0px;
-        }
-    }
-}
-
-@media (min-width: 2000px){
-    .section-1 {
-        h1 {
-            left: 200px;
-        }
     }
 }
