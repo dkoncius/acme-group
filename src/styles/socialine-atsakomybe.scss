@@ -370,6 +370,21 @@ header {
   
 }
 
+footer {
+    color: var(--blue-extra-light);
+
+    .social {
+        a:before {
+            background: var(--blue-extra-light) !important;
+        }
+    }
+
+    .copywrites a {
+        color: var(--blue-extra-light);
+    }
+}
+
+
 
 @media (max-width: 1600px) {
     .section-1 {

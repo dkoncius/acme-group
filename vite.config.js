@@ -25,6 +25,7 @@ export default defineConfig({
         pagrindinesVeiklos: path.resolve(__dirname, 'src/pages/pagrindines-veiklos.html'),
         privatumoPolitika: path.resolve(__dirname, 'src/pages/privatumo-politika.html'),
         socialineAtsakomybe: path.resolve(__dirname, 'src/pages/socialine-atsakomybe.html'),
+        versloInovacijuLabaratorija: path.resolve(__dirname, 'src/pages/verslo-inovaciju-labaratorija.html'),
         page404: path.resolve(__dirname, 'src/pages/404.html'),
        
       }

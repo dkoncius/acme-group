@@ -10,15 +10,23 @@ button, a, .logo, .right {
     cursor: url('/icons/pointer-blue.svg'), pointer !important;
 }
 
+
 header {
     .logo {
-        transform: translateY(0%) !important;
-        clip-path: inset(0 0 0% 0) !important;
+        transform: translateY(0%);
+        clip-path: inset(0 0 0% 0);
     }
 
     .right {
-        transform: translateY(0px) !important;
-        clip-path: inset(0 0 0% 0) !important;
+        transform: translateY(0px);
+        clip-path: inset(0 0 0% 0);
+        color: var(--blue-dark) !important;
+
+        .menu .line,
+        .menu .bubble,
+        .language {
+            background: var(--blue-dark) !important;
+        }
     }
 }
 
@@ -346,7 +354,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(6, minmax(190px, 1fr));
     grid-auto-rows: minmax(250px, 1fr);
-    height: 450px;
+    height: 830px;
     line-height: 25px;
     position: relative;
     margin-bottom: -300px;
