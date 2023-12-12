@@ -12,13 +12,20 @@ button, a, .logo, .right {
 
 header {
     .logo {
-        transform: translateY(0%) !important;
-        clip-path: inset(0 0 0% 0) !important;
+        transform: translateY(0%);
+        clip-path: inset(0 0 0% 0);
     }
 
     .right {
-        transform: translateY(0px) !important;
-        clip-path: inset(0 0 0% 0) !important;
+        transform: translateY(0px);
+        clip-path: inset(0 0 0% 0);
+        color: var(--blue-dark) !important;
+
+        .menu .line,
+        .menu .bubble,
+        .language {
+            background: var(--blue-dark) !important;
+        }
     }
 }
 
