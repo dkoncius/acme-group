@@ -5,6 +5,7 @@ import 'swiper/css/bundle';
 const swiperExit = document.querySelector(".swiper-exit");
 const gallerySwiper = document.querySelector(".gallery-swiper");
 const galleryItems = document.querySelectorAll(".gallery img, .gallery video"); // Select gallery items
+const swiperVideos = document.querySelectorAll(".swiper video"); // Select gallery items
 
 let scrollPosition = 0;
 
@@ -46,28 +47,29 @@ const swiper = new Swiper(gallerySwiper, {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
-    // Pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    // Scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-
     // Event to pause video on slide change
     on: {
+        init: function () {
+            updateSlideCounter(this);
+        },
         slideChange: function () {
             const previousSlide = this.slides[this.previousIndex];
             const video = previousSlide.querySelector('video');
             if (video) {
                 video.pause();
             }
+            updateSlideCounter(this);
         }
     }
 });
+
+// Slides counter
+function updateSlideCounter(swiper) {
+    const currentIndex = swiper.realIndex + 1; // +1 because index starts at 0
+    const totalSlides = swiper.slides.length;
+    const counterElement = document.querySelector('.swiper-slide-counter');
+    counterElement.textContent = `${currentIndex} / ${totalSlides}`;
+}
 
 // Event listeners for gallery items
 galleryItems.forEach((item, index) => {
@@ -93,6 +95,7 @@ galleryItems.forEach((item, index) => {
     });
 });
 
+
 function createIcon(item) {
     const icon = document.createElement("img");
     icon.src = item.tagName.toLowerCase() === 'img' ? "/naujienos/image-icon.svg" : "/naujienos/video-icon.svg";
@@ -100,3 +103,33 @@ function createIcon(item) {
     icon.style.display = 'none'; // Initially hide the icon
     return icon;
 }
+
+// Video play function
+let play = false;
+swiperVideos.forEach(video => {
+    const icon = document.createElement("div")
+    icon.classList.add("video-play-icon")
+    video.parentNode.append(icon)
+
+    video.addEventListener("click", () => {
+        toggleVideoPlayback(video, icon)
+    })
+
+    icon.addEventListener("click", () => {
+        toggleVideoPlayback(video, icon)
+    })
+})
+
+
+function toggleVideoPlayback(video, icon) {
+    console.log(video, icon)
+    if (!play) {
+      video.play();
+      icon.classList.add("hidden");
+      play = true;
+    } else {
+      video.pause();
+      icon.classList.remove("hidden");
+      play = false;
+    }
+  }

@@ -139,6 +139,24 @@
     background: rgb(0, 74, 78, 0.8);
     user-select: none;
 
+    
+    .video-play-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background: url('/naujienos/video-icon.svg');
+        background-size: contain;
+        width: clamp(70px, 6vw, 100px);
+        height: clamp(70px, 6vw, 100px);
+    }
+
+    .video-play-icon.hidden {
+        visibility: hidden;
+    }
+
 
 
     .swiper-button-prev,
@@ -153,7 +171,7 @@
     }
 
     .swiper-button-prev {
-        left: calc(50% - 600px - 29px); /* Half of viewport - half of slide width - offset */
+        left: calc((100% - 1200px) / 2 - 30px);
     }
 
     .swiper-button-next {
@@ -184,16 +202,40 @@
         transform: scale(1.3);
     }
 
-    .swiper-exit {
+    .swiper-slide-counter {
         position: absolute;
-        top: 70px;
-        left: 120px;
+        top: 2.5vw;
+        right: 20vw;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 54px;
+    }
+
+    .swiper-exit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        color: var(--green-light);
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+        margin: auto;
         z-index: 1001;
+        cursor: url("/icons/pointer-green.svg"), pointer;
+
+        .line {
+            width: 30px;
+            height: 1px;
+            background: var(--green-light);
+        }
 
         svg {
-            transform: scale(3);
-            width: 20px;
-            height: 20px;
+            width: 40px;
+            height: 40px;
         }
 
         svg:hover path {
@@ -205,11 +247,12 @@
         display: flex;
         justify-content: center;
         align-items: center; /* Center content vertically */
-        width: 1200px; /* Width of each slide */
+        max-width: 1200px; /* Width of each slide */
+        width: 80%;
 
-        & > * {
+        video, img {
             width: 100%;
-            height: 70%;
+            height: 60%;
             object-fit: cover;
             position: absolute;
             top: 0;
@@ -217,9 +260,20 @@
             right: 0;
             bottom: 0;
             margin: auto;
-            border-radius: 100px;
+            border-radius: 56px;
         }
     }
+
+    
+        /* Adjust for smaller screens */
+        @media (max-width: 1400px) {
+            .swiper-button-prev {
+                left: 80px; /* or any appropriate value */
+            }
+            .swiper-button-next {
+                right: 80px; /* or any appropriate value */
+            }
+        }
 }
 
 .swiper.gallery-swiper.show {
@@ -268,3 +322,4 @@
         } 
     }
 }
+

@@ -156,7 +156,6 @@
             <div class="right">
               <div class="right-image gallery-item">
                 <img src="/images/activities-1.jpg" alt="activities-1">
-                <div class="icon"></div>
               </div>
               <div class="right-image gallery-item">
                 <img src="/images/activities-2.jpg" alt="activities-2">
@@ -169,7 +168,10 @@
 
             <!-- Gallery swiper -->
             <div class="swiper gallery-swiper">
+              <div class="swiper-slide-counter"></div>
               <div class="swiper-exit">
+                <span>uždaryti</span> 
+                <span class="line"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
                   <circle cx="25.5811" cy="25.5811" r="25.5811" fill="#E6F5E4"/>
                   <path d="M13.2031 14.0283L37.1338 37.959" stroke="#004A4E" stroke-width="2" stroke-linecap="round"/>
@@ -179,7 +181,8 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <video controls src="/landing/bg-video.mp4" type="video/mp4"></video>
+                  <video src="/landing/bg-video.mp4" type="video/mp4"></video>
+                  <!-- <div class="video-play-icon"></div> -->
                 </div>
                 <div class="swiper-slide"><img src="/images/activities-1.jpg" alt="Image 1"></div>
                 <div class="swiper-slide"><img src="/images/activities-2.jpg" alt="Image 2"></div>
@@ -191,8 +194,6 @@
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
 
-              <!-- Pagination -->
-              <div class="swiper-pagination"></div>
             </div>
        
         </section>
@@ -243,7 +244,7 @@
     <script type="module" src="/src/scripts/navigation.js"></script>
     <script type="module" src="/src/scripts/gallery-naujienos.js"></script>
       <!-- Loading animation -->
-      <script type="module">
+      <!-- <script type="module">
         import gsap from "gsap";
         import ScrollTrigger from "gsap/ScrollTrigger";
         gsap.registerPlugin(ScrollTrigger);
@@ -289,6 +290,6 @@
         });
       });
       })
-      </script>
+      </script> -->
     </body>
 </html>
