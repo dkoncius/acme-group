@@ -280,6 +280,7 @@ main {
             grid-template-columns: 1fr 1.5fr;
             grid-column: 1;
             grid-row: 1;
+            margin: 50px 0;
         }
 
         .tab.opened {
@@ -301,6 +302,7 @@ main {
         }
 
         .content-left {
+            width: auto;
             transform: translateY(0);
         }
 
