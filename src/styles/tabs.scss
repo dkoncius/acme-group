@@ -10,7 +10,7 @@
 
     button {
         font-family: 'CircularXXWeb-Book';
-        cursor: url('/icons/cursor-green.svg'), pointer;
+        cursor: url('/icons/pointer-green.svg'), pointer;
         background: none;
         border: none;
         color: var(--dark-green);
@@ -88,7 +88,7 @@
 
     .button {
         font-family: "CircularXXWeb-Book";
-        cursor: url('/icons/cursor-green.svg'), pointer;
+        cursor: url('/icons/pointer-green.svg'), pointer;
         width: 271px;
         height: 50px;
         border-radius: 0 0 26.5px 0;
@@ -100,7 +100,6 @@
     }
 
     .button:hover {
-        cursor: url('/icons/pointer-green.svg'), pointer;
         border-radius: 0;
     }
 }
