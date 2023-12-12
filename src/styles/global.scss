@@ -82,6 +82,11 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 		font-size: clamp(24px, 2.2vw, 42px);
 	}
 
+	h4 {
+		font-weight: 400;
+		font-size: clamp(20px, 1.5vw, 36px);
+	}
+
 	.button {
 		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
 		display: flex;
