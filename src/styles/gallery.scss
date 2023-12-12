@@ -275,6 +275,9 @@
 
 // Soc atsakmoybė
 .socialine-atsakomybe .gallery {
+    .left > *, .right .right-image > * {
+        cursor: url('/icons/pointer-blue.svg'), pointer;
+    }
 
     .gallery-shape::before {
         background: var(--blue-extra-light);
