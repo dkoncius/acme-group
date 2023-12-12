@@ -40,7 +40,7 @@ main {
 .section-1 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 532px 640px 100px;
+    grid-template-rows: 567px 649px 169px;
     color: var(--dark-green);
     margin: auto;
     position: relative;
@@ -66,8 +66,8 @@ main {
         position: absolute;
         top: -50px;
         right: -182px;
-        width: 1924.42px;
-        height: 1362.1px;
+        width: 2200px;
+        height: 1417.1px;
         z-index: -1;
 
         &::before {
@@ -100,7 +100,7 @@ main {
         object-fit: cover;
         object-position: center;
         position: absolute;
-        top: 577px;
+        top: 633px;
         right: 685px;
         z-index: -2;
     }
@@ -311,7 +311,7 @@ footer {
     
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1800px) {
     .section-1 {
         grid-template-columns: repeat(6, 250px);
 
@@ -321,10 +321,11 @@ footer {
 
         h1 {
             left: -55px;
+            transform: translate(200px, 150px);
         }
 
         .content {
-            left: 54px;
+            left: 250px;
             top: 104px;
         }
     }
