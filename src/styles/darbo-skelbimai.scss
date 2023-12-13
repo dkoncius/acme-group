@@ -40,12 +40,12 @@ main {
 .section-1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 600px 1000px;
+    grid-template-rows: 600px 800px;
     color: var(--burgundy-dark);
     margin: auto;
     position: relative;
-    clip-path: inset(0 0 0 100%);
-    transform: translateX(-300px);
+    // clip-path: inset(0 0 0 100%);
+    // transform: translateX(-300px);
 
     .shape-1 {
         background: url('/karjera/shape-1.svg');
@@ -110,7 +110,6 @@ main {
     display: grid;
     color: var(--burgundy-dark);
     max-width: 1500px;
-    margin-top: -200px;
 
     .icons {
         display: flex;

@@ -27,6 +27,8 @@ export default defineConfig({
         socialineAtsakomybe: path.resolve(__dirname, 'src/pages/socialine-atsakomybe.html'),
         versloInovacijuLabaratorija: path.resolve(__dirname, 'src/pages/verslo-inovaciju-labaratorija.html'),
         partneriuInterviu: path.resolve(__dirname, 'src/pages/partneriu-interviu.html'),
+        karjera: path.resolve(__dirname, 'src/pages/karjera.html'),
+        darboSkelbimai: path.resolve(__dirname, 'src/pages/darbo-skelbimai.html'),
         page404: path.resolve(__dirname, 'src/pages/404.html'),
        
       }
