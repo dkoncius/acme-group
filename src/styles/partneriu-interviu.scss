@@ -12,6 +12,7 @@ button, a, .logo, .right {
 
 
 header {
+    mix-blend-mode:normal;
     .logo {
         transform: translateY(0%);
         clip-path: inset(0 0 0% 0);
@@ -40,13 +41,8 @@ main {
 .section-1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 772px;
+    grid-auto-rows: 808px;
     color: var(--blue-extra-light);
-
-
-    @media (max-width: 1000px){
-        grid-template-columns: repeat(4, 300px);
-    }
 
     .content {
         grid-column: 1/3;
@@ -68,8 +64,8 @@ main {
         background-size: cover;
         position: absolute;
         right: 600px;
-        width: 1142.87px;
-        height: 756.34px;
+        width: 1267.87px;
+        height: 807.34px;
         z-index: -1;
 
         &::before {
@@ -107,10 +103,12 @@ main {
     .content {
         display: grid;
         grid-template-columns: repeat(6, 250px);
+        grid-auto-rows: minmax(50px, auto);
         width: 100%;
         font-weight: 400;
         right: 1116px;
         color: var(--blue-dark);
+        column-gap: 50px;
 
         h2 {
             margin: 50px 0;
@@ -130,6 +128,7 @@ main {
         grid-template-columns: repeat(6, 250px);
         grid-auto-rows: minmax(100px, 1fr);
         grid-column: span 4;
+        gap: 50px;
         width: 100vw;
 
         &:first-of-type {
@@ -147,7 +146,8 @@ main {
 
         .article-image {
             grid-column: 1/4;
-            width: 90%;
+            height: 143%;
+            width: 86%;
             max-height: 550px;
             object-fit: cover;
             position: relative;
@@ -161,9 +161,10 @@ main {
             .shape-3 {
                 background: url('/tvarumas/partneriu-interviu-shape-2.svg');
                 position: absolute;
-                top: -41.5px;
-                width: 102%;
-                height: 99%;
+                top: -43px;
+                left: -10px;
+                width: 877px;
+                height: 276px;
                 background-repeat: no-repeat;
                 background-size: contain;
                 z-index: 1;
@@ -209,13 +210,7 @@ main {
         grid-column: 4;
         grid-row: 4;
         position: relative;
-        top: -100px;
-    }
-
-    @media (max-width: 900px) {
-        article .article-content {
-            gap: 15px;
-        }
+        align-self: start;
     }
 }
 
@@ -234,5 +229,48 @@ footer {
 
     .copywrites a {
         color: var(--blue-extra-light);
+    }
+}
+
+
+
+@media (max-width: 1000px){
+    .section-1 {
+        grid-template-columns: repeat(4, 300px);
+    }
+}
+
+@media (max-width: 900px) {
+    .news article .article-content {
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 1600px) {
+
+    .section-1 {
+        .shape-1 {
+            left: -400px;
+        }
+    }
+
+    .news .content {
+        gap: 0;
+    }
+
+    .news article {
+        gap: 0;
+        .article-image {
+            width: 70%;
+
+            .shape-3 {
+                width: 798px;
+            }
+        }
+
+        .article-content {
+            width: 100%;
+        }
     }
 }
