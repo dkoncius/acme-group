@@ -283,6 +283,7 @@
         background: var(--blue-extra-light);
     }
 }
+
 .socialine-atsakomybe .swiper.gallery-swiper  {
     background: rgb(21, 39, 106, 0.8);  
 
@@ -309,6 +310,50 @@
 
     .video-play-icon {
         background: url('/tvarumas/video-icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+   
+}
+
+// Karjera
+.karjera .gallery {
+    .left > *, .right .right-image > * {
+        cursor: url('/icons/pointer-burgundy.svg'), pointer;
+    }
+
+    .gallery-shape::before {
+        background: var(--burgundy-extra-light);
+    }
+}
+.karjera .swiper.gallery-swiper  {
+    background: rgb(116, 53, 87, 0.8);
+
+    .swiper-button-prev:after {
+        content: url("/karjera/swiper-prev-icon.svg");
+    }
+
+    .swiper-button-next:after {
+        content: url("/karjera/swiper-next-icon.svg");
+    }
+
+    .swiper-slide-counter {
+        color: var(--blue-extra-light);
+    }
+
+    .swiper-exit {
+        color: var(--burgundy-extra-light);
+        cursor: url("/icons/pointer-burgundy.svg"), pointer;
+
+        .line {
+            color: var(--burgundy-extra-light);
+        }
+    }
+
+    .video-play-icon {
+        background: url('/karjera/video-icon.svg');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;

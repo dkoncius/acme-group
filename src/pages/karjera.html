@@ -30,10 +30,11 @@
     <link rel="stylesheet" href="/src/styles/header.scss">
     <link rel="stylesheet" href="/src/styles/tabs.scss">
     <link rel="stylesheet" href="/src/styles/karjera.scss">
+    <link rel="stylesheet" href="/src/styles/gallery.scss">
     <link rel="stylesheet" href="/src/styles/footer.scss">
   </head>
   <body>
-  <body>
+  <body class="karjera">
    <!-- Navigation -->
    <header>
     <a href="landing.html" class="logo">
@@ -265,6 +266,135 @@
             </div>
         </div>
       </section>
+
+      <div class="gallery">
+        <div class="gallery-shape">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1326" viewBox="0 0 1180 1326" fill="none">
+            <path d="M587.208 948.111L616.925 467.922L642.947 47.5406C859.445 31.9245 1075.94 16.3085 1292.44 0.692398C1292.44 0.651678 1292.44 0.600778 1292.44 0.560059C929.191 26.7633 565.931 52.9665 202.682 79.1697C96.876 86.8047 13.0194 171.512 6.47334 277.384L0.609375 372.19C91.1545 365.654 181.7 359.129 272.245 352.593C367.28 345.742 446.3 424.749 439.449 519.789C420.065 788.438 400.692 1057.09 381.308 1325.75C654.379 1308.84 927.45 1291.94 1200.51 1275.03C1200.51 1274.99 1200.51 1274.94 1200.51 1274.9C988.523 1288.02 776.535 1301.14 564.547 1314.27L587.208 948.132V948.111Z" fill="#743557"/>
+            </svg>
+        </div>
+        <div class="left gallery-item">
+          <video src="/landing/bg-video.mp4"></video>
+        </div>
+        <div class="right">
+          <div class="right-image gallery-item">
+            <img src="/images/activities-1.jpg" alt="activities-1">
+          </div>
+          <div class="right-image gallery-item">
+            <img src="/images/activities-2.jpg" alt="activities-2">
+          </div>
+          <div class="right-image gallery-item">
+            <img src="/images/activities-3.jpg" alt="activities-3">
+          </div>
+          <!-- ... more gallery items ... -->
+        </div>
+      </div>
+    
+      <!-- Gallery swiper -->
+      <div class="swiper gallery-swiper">
+        <div class="swiper-slide-counter"></div>
+        <div class="swiper-exit">
+          <span>uždaryti</span> 
+          <span class="line"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+            <circle cx="25.5811" cy="25.5811" r="25.5811" fill="#EEE9E6"/>
+            <path d="M13.2031 14.0283L37.1338 37.959" stroke="#743557" stroke-width="2" stroke-linecap="round"/>
+            <path d="M13.2031 37.1338L37.1338 13.2031" stroke="#743557" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <video src="/landing/bg-video.mp4" type="video/mp4"></video>
+          </div>
+          <div class="swiper-slide"><img src="/images/activities-1.jpg" alt="Image 1"></div>
+          <div class="swiper-slide"><img src="/images/activities-2.jpg" alt="Image 2"></div>
+          <div class="swiper-slide"><img src="/images/activities-3.jpg" alt="Image 3"></div>
+          <!-- ... more slides ... -->
+        </div>
+        
+        <!-- If you want navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+  
+      </div>
+
+
+      <section class="acme-human">
+        <div class="content">
+            <h2>Acme žmogus</h2>
+            <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </p>
+            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+            <div class="check-list">
+              <ul>
+                <li>
+                  <img src="/karjera/check.svg" alt="">Prisiima atsakomybę
+                </li>
+                <li>
+                  <img src="/karjera/check.svg" alt="">Prisiima atsakomybę
+                </li>
+                <li>
+                  <img src="/karjera/check.svg" alt="">Prisiima atsakomybę
+                </li>
+                <li>
+                  <img src="/karjera/check.svg" alt="">Prisiima atsakomybę
+                </li>
+              </ul>
+              
+              <ul>
+                <li>
+                  <img src="/karjera/check.svg" alt="">Prisiima atsakomybę
+                </li>
+                <li>
+                  <img src="/karjera/check.svg" alt="">Prisiima atsakomybę
+                </li>
+                <li>
+                  <img src="/karjera/check.svg" alt="">Prisiima atsakomybę
+                </li>
+                <li>
+                  <img src="/karjera/check.svg" alt="">Prisiima atsakomybę
+                </li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="content-2">
+          <h3>Įdarbinio procesas</h3>
+          <div class="steps">
+            <div class="step">
+              <div class="number">1</div>
+              <p>Nuotolinis pokalbis su atrankos specialistus</p>
+            </div>
+            <div class="step">
+              <div class="number">3</div>
+              <p>Nuotolinis pokalbis su atrankos specialistus</p>
+            </div>
+            <div class="step">
+              <div class="number">4</div>
+              <p>Nuotolinis pokalbis su atrankos specialistus</p>
+            </div>
+            <div class="step">
+              <div class="number">5</div>
+              <p>Nuotolinis pokalbis su atrankos specialistus</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <h2>Rekomendacija</h2>
+          <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </p>
+          <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </p>
+      </div>
+
+      <div class="content">
+        <h2>Rekomendacija</h2>
+        <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </p>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </p>
+    </div>
+      </section>
         
       <footer>
         <svg  class="footer-forma" xmlns="http://www.w3.org/2000/svg" width="1625" height="501" viewBox="0 0 1625 501" fill="none">
@@ -332,6 +462,7 @@
 
     <script type="module" src="/src/scripts/navigation.js"></script>
     <script type="module" src="/src/scripts/karjera-tabs.js"></script>
+    <script type="module" src="/src/scripts/gallery-karjera.js"></script>
     <!-- <script type="module">
       import gsap from "gsap";
       import ScrollTrigger from "gsap/ScrollTrigger";
