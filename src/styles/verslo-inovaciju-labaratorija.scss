@@ -40,7 +40,7 @@ main {
 .section-1 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 567px 649px 169px;
+    grid-template-rows: 600px 810px 168px;
     color: var(--dark-green);
     margin: auto;
     position: relative;
@@ -66,8 +66,8 @@ main {
         position: absolute;
         top: -50px;
         right: -182px;
-        width: 2200px;
-        height: 1417.1px;
+        width: 2335px;
+        height: 1712px;
         z-index: -1;
 
         &::before {
@@ -95,13 +95,13 @@ main {
     }
 
     .shape-2 {
-        width: 86%;
-        height: 735px;
+        width: 1000px;
+        height: 812px;
         object-fit: cover;
         object-position: center;
         position: absolute;
-        top: 633px;
-        right: 685px;
+        top: 753px;
+        left: 0px;
         z-index: -2;
     }
 
@@ -132,13 +132,14 @@ main {
 .section-2 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 450px 400px;
     color: var(--blue-dark);
     margin: auto;
     position: relative;
     background: var(--blue-extra-light);
     transform: rotate(-3deg);
     width: 120%;
+    margin-top: -100px;
     left: -100px;
 
     .shape-3 {
@@ -157,20 +158,24 @@ main {
         right: 18px;
         width: 728.018px;
         height: 728.019px;
+        border-radius: 200px 0 0 200px;
+        overflow: hidden;
 
         .shape-2 {
             position: absolute;
-            right: -187px;
-            top: -4px;
-            width: 120%;
-            height: 100px;
+            right: -153px;
+            top: -72px;
+            width: 875px;
+            height: 168px;
             background: url('/tvarumas/inovaciju-shape-2.svg');
             background-repeat: no-repeat;
+            background-size: cover;
         }
 
         img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
     }
 
@@ -178,6 +183,7 @@ main {
         display: flex;
         gap: 30px;
         margin-bottom: 30px;
+        margin: 50px 0;
 
         img {
             width: 19%;
@@ -247,6 +253,7 @@ main {
         display: flex;
         gap: 30px;
         margin-bottom: 30px;
+        margin: 50px 0;
 
         img {
             width: 19%;
@@ -316,7 +323,7 @@ footer {
         grid-template-columns: repeat(6, 250px);
 
         .shape-1 {
-            left: -200px;
+            left: -400px;
         }
 
         h1 {
@@ -325,9 +332,13 @@ footer {
         }
 
         .content {
-            left: 250px;
-            top: 104px;
+            left: 125px;
+            top: 182px;
         }
+    }
+
+    .section-2 {
+        grid-template-rows: 400px 400px;
     }
 }
 
