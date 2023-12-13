@@ -29,6 +29,7 @@ export default defineConfig({
         partneriuInterviu: path.resolve(__dirname, 'src/pages/partneriu-interviu.html'),
         karjera: path.resolve(__dirname, 'src/pages/karjera.html'),
         darboSkelbimai: path.resolve(__dirname, 'src/pages/darbo-skelbimai.html'),
+        mentoryste: path.resolve(__dirname, 'src/pages/mentoryste.html'),
         page404: path.resolve(__dirname, 'src/pages/404.html'),
        
       }
