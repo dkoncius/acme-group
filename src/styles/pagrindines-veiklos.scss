@@ -34,7 +34,7 @@ main {
 .section-1 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 532px 640px 100px;
+    grid-template-rows: 600px 810px 168px;
     color: var(--dark-green);
     margin: auto;
     position: relative;
@@ -48,8 +48,8 @@ main {
         position: absolute;
         top: -50px;
         right: -182px;
-        width: 1924.42px;
-        height: 1362.1px;
+        width: 2335px;
+        height: 1712px;
         z-index: -1;
 
         &::before {
@@ -77,13 +77,13 @@ main {
     }
 
     .shape-2 {
-        width: 86%;
-        height: 735px;
+        width: 1000px;
+        height: 812px;
         object-fit: cover;
         object-position: center;
         position: absolute;
-        top: 577px;
-        right: 685px;
+        top: 753px;
+        left: 0px;
         z-index: -2;
     }
 
@@ -120,13 +120,14 @@ main {
 .section-2 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 450px 400px;
     color: var(--dark-green);
     margin: auto;
     position: relative;
     background: var(--green-light);
     transform: rotate(-3deg);
     width: 120%;
+    margin-top: -100px;
     left: -100px;
 
     .shape-3 {
@@ -145,15 +146,18 @@ main {
         right: 18px;
         width: 728.018px;
         height: 728.019px;
+        border-radius: 200px 0 0 200px;
+        overflow: hidden;
 
         .shape-2 {
             position: absolute;
-            right: -187px;
-            top: -4px;
-            width: 120%;
-            height: 100px;
+            right: -153px;
+            top: -72px;
+            width: 875px;
+            height: 168px;
             background: url('/pagrindines-veiklos/shape-2.svg');
             background-repeat: no-repeat;
+            background-size: cover;
         }
 
         img {
@@ -307,6 +311,29 @@ main {
         .section-1 .content {
             grid-column: 4/7;
         }
+}
+
+@media (max-width: 1800px) {
+    .section-1 {
+        grid-template-columns: repeat(6, 250px);
+
+        .shape-1 {
+            left: -400px;
+        }
+
+        h1 {
+            left: -55px;
+        }
+
+        .content {
+            left: 125px;
+            top: 182px;
+        }
+    }
+
+    .section-2 {
+        grid-template-rows: 400px 400px;
+    }
 }
 
 

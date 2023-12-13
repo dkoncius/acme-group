@@ -318,6 +318,14 @@ footer {
     
 }
 
+
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+        .section-1 .content {
+            grid-column: 4/7;
+        }
+}
+
 @media (max-width: 1800px) {
     .section-1 {
         grid-template-columns: repeat(6, 250px);
@@ -342,13 +350,6 @@ footer {
     }
 }
 
-@media (min-width: 1201px) and (max-width: 1600px) {
-        .section-1 .content {
-            grid-column: 4/7;
-        }
-}
-
-
 @media (min-width: 1800px){
     .section-1 {
         h1 {
@@ -356,6 +357,7 @@ footer {
         }
     }
 }
+
 
 @media (min-width: 2000px){
     .section-1 {
