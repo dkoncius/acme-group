@@ -1,14 +1,13 @@
 body {
-    background: var(--green-light);
+    background: var(--burgundy-extra-light) !important;
     min-height: auto;
-    & > *,
-    a {
+    & > * {
         cursor: url('/icons/cursor-green.svg'), pointer;
     }
 }
 
 button, a, .logo, .right {
-    cursor: url('/icons/pointer-green.svg'), pointer;
+    cursor: url('/icons/pointer-green.svg'), pointer !important;
 }
 
 header {
