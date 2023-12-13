@@ -36,7 +36,7 @@
   <body class="karjera">
    <!-- Navigation -->
    <header>
-    <a href="landing.html" class="logo">
+    <a href="landing.html" class="logo next-page-link">
       <img src="/karjera/logo-dark.svg" alt="">
     </a>
     <div class="right">
@@ -102,7 +102,7 @@
               <h2>Morem ipsum</h2>
               <p>Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
               <p>Curabitur tempus urna at turpis condimentum lobortis.</p>
-              <a class="button" href="darbo-skelbimai.html">Susisiekite</a>
+              <a class="button next-page-link" href="darbo-skelbimai.html">Susisiekite</a>
             </div>
 
             <div class="content-info">
@@ -180,17 +180,17 @@
    
   
         <div class="social">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Youtube</a>
+            <a href="#" class="next-page-link">Facebook</a>
+            <a href="#" class="next-page-link">Instagram</a>
+            <a href="#" class="next-page-link">LinkedIn</a>
+            <a href="#" class="next-page-link">Youtube</a>
         </div>
   
         <hr>
   
         <div class="copywrites">
           <p>@ 2023 ACME grupė. Visos teisės saugomos</p>
-          <a href="privatumo-politika.html">Privatumo politika</a>
+          <a href="privatumo-politika.html" class="next-page-link">Privatumo politika</a>
       </div>
     </footer>
 
@@ -251,6 +251,22 @@
           ease: "power3.inOut",
           stagger: 0.5
         }, "2.5");
+
+        document.addEventListener("DOMContentLoaded", function() { 
+         document.querySelectorAll('.next-page-link').forEach(link => {
+         link.addEventListener('click', function(e) {
+           e.preventDefault();
+           const url = this.href;
+   
+           gsap.to('#mainContent', {
+             opacity: 0,
+             duration: 1,
+             ease: "power3.inOut",
+             onComplete: () => window.location.href = url
+           });
+         });
+       });
+       })
 
 
     </script>

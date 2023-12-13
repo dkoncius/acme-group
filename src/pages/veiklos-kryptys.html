@@ -35,7 +35,7 @@
   <body>
     <!-- Navigation -->
     <header>
-        <a href="landing.html" class="logo">
+        <a href="landing.html" class="logo next-page-link">
           <img src="/svg/acme-dark-logo.svg" alt="">
         </a>
         <div class="right">
@@ -98,7 +98,7 @@
                 <h1>Veiklos kryptys</h1>
                 <p>Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.</p>
                 <p>Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
-                <a href="#" class="button">Daugiau informacijos</a>
+                <a href="#" class="button next-page-link">Daugiau informacijos</a>
             </div>
 
             <div class="content content-left">
@@ -110,7 +110,7 @@
                     <img src="/veiklos-kryptys/brand-2.svg" alt="brand-2">
                     <img src="/veiklos-kryptys/brand-3.svg" alt="brand-3">
                 </div>
-                <a href="pagrindines-veiklos.html" class="button">Daugiau informacijos</a>
+                <a href="pagrindines-veiklos.html" class="button next-page-link">Daugiau informacijos</a>
                
             </div>
 
@@ -123,7 +123,7 @@
                     <img src="/veiklos-kryptys/brand-2.svg" alt="brand-2">
                     <img src="/veiklos-kryptys/brand-3.svg" alt="brand-3">
                 </div>
-                <a href="#" class="button">Daugiau informacijos</a>
+                <a href="#" class="button next-page-link">Daugiau informacijos</a>
             </div>
         </section>
 
@@ -158,17 +158,17 @@
        
 
             <div class="social">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Youtube</a>
+                <a href="#" class="next-page-link">Facebook</a>
+                <a href="#" class="next-page-link">Instagram</a>
+                <a href="#" class="next-page-link">LinkedIn</a>
+                <a href="#" class="next-page-link">Youtube</a>
             </div>
    
             <hr>
 
             <div class="copywrites">
               <p>@ 2023 ACME grupė. Visos teisės saugomos</p>
-              <a href="privatumo-politika.html">Privatumo politika</a>
+              <a href="privatumo-politika.html" class="next-page-link">Privatumo politika</a>
           </div>
         </footer>
 
@@ -214,6 +214,22 @@
         clipPath: "inset(0 0 0 100%)",
         stagger: 0.5
       }, "0.9");
+
+      document.addEventListener("DOMContentLoaded", function() { 
+         document.querySelectorAll('.next-page-link').forEach(link => {
+         link.addEventListener('click', function(e) {
+           e.preventDefault();
+           const url = this.href;
+   
+           gsap.to('#mainContent', {
+             opacity: 0,
+             duration: 1,
+             ease: "power3.inOut",
+             onComplete: () => window.location.href = url
+           });
+         });
+       });
+       })
     </script>
     </body>
 </html>

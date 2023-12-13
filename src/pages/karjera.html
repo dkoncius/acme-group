@@ -37,7 +37,7 @@
   <body class="karjera">
    <!-- Navigation -->
    <header>
-    <a href="landing.html" class="logo">
+    <a href="landing.html" class="logo next-page-link">
       <img src="/karjera/logo-dark.svg" alt="">
     </a>
     <div class="right">
@@ -97,7 +97,7 @@
 
             <div class="content">
               <h1>Darbas Acme Grupėje</h1>
-              <a class="button" href="darbo-skelbimai.html">Atviros pozicijos</a>
+              <a class="button next-page-link" href="darbo-skelbimai.html">Atviros pozicijos</a>
             </div>
 
             <div class="content-2">
@@ -152,7 +152,7 @@
               <p class="job-city">Vilnius</p>
               <img class="job-logo" src="/karjera/logo-dark.svg" alt="">
               <a href="#">
-                <img class="job-link" src="/karjera/arrow.svg" alt="">
+                <img class="job-link next-page-link" src="/karjera/arrow.svg" alt="">
               </a>
               <hr>
           </div>
@@ -161,7 +161,7 @@
               <p class="job-city">Vilnius</p>
               <img class="job-logo" src="/karjera/logo-dark.svg" alt="">
               <a href="#">
-                <img class="job-link" src="/karjera/arrow.svg" alt="">
+                <img class="job-link next-page-link" src="/karjera/arrow.svg" alt="">
               </a>
               <hr>
           </div>
@@ -170,7 +170,7 @@
               <p class="job-city">Vilnius</p>
               <img class="job-logo" src="/karjera/logo-dark.svg" alt="">
               <a href="#">
-                <img class="job-link" src="/karjera/arrow.svg" alt="">
+                <img class="job-link next-page-link" src="/karjera/arrow.svg" alt="">
               </a>
               <hr>
           </div>
@@ -179,14 +179,14 @@
               <p class="job-city">Vilnius</p>
               <img class="job-logo" src="/karjera/logo-dark.svg" alt="">
               <a href="#">
-                <img class="job-link" src="/karjera/arrow.svg" alt="">
+                <img class="job-link next-page-link" src="/karjera/arrow.svg" alt="">
               </a>
               <hr>
           </div>
           <div class="job">
-              <a class="button-outline" href="darbo-skelbimai.html">
+              <a class="button-outline next-page-link" href="darbo-skelbimai.html">
                 <span>Visi darbo skelbimai</span>
-                <img class="button-outline-icon" src="/karjera/arrow.svg" alt="">
+                <img class="button-outline-icon next-page-link" src="/karjera/arrow.svg" alt="">
               </a>
              
           </div>
@@ -444,17 +444,17 @@
    
   
         <div class="social">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Youtube</a>
+            <a href="#" class="next-page-link">Facebook</a>
+            <a href="#" class="next-page-link">Instagram</a>
+            <a href="#" class="next-page-link">LinkedIn</a>
+            <a href="#" class="next-page-link">Youtube</a>
         </div>
   
         <hr>
   
         <div class="copywrites">
           <p>@ 2023 ACME grupė. Visos teisės saugomos</p>
-          <a href="privatumo-politika.html">Privatumo politika</a>
+          <a href="privatumo-politika.html" class="next-page-link">Privatumo politika</a>
       </div>
     </footer>
 
@@ -500,7 +500,21 @@
         });
       });
 
-
+      document.addEventListener("DOMContentLoaded", function() { 
+         document.querySelectorAll('.next-page-link').forEach(link => {
+         link.addEventListener('click', function(e) {
+           e.preventDefault();
+           const url = this.href;
+   
+           gsap.to('#mainContent', {
+             opacity: 0,
+             duration: 1,
+             ease: "power3.inOut",
+             onComplete: () => window.location.href = url
+           });
+         });
+       });
+       })
 
     </script>
     </body>

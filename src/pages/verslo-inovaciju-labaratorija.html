@@ -35,7 +35,7 @@
   <body>
    <!-- Navigation -->
    <header>
-    <a href="landing.html" class="logo">
+    <a href="landing.html" class="logo next-page-link">
       <img src="/tvarumas/Acme_logo_tamsiai_melyna.svg" alt="">
     </a>
     <div class="right">
@@ -103,7 +103,7 @@
                 <p>Bendrovė atstovauja daugiau nei 200 informacinių technologijų, kompiuterinės technikos, programinės įrangos, garso, vaizdo ir fotografijos, kompiuterinių žaidimų bei buitinės technikos tiekėjų ir prekinių ženklų, tarp kurių tokie vardai kaip Dell, Lenovo, Asus, Acer, Microsoft, LG, Samsung, Huawei ir kiti.</p>
 
                 <p> UAB ACC Distribution ir jai priklausančiose bendrovėse dirba virš 200 darbuotojų, kurie aptarnauja daugiau kaip 4000 klientų Baltijos šalyse.</p>
-                <a class="button" href="#">Daugiau informacijos</a>
+                <a class="button next-page-link" href="#">Daugiau informacijos</a>
             </div>
         </section>
 
@@ -127,7 +127,7 @@
                     <img src="/tvarumas/brand-3.svg" alt="brand-3">
                 </div>
 
-                <a href="#" class="button">Daugiau informacijos</a>
+                <a href="#" class="button next-page-link">Daugiau informacijos</a>
             </div>
         </section>
 
@@ -149,7 +149,7 @@
                 <img src="/tvarumas/brand-3.svg" alt="brand-3">
               </div>
 
-              <a href="#" class="button">Daugiau informacijos</a>
+              <a href="#" class="button next-page-link">Daugiau informacijos</a>
           </div>
       </section>
      
@@ -202,17 +202,17 @@
    
   
         <div class="social">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Youtube</a>
+            <a href="#" class="next-page-link">Facebook</a>
+            <a href="#" class="next-page-link">Instagram</a>
+            <a href="#" class="next-page-link">LinkedIn</a>
+            <a href="#" class="next-page-link">Youtube</a>
         </div>
   
         <hr>
   
         <div class="copywrites">
           <p>@ 2023 ACME grupė. Visos teisės saugomos</p>
-          <a href="privatumo-politika.html">Privatumo politika</a>
+          <a href="privatumo-politika.html" class="next-page-link">Privatumo politika</a>
       </div>
     </footer>
 
@@ -256,7 +256,21 @@
         });
       });
 
-
+      document.addEventListener("DOMContentLoaded", function() { 
+         document.querySelectorAll('.next-page-link').forEach(link => {
+         link.addEventListener('click', function(e) {
+           e.preventDefault();
+           const url = this.href;
+   
+           gsap.to('#mainContent', {
+             opacity: 0,
+             duration: 1,
+             ease: "power3.inOut",
+             onComplete: () => window.location.href = url
+           });
+         });
+       });
+       })
 
     </script>
     </body>

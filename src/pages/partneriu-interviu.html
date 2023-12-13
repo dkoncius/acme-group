@@ -35,7 +35,7 @@
   <body>
    <!-- Navigation -->
    <header>
-    <a href="landing.html" class="logo">
+    <a href="landing.html" class="logo next-page-link">
       <img src="/tvarumas/Acme_logotipas_sviesiai_melyna.svg" alt="">
     </a>
     <div class="right">
@@ -202,17 +202,17 @@
    
   
         <div class="social">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Youtube</a>
+            <a href="#" class="next-page-link">Facebook</a>
+            <a href="#" class="next-page-link">Instagram</a>
+            <a href="#" class="next-page-link">LinkedIn</a>
+            <a href="#" class="next-page-link">Youtube</a>
         </div>
   
         <hr>
   
         <div class="copywrites">
           <p>@ 2023 ACME grupė. Visos teisės saugomos</p>
-          <a href="privatumo-politika.html">Privatumo politika</a>
+          <a href="privatumo-politika.html" class="next-page-link">Privatumo politika</a>
       </div>
     </footer>
 
@@ -220,42 +220,90 @@
 
     <script type="module" src="/src/scripts/navigation.js"></script>
     <script type="module">
-      import gsap from "gsap";
+       import gsap from "gsap";
       import ScrollTrigger from "gsap/ScrollTrigger";
       gsap.registerPlugin(ScrollTrigger);
 
+         //   Scroll to top after refresh
+         window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        }
+
+    document.body.style.overflow = 'hidden';
+
       // Landing
-      //   Scroll to top after refresh
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    }
+      document.addEventListener("DOMContentLoaded", function() {
+        const tl = gsap.timeline();
+ 
+        tl.from('.section-1, .news', {
+              duration: 1,
+              ease: "power3.inOut",
+              x: "-50%"
+            }, "<");  
 
-      document.body.style.overflow = 'hidden';
+          tl.from('.section-1 .content', {
+              opacity: 0,
+              duration: 1,
+              ease: "power3.inOut",
+            }, "0.5");  
 
+            tl.eventCallback("onComplete", () => {
+        document.body.style.overflow = 'auto';
+      });
+            
+      });
+
+
+
+      
       document.addEventListener("DOMContentLoaded", function() {
         const tl = gsap.timeline();
 
-        tl.to('.section-1', {
-          x: 0,
+        tl.to('.news', {
           duration: 1,
           ease: "power3.inOut",
-          clipPath: "inset(0 0 0 0%)"
+          clipPath: "inset(0 0 0 %)"
         }, "0.5");  
 
-        tl.from('.section-1 .content', {
+        tl.from('.news .content .categories', {
+          opacity: 0,
+          duration: 1,
+          ease: "power3.inOut",
+        }, "0.5");
+
+
+        tl.from('.news .content:not(:first-of-type) .article-image', {
           x: -500,
           opacity: 0,
           duration: 1,
           ease: "power3.inOut",
-          clipPath: "inset(0 0 0 100%)",
-          stagger: 0.5
-        }, "0.9");
+          stagger: 1
+        }, "0.5");
 
-        tl.eventCallback("onComplete", () => {
-          document.body.style.overflow = 'auto';
-        });
+        tl.from('.news .content .article-content', {
+          x: 500,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.inOut",
+          stagger: 1
+        }, "1");
       });
 
+      document.addEventListener("DOMContentLoaded", function() { 
+        document.querySelectorAll('.next-page-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = this.href;
+  
+          gsap.to('#mainContent', {
+            opacity: 0,
+            duration: 1,
+            ease: "power3.inOut",
+            onComplete: () => window.location.href = url
+          });
+        });
+      });
+      })
 
 
     </script>
