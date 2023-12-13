@@ -63,6 +63,8 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 430px;
     color: var(--blue-dark);
+    clip-path: inset(0 0 0 100%);
+    transform: translateX(-300px);
 
 
     @media (max-width: 1000px){
@@ -376,9 +378,9 @@ footer {
         &::before {
             content: "";
             position: absolute;
-            top: 72px;
-            left: -538px;
-            width: 100%;
+            top: 108px;
+            left: -911px;
+            width: 81%;
             height: 74%;
             background: var(--blue-dark);
             transform: rotate(-4deg);

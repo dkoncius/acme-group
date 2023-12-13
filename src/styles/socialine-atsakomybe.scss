@@ -63,6 +63,8 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 600px 400px;
     color: var(--blue-dark);
+    clip-path: inset(0 0 0 100%);
+    transform: translateX(-300px);
 
 
     @media (max-width: 1000px){

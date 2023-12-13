@@ -265,20 +265,6 @@
           clipPath: "inset(0 0 0 %)"
         }, "0.5");  
 
-        tl.from('.news .content .categories', {
-          opacity: 0,
-          duration: 1,
-          ease: "power3.inOut",
-        }, "0.5");
-
-
-        tl.from('.news .content:not(:first-of-type) .article-image', {
-          x: -500,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.inOut",
-          stagger: 1
-        }, "0.5");
 
         tl.from('.news .content .article-content', {
           x: 500,

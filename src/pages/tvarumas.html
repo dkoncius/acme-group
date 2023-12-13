@@ -300,37 +300,36 @@
       import ScrollTrigger from "gsap/ScrollTrigger";
       gsap.registerPlugin(ScrollTrigger);
 
-         //   Scroll to top after refresh
-         window.onbeforeunload = function () {
-          window.scrollTo(0, 0);
-        }
+      //   Scroll to top after refresh
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
 
-    document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
 
-      // Landing
       document.addEventListener("DOMContentLoaded", function() {
         const tl = gsap.timeline();
- 
-        tl.from('.section-1', {
-              duration: 1,
-              ease: "power3.inOut",
-              scale: 1.1
-            }, "<");  
 
-          tl.from('.section-1 .content', {
-              x: -300,
-              opacity: 0,
-              duration: 1,
-              ease: "power3.inOut",
-              clipPath: "inset(0 0 0 100%)"
-            }, "0.5");  
+        tl.to('.section-1', {
+          x: 0,
+          duration: 1,
+          ease: "power3.inOut",
+          clipPath: "inset(0 0 0 0%)"
+        }, "0.5");  
 
-            tl.eventCallback("onComplete", () => {
-        document.body.style.overflow = 'auto';
+        tl.from('.section-1 .content', {
+          x: -500,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.inOut",
+          clipPath: "inset(0 0 0 100%)",
+          stagger: 0.5
+        }, "0.9");
+
+        tl.eventCallback("onComplete", () => {
+          document.body.style.overflow = 'auto';
+        });
       });
-            
-      });
-
 
       document.addEventListener("DOMContentLoaded", function() { 
          document.querySelectorAll('.next-page-link').forEach(link => {
