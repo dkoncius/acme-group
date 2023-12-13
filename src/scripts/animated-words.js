@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         opacity: 1,
         stagger: 0.5, // 0.1 seconds between each word's animation
-        ease: "none",
+        ease: "none"
     });
 });
