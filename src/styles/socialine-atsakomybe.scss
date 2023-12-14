@@ -242,7 +242,7 @@ header {
 
 .tech-education {
     position: relative;
-    top: 200px;
+    top: 150px;
     background: var(--blue-extra-light);
     color: var(--blue-dark);
     margin-bottom: 400px;
@@ -257,6 +257,15 @@ header {
         background: var(--blue-extra-light);
         z-index: -1;
         transform: rotate(-4deg);
+    }
+
+    .tech-shape {
+        width: 30vw;
+        height: 600px;
+        position: absolute;
+        right: 0;
+        border-radius: 200px 0 0 200px;
+        object-fit: cover;
     }
 
     .content {
@@ -387,6 +396,13 @@ footer {
     }
 }
 
+
+@media (max-width: 1025px){
+    .tech-education .content .projects {
+        grid-template-columns: 200px 1fr;
+        left: 0;
+    }
+}
 
 
 @media (max-width: 1600px) {
