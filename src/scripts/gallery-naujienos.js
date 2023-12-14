@@ -52,6 +52,7 @@ const swiper = new Swiper(gallerySwiper, {
             updateSlideCounter(this);
         },
         slideChange: function () {
+            const previousSlide = this.slides[this.previousIndex];
             if (previousSlide) {
                 const video = previousSlide.querySelector('video');
                 if (video) {
