@@ -103,7 +103,7 @@ header .right {
     nav .link {
         display: flex;
         gap: 20px;
-        font-size: clamp(30px, 4.5vw, 60px);
+        font-size: clamp(32px, 4.5vw, 60px);
         color: var(--dark-green);
         padding-left: 20%;
         line-height: 100px;
@@ -125,6 +125,20 @@ header .right {
         svg .fill {
             fill: #01494e;
             transition: 0.3s;
+        }
+    }
+}
+
+
+@media (max-width: 425px){
+    .logo img {
+        width: 90px;
+    }
+
+    .expanded-menu nav {
+        padding-top: 150px;
+        .link {
+            padding-left: 25px;
         }
     }
 }

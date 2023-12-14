@@ -63,7 +63,7 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 	}
 	
 	button {
-		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
+		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
 		height: 50px;
 		font-size: 1.2em;
 	}
@@ -71,7 +71,7 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 	button, p, a {
 		text-decoration: none;
 		font-size: clamp(16px, 1.2vw, 25px);
-		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
+		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
 	}
 
 	h1 {
@@ -94,7 +94,7 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 	}
 
 	.button {
-		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
+		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -105,6 +105,7 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 		color: var(--green-bright);
 		font-size: clamp(16px, 0.8vw, 25px);
 		border: none;
+		box-sizing: content-box;
 		transition: 0.3s;
 	}
 
@@ -114,7 +115,7 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 	}
 
 	.button-outline {
-		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
+		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
 		text-decoration: none;
 		display: flex;
 		justify-content: center;
@@ -124,8 +125,10 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 		color: var(--dark-green);
 		width: 165px;
 		height: 50px;
+		padding: 0 50px;
 		position: relative;
 		font-size: clamp(16px, 1.2vw, 25px);
+		box-sizing: content-box;
 		transition: 0.3s;
 
 
@@ -145,7 +148,7 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 
 
 	.button-left {
-		font-family:"CircularXXSub-Book", "Plus jakarta sans", sans-serif;
+		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
 		text-decoration: none;
 		display: flex;
 		justify-content: center;

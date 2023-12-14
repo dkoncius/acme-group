@@ -210,7 +210,7 @@ main {
             grid-column: 2;
             border-color: var(--burgundy-dark);
             color: var(--burgundy-dark);
-            width: 300px;
+            max-width: 360px;
 
             &:hover {
                 background: var(--burgundy-dark);
@@ -223,11 +223,12 @@ main {
 .mentorship {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 800px;
+    // grid-template-rows: 800px;
     position: relative;
+    padding-bottom: 300px;
 
     .mentorship-image {
-        width: 450px;
+        width: 40%;
         height: 600px;
         border-radius: 200px 0 0 100px;
         position: absolute;
@@ -464,4 +465,32 @@ footer {
     .copywrites, .copywrites a {
         color: var(--burgundy-extra-light) !important;
     }
+}
+
+
+@media (max-width: 1200px){
+    .section-info {
+        .icons {
+            justify-content: center;
+            flex-wrap: wrap;
+            transform: translate(0);
+
+            .icon {
+                width: 30%;
+            }
+        }
+    }
+
+    .mentorship {
+        .content {
+            transform: translate(150px, 99px);
+        }
+    }
+
+	.acme-human {
+		.acme-shape {
+			width: 450px;
+			left: -200px;
+		}
+	}
 }

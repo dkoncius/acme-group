@@ -87,3 +87,10 @@ main {
     }
 }
 
+@media (max-width: 1025px){
+    .news-content .content {
+        grid-column: 1/6;
+        margin-left: 50px;
+        width: 90vw;
+    }
+}

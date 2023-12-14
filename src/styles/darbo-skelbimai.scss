@@ -127,10 +127,13 @@ main {
         }
 
        .more {
+            display: block;
             color: var(--burgundy-dark);
             text-decoration: underline;
-            grid-column: 1/5;
             text-align: center;
+            margin: 30px auto;
+            position: relative;
+            left: -100px;
        }
 
        .no-job {
@@ -197,4 +200,12 @@ footer {
     .copywrites, .copywrites a {
         color: var(--burgundy-extra-light) !important;
     }
+}
+
+@media (max-width: 1024px){
+        .other-jobs {
+            .content {
+                grid-column: 2/5;
+            }
+        }
 }

@@ -8,6 +8,7 @@ body {
 
 button, a, .logo, .right {
     cursor: url('/icons/pointer-blue.svg'), pointer !important;
+    color: var(--blue-extra-light) !important;
 }
 
 
@@ -101,7 +102,7 @@ main {
 
     .content {
         display: grid;
-        grid-template-columns: repeat(6, 250px);
+        grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: minmax(50px, auto);
         width: 100%;
         font-weight: 400;
@@ -124,7 +125,7 @@ main {
 
     article {
         display: grid;
-        grid-template-columns: repeat(6, 250px);
+        grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: minmax(100px, 1fr);
         grid-column: span 4;
         gap: 50px;
@@ -172,7 +173,8 @@ main {
 
         .article-content {
             grid-column: 4/6;
-            width: 130%;
+            width: 100%;
+            max-width: 800px;
             margin-top: 15px;
             display: flex;
             flex-direction: column;
@@ -206,10 +208,9 @@ main {
     .more {
         color: var(--blue-dark);
         text-decoration: underline;
-        grid-column: 4;
+        grid-column: 3;
         grid-row: 4;
-        position: relative;
-        align-self: start;
+        margin: 30px 0;
     }
 }
 
@@ -218,7 +219,7 @@ main {
 
 
 footer {
-    color: var(--blue-extra-light);
+    color: var(--blue-extra-light) !important;
 
     .social {
         a:before {
@@ -227,23 +228,38 @@ footer {
     }
 
     .copywrites a {
-        color: var(--blue-extra-light);
+        color: var(--blue-extra-light) !important;
     }
 }
 
 
-
-@media (max-width: 1000px){
+@media (max-width: 1200px){
     .section-1 {
         grid-template-columns: repeat(4, 300px);
     }
-}
 
-@media (max-width: 900px) {
-    .news article .article-content {
-        gap: 15px;
+    .news .content {
+        grid-template-columns: repeat(6, 180px);
+
+        article {
+            grid-template-columns: repeat(6, 180px);
+
+            .article-content {
+                grid-column: span 3;
+                position: relative;
+                left: -120px;
+                width: 60%;
+            }
+        }
+
+        .more {
+            position: relative;
+            left: -120px;
+            grid-column: 4;
+        }
     }
 }
+
 
 
 @media (max-width: 1600px) {
@@ -260,6 +276,7 @@ footer {
 
     .news article {
         gap: 0;
+
         .article-image {
             width: 70%;
 
@@ -267,9 +284,15 @@ footer {
                 width: 798px;
             }
         }
+    }
+}
 
-        .article-content {
-            width: 100%;
+@media (min-width: 1601px) {
+    .news .content {
+        grid-template-columns: repeat(4, 250px);
+
+        article {
+            grid-template-columns: repeat(4, 250px);
         }
     }
 }

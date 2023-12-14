@@ -22,6 +22,7 @@
         transform: translate(-50%, -50%);
         width: 50px;
         height: 50px;
+        pointer-events: none;
     }
 
     .gallery-shape {
@@ -125,9 +126,9 @@
     width: 100%;
     height: 100%;
     z-index: 1000;
-    visibility: hidden;
     background: rgb(0, 74, 78, 0.8);
     user-select: none;
+    display: none;
 
     
     .video-play-icon {
@@ -269,7 +270,7 @@
 }
 
 .swiper.gallery-swiper.show {
-    visibility: visible;
+    display: block;
 }
 
 

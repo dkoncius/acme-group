@@ -30,7 +30,6 @@ function enableScrollAndRemoveOverlay() {
 swiperExit.addEventListener("click", () => {
     gallerySwiper.classList.remove("show");
     enableScrollAndRemoveOverlay();
-    swiper.slideTo(0);
 });
 
 // Initialize the swiper
@@ -53,10 +52,11 @@ const swiper = new Swiper(gallerySwiper, {
             updateSlideCounter(this);
         },
         slideChange: function () {
-            const previousSlide = this.slides[this.previousIndex];
-            const video = previousSlide.querySelector('video');
-            if (video) {
-                video.pause();
+            if (previousSlide) {
+                const video = previousSlide.querySelector('video');
+                if (video) {
+                    video.pause();
+                }
             }
             updateSlideCounter(this);
         }

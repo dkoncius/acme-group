@@ -132,3 +132,12 @@ main {
         }
     }
 }
+
+@media (max-width: 1025px){
+    .section-1 {
+        .content {
+            grid-column: 1;
+            padding: 0 50px;
+        }
+    }
+}
