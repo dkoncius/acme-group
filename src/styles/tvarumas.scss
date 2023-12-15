@@ -12,7 +12,6 @@ button, a, .logo, .right {
 
 
 header {
-    mix-blend-mode: multiply;
     .logo {
         transform: translateY(0%) !important;
         clip-path: inset(0 0 0% 0)!important;
@@ -21,12 +20,12 @@ header {
     .right {
         transform: translateY(0px) !important;
         clip-path: inset(0 0 0% 0) !important;
-        color: var(--blue-dark) !important;
+        color: var(--blue-dark);
 
         .menu .line,
         .menu .bubble,
         .language {
-            background: var(--blue-dark) !important;
+            background: var(--blue-dark);
         }
     }
 }
@@ -37,27 +36,6 @@ main {
     margin: auto;
     overflow: hidden;
 }
-
-
-header {
-    .logo {
-        transform: translateY(0%);
-        clip-path: inset(0 0 0% 0);
-    }
-
-    .right {
-        transform: translateY(0px);
-        clip-path: inset(0 0 0% 0);
-        color: var(--blue-dark) !important;
-
-        .menu .line,
-        .menu .bubble,
-        .language {
-            background: var(--blue-dark) !important;
-        }
-    }
-}
-
 
 .section-1 {
     display: grid;
@@ -91,6 +69,7 @@ header {
         }
 
         .button {
+            width: 250px;
             background: var(--blue-dark);
             color: var(--blue-extra-light);
         }
