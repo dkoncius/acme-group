@@ -20,7 +20,7 @@ const language = document.getElementById("language")
 
 let clicked = false
 menu?.addEventListener("click", function(){
-    console.log(this)
+  
 
     const bubble = this.querySelector(".bubble")
 
