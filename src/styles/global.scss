@@ -24,10 +24,10 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 	// Variables
 	 :root {
 		// Green
-		--green-light: #e5f5e5;
-		--green-spot: #a4f0ba;
-		--green-bright: #008f7f;
-		--dark-green: #01494e;
+		--green-light: #E6F5E4;
+		--green-spot: #A7F2B5;
+		--green-bright: #00917D;
+		--dark-green: #004A4E;
 	
 		// Blue
 		--blue-dark: #15276A;
@@ -98,7 +98,7 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 220px;
+		width: auto;
 		height: 50px;
 		border-radius: 0px 0px 26.5px 0px;
 		background:  var(--green-light);

@@ -8,7 +8,6 @@ body {
 
 button, a, .logo, .right {
     cursor: url('/icons/pointer-blue.svg'), pointer !important;
-    color: var(--blue-extra-light) !important;
 }
 
 
@@ -293,6 +292,10 @@ footer {
 
         article {
             grid-template-columns: repeat(4, 250px);
+        }
+
+        .more {
+            grid-column: 4;
         }
     }
 }
