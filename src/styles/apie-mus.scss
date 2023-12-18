@@ -251,6 +251,10 @@ main {
                 align-items: center;
                 gap: 15px;
             }
+
+            svg {
+                width: clamp(40px, 4vw, 81px);
+            }
         }
     }
   

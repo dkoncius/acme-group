@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     gsap.to("#text-container span", {
         scrollTrigger: {
             trigger: "#text-container",
-            start: "top-=100px bottom", // when the top of the trigger hits the bottom of the viewport
+            start: "top bottom", // when the top of the trigger hits the bottom of the viewport
             end: "center+=200px center", // when the bottom of the trigger hits the top of the viewport
             scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
             markers: false

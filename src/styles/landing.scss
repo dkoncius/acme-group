@@ -2,15 +2,18 @@ body {
     background: var(--green-light);
 }
 
-main {
-    max-width: 2000px;
-    overflow: hidden;
-    margin: auto;
+a {
+    color: var(--green-light);
 }
 
-button, a, .logo, .right {
-    cursor: url('/icons/pointer-green.svg'), pointer;
+
+main {
+    max-width: 2000px;
+    margin: auto;
+    overflow: hidden;
 }
+
+
 
 header {
     .logo {
@@ -547,6 +550,7 @@ footer {
             transition: 0.3s;
             position: relative;
             overflow: hidden;
+            height: clamp(20px, 1.5vw, 30px);
         }
 
         a:hover {
@@ -574,39 +578,70 @@ footer {
         grid-column: 1/5;
         grid-row: 4;
         display: flex;
-        gap: 150px;
+        gap: 50px;
         margin-top: 30px;
         color: var(--green-light);
         font-size: clamp(11px, 1.2vw, 21px);
 
+
         a {
             cursor: url("/icons/pointer-green.svg"), pointer;
-            color: var(--green-light);
+            opacity: 0.7;
+            transition: 0.3s;
             position: relative;
+            overflow: hidden;
             top: 2px;
+            height: clamp(20px, 1.5vw, 30px);
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background:  var(--green-bright);
+            transform: translate(-105%);
+            transition: 0.3s;
+        }
+
+        a:hover::before {
+            transform: translate(0%);
         }
     }
 
 
+
+  
     @media (max-width: 900px){
         .description {
-            width: 80%;
-            font-size: 12px;
+            width: 70%;
+            font-size: 16px;
         }
 
         .contact-1, .contact-1-img {
-            transform: translate(-70px, 0);
+            transform: translate(-120px, 0);
         }
 
         .contact-2, .contact-2-img {
-            transform: translate(-140px, 0);
+            transform: translate(-180px, 0);
         }
+
+      
 
     }
 
 
     @media (max-width: 1440px){
         grid-template-rows: 3fr 4fr 0fr 3fr;
+
+        .footer-forma {
+            width: 1200px;
+        }
 
         .social {
             margin-bottom: 15px;
@@ -1120,21 +1155,24 @@ footer {
 @media (min-width: 2201px){
 
     .news {
+         left: -30px;
+         top: 5px;
         .form-7 {
             top: -15px;
             right: 0;
-            left: 516px
+            left: 550px;
         }
 
         .form-8 {
-            top: -131px;
+            top: -125px;
+            right: 70px;
         }
     
         .news-img {
             top: -61px;
             right: 0;
             left: 1558px;
-            border-radius: 250px 0 0 0;
+            border-radius: 300px 0 0 0;
         }
     }
 }
