@@ -52,10 +52,8 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 	}
 	
 	body {
-		background: var(--green-light);
 		font-family: "CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
 		position: relative;
-		cursor: url("/icons/cursor-green.svg"), pointer;
 	}
 	
 	body::-webkit-scrollbar {
@@ -110,7 +108,6 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 	}
 
 	.button:hover {
-		cursor: url('/icons/pointer-green.svg'),pointer;
 		border-radius: 0;
 	}
 
@@ -164,7 +161,6 @@ src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
 	}
 
 	.button-left:hover {
-		cursor: url('/icons/pointer-green.svg'),pointer;
 		background: var(--dark-green);
 		color: var(--green-light);
 

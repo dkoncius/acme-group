@@ -1,5 +1,5 @@
 body {
-    background: var(--green-light) !important;
+    background: var(--green-light);
     min-height: auto;
     & > * {
         cursor: url('/icons/cursor-green.svg'), pointer;

@@ -1,5 +1,5 @@
 body {
-    background: var(--burgundy-extra-light) !important;
+    background: var(--burgundy-extra-light);
     min-height: auto;
     & > * {
         cursor: url('/icons/cursor-burgundy.svg'), pointer;
@@ -7,7 +7,7 @@ body {
 }
 
 button, a, .logo, .right {
-    cursor: url('/icons/pointer-burgundy.svg'), pointer !important;
+    cursor: url('/icons/pointer-burgundy.svg'), pointer;
 }
 
 

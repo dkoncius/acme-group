@@ -6,21 +6,30 @@ body {
     }
 }
 
-.button, a, .logo, .right {
-    cursor: url('/icons/pointer-blue.svg'), pointer !important;
+button, a, .logo, .right {
+    cursor: url('/icons/pointer-blue.svg'), pointer;
 }
+
 
 header {
     .logo {
         transform: translateY(0%) !important;
-        clip-path: inset(0 0 0% 0) !important;
+        clip-path: inset(0 0 0% 0)!important;
     }
 
     .right {
         transform: translateY(0px) !important;
         clip-path: inset(0 0 0% 0) !important;
+        color: var(--blue-dark);
+
+        .menu .line,
+        .menu .bubble,
+        .language {
+            background: var(--blue-dark);
+        }
     }
 }
+
 
 
 main {
