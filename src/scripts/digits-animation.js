@@ -7,12 +7,12 @@ const animateDigits = () => {
       const integerDigits = document.querySelectorAll('.number .digit:not(.digit-float)');
       const floatDigit = document.querySelector('.digit-float');
   
-      const animateValue = (element, start, end, duration) => {
+      const animateValue = (element, end, size) => {
           let startTimestamp = null;
           const step = (timestamp) => {
               if (!startTimestamp) startTimestamp = timestamp;
-              const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-              element.textContent = (progress * (end - start) + start).toFixed(1);
+              const progress = Math.min((timestamp - startTimestamp) / 2000, 1);
+              element.textContent = (progress * end).toFixed(size);
               if (progress < 1) {
                   window.requestAnimationFrame(step);
               }
@@ -23,13 +23,13 @@ const animateDigits = () => {
       // Start animation for the integer digits
       integerDigits.forEach((digit) => {
           const targetValue = parseInt(digit.textContent);
-          animateValue(digit, 0, targetValue, 2000); // Duration in milliseconds
+          animateValue(digit, targetValue, 0); // Duration in milliseconds
       });
   
       // Start animation for the float digit
       if (floatDigit) {
           const targetValue = parseFloat(floatDigit.textContent);
-          animateValue(floatDigit, 0, targetValue, 2000); // Duration in milliseconds
+          animateValue(floatDigit, targetValue, 1); // Duration in milliseconds
       }
 }
 
