@@ -113,6 +113,7 @@ footer {
             transition: 0.3s;
             position: relative;
             overflow: hidden;
+            height: clamp(20px, 1.5vw, 30px);
         }
 
         a:hover {
@@ -144,7 +145,6 @@ footer {
         margin-top: 30px;
         color: var(--green-light);
         font-size: clamp(11px, 1.2vw, 21px);
-        height: 25px;
 
        
 
@@ -155,6 +155,7 @@ footer {
             position: relative;
             overflow: hidden;
             top: 2px;
+            height: clamp(20px, 1.5vw, 30px);
         }
 
         a:hover {
