@@ -11,19 +11,15 @@ button, a, svg, .logo, .right {
     color: var(--dark-green);
 }
 
-a {
-    text-decoration: underline;
-}
-
 header {
     .logo {
-        transform: translateY(0%);
-        clip-path: inset(0 0 0% 0);
+        transform: translateY(0%) !important;
+        clip-path: inset(0 0 0% 0) !important;
     }
 
     .right {
-        transform: translateY(0px);
-        clip-path: inset(0 0 0% 0);
+        transform: translateY(0px) !important;
+        clip-path: inset(0 0 0% 0) !important;
     }
 }
 
