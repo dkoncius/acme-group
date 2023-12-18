@@ -197,7 +197,7 @@
                 </div>
 
                 <div class="number">
-                  <div class="digit">2.8m</div>
+                  <div><span class="digit-float">2.8</span>m</div>
                   <p>Informacijos punktas</p>
                 </div>
 
@@ -293,8 +293,8 @@
             <img class="contact-1-img" src="/tvarumas/Acme_ikona_partnerystė.png" alt="">
             <div class="contact-1">
                 <p class="contact-title">Įmonės kontaktai</p>
-                <p>Tel. +370 37 333533</p>
-                <p>info@acmegrupe.lt</p>
+                <a href="tel:+37037333533" target="_blank">Tel. +370 37 333533</a>
+                <a href="mailto:info@acmegrupe.lt" target="_blank">info@acmegrupe.lt</a>
             </div>
 
     
@@ -302,16 +302,16 @@
             <div class="contact-2">
                 <p class="contact-title">Kontaktai žiniasklaidai</p>
                 <p>Komunikacijos vadovė</p>
-                <p>Simona.masalskiene@acme.lt</p>
-                <p>Mob.tel.: +37066997776</p>
+                <a href="mailto:Simona.masalskiene@acme.lt" target="_blank">Simona.masalskiene@acme.lt</a>
+                <a href="tel:+37066997776" target="_blank">Mob.tel.: +37066997776</a>
             </div>
        
 
             <div class="social">
-                <a href="#" class="next-page-link">Facebook</a>
-                <a href="#" class="next-page-link">Instagram</a>
-                <a href="#" class="next-page-link">LinkedIn</a>
-                <a href="#" class="next-page-link">Youtube</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Youtube</a>
             </div>
    
             <hr>
@@ -326,80 +326,81 @@
 
     <script type="module" src="/src/scripts/navigation.js"></script>
     <script type="module" src="/src/scripts/timeline.js"></script>
+    <script type="module" src="/src/scripts/digits-animation.js"></script>
     <script type="module" src="/src/scripts/apie-mus-video.js"></script>
     <script type="module" src="/src/scripts/header-collider-green.js"></script>
-      <!-- Loading animation -->
-      <script type="module">
-        import gsap from "gsap";
-        import ScrollTrigger from "gsap/ScrollTrigger";
-        gsap.registerPlugin(ScrollTrigger);
+    <!-- Loading animation -->
+    <script type="module">
+      import gsap from "gsap";
+      import ScrollTrigger from "gsap/ScrollTrigger";
+      gsap.registerPlugin(ScrollTrigger);
 
-        
-        //   Scroll to top after refresh
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-          }
+      
+      //   Scroll to top after refresh
+      window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        }
 
-      document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
 
-      document.addEventListener("DOMContentLoaded", function() {
-        const tl = gsap.timeline();
+    document.addEventListener("DOMContentLoaded", function() {
+      const tl = gsap.timeline();
 
-        tl.to('.section-1', {
-          x: 0,
-          duration: 1,
-          ease: "power3.inOut",
-          clipPath: "inset(0 0 0 0%)"
-        }, "0.5");  
+      tl.to('.section-1', {
+        x: 0,
+        duration: 1,
+        ease: "power3.inOut",
+        clipPath: "inset(0 0 0 0%)"
+      }, "0.5");  
 
-        tl.from('.section-1 .content', {
-          x: -500,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.inOut",
-          clipPath: "inset(0 0 0 100%)",
-          stagger: 0.5
-        }, "0.9");
+      tl.from('.section-1 .content', {
+        x: -500,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.inOut",
+        clipPath: "inset(0 0 0 100%)",
+        stagger: 0.5
+      }, "0.9");
 
-        tl.eventCallback("onComplete", () => {
-          document.body.style.overflow = 'auto';
+      tl.eventCallback("onComplete", () => {
+        document.body.style.overflow = 'auto';
+      });
+    });
+
+
+  // Scroll animations for multiple '.manager' elements inside '.management'
+    gsap.utils.toArray('.managers .manager').forEach((manager, index) => {
+      gsap.from(manager, {
+        scrollTrigger: {
+          trigger: manager,
+          start: 'top bottom+=100',
+          end: 'bottom top',
+          toggleActions: 'play none none none',
+        },
+        clipPath: "inset(0 0 100% 0)",
+        y: 300, // Start position (50px above the final position)
+        duration: 1, // Animation duration in seconds
+        ease: "power3.out", // Easing function
+        stagger: 0.3 * index
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() { 
+        document.querySelectorAll('.next-page-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = this.href;
+  
+          gsap.to('#mainContent', {
+            opacity: 0,
+            duration: 1,
+            ease: "power3.inOut",
+            onComplete: () => window.location.href = url
+          });
         });
       });
+      })
 
-
-    // Scroll animations for multiple '.manager' elements inside '.management'
-      gsap.utils.toArray('.managers .manager').forEach((manager, index) => {
-        gsap.from(manager, {
-          scrollTrigger: {
-            trigger: manager,
-            start: 'top bottom+=100',
-            end: 'bottom top',
-            toggleActions: 'play none none none',
-          },
-          clipPath: "inset(0 0 100% 0)",
-          y: 300, // Start position (50px above the final position)
-          duration: 1, // Animation duration in seconds
-          ease: "power3.out", // Easing function
-          stagger: 0.3 * index
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", function() { 
-         document.querySelectorAll('.next-page-link').forEach(link => {
-         link.addEventListener('click', function(e) {
-           e.preventDefault();
-           const url = this.href;
-   
-           gsap.to('#mainContent', {
-             opacity: 0,
-             duration: 1,
-             ease: "power3.inOut",
-             onComplete: () => window.location.href = url
-           });
-         });
-       });
-       })
-
-      </script>
+    </script>
     </body>
 </html>

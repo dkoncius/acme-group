@@ -11,6 +11,7 @@ footer {
 
     a {
         text-decoration: none;
+        color: var(--green-light);
     }
 
     .footer-forma {
@@ -143,12 +144,36 @@ footer {
         margin-top: 30px;
         color: var(--green-light);
         font-size: clamp(11px, 1.2vw, 21px);
+        height: 25px;
+
+       
 
         a {
             cursor: url("/icons/pointer-green.svg"), pointer;
-            color: var(--green-light);
+            opacity: 0.7;
+            transition: 0.3s;
             position: relative;
+            overflow: hidden;
             top: 2px;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background:  var(--green-bright);
+            transform: translate(-105%);
+            transition: 0.3s;
+        }
+
+        a:hover::before {
+            transform: translate(0%);
         }
     }
 

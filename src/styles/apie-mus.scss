@@ -138,7 +138,7 @@ main {
 .timeline {
         .dates {
         display: flex;
-        height: 245px;
+        height: 300px;
         margin-bottom: 50px;
         position: relative;
         overflow: hidden;
@@ -150,9 +150,14 @@ main {
             position: relative;
             transition: 0.3s;
 
+            p {
+                font-size: 2em;
+            }
+
             &.selected {
                 p {
-                    transform: scale(1.5);
+                    transform: scale(1.8) translateX(15px) !important;
+                    user-select: none;
                 }
 
                 .line {
@@ -164,7 +169,7 @@ main {
                 z-index: 1;
 
                 p {
-                    transform: scale(1.5);
+                    transform: scale(1.3) translateX(15px);
                 }
 
                 .line {
@@ -180,12 +185,12 @@ main {
             .line {
                 color: var(--dark-green);
                 position: relative;
-                right: 60%;
+                right: 150%;
                 bottom: 5%;
-                width: 100px;
+                width: 75px;
                 height: 1px;
                 background: var(--dark-green);
-                transition: height 0.3s ease; /* Transition for height change */
+                transition: height 0.3s ease;
             }
         }
     }
@@ -195,6 +200,7 @@ main {
         width: 40%;
         position: relative;
         left: 50%;
+
     }
 }
 
@@ -311,9 +317,12 @@ main {
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
+                width: 130px;
+                font-size: clamp(58px, 7.2vw, 112px);
 
                 .digit {
-                    font-size: clamp(58px, 7.2vw, 112px);
+                    position: relative;
+                    transition: all 1s ease-out;
                 }
             }
         }
@@ -348,13 +357,17 @@ main {
         }
     }
 }
-@media (max-width: 1000px){
+@media (max-width: 1025px){
     .section-1 {
         grid-template-columns: repeat(6, 150px);
 
         .shape-1 {
             left: -689px;
         }
+    }
+
+    .values-2 .content .numbers .number {
+        width: 70px;
     }
     
 }

@@ -118,7 +118,7 @@ class Timeline {
     centerDateItem(item) {
         const datesContainer = this.container.querySelector('.dates');
         const containerRect = datesContainer.getBoundingClientRect();
-        const scrollPosition = item.offsetLeft + item.offsetWidth / 20 - containerRect.width / 2;
+        const scrollPosition = item.offsetLeft + item.offsetWidth / 20 - containerRect.width / 1.8;
         const maxScrollLeft = datesContainer.scrollWidth - containerRect.width;
         datesContainer.scrollTo({
             left: Math.min(Math.max(scrollPosition, 0), maxScrollLeft),
