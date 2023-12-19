@@ -237,11 +237,11 @@ h1 {
         color: white;
         position: relative;
 
-        &:hover .left-img {
+        &:hover .left-media {
             transform: scale(1.1);
         }
 
-        .left-img {
+        .left-media {
             width: 100%;
             height: 100%;
             position: absolute;
@@ -301,11 +301,11 @@ h1 {
         position: relative;
         
 
-        &:hover .right-img {
+        &:hover .right-media {
             transform: scale(1.1);
         }
 
-        .right-img {
+        .right-media {
             width: 100%;
             height: 100%;
             position: absolute;
