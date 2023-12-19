@@ -1,21 +1,21 @@
-// Video play function
-const video = document.querySelector(".video-section video");
+const iframe = document.querySelector(".video-section .video");
 const videoIcon = document.querySelector(".video-section .video-play-icon");
 let play = false;
 
 function toggleVideoPlayback() {
   if (!play) {
-    video.play();
+    // Play the video by setting the iframe's "src" attribute
+    iframe.src = iframe.getAttribute("src");
     videoIcon.classList.add("hidden");
     play = true;
   } else {
-    video.pause();
+    // Pause the video by removing the iframe's "src" attribute
+    iframe.removeAttribute("src");
     videoIcon.classList.remove("hidden");
     play = false;
   }
 }
 
-video.addEventListener("click", toggleVideoPlayback);
 videoIcon.addEventListener("click", toggleVideoPlayback);
 
 
