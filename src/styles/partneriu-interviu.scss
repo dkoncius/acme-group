@@ -214,8 +214,14 @@ main {
 
 
 
+
 footer {
     color: var(--blue-extra-light) !important;
+    margin-top: 150px;
+
+    a {
+        color: var(--blue-extra-light) !important;
+    }
 
     .social {
         a:before {
@@ -223,10 +229,21 @@ footer {
         }
     }
 
-    .copywrites a {
+
+    .copywrites {
         color: var(--blue-extra-light) !important;
+        a {
+            color: var(--blue-extra-light) !important;
+            cursor: url("/icons/pointer-blue.svg"), pointer !important;
+
+             &::before {
+
+                background:  var(--blue-extra-light) !important;
+            }
+        }
     }
 }
+
 
 
 @media (max-width: 1200px){

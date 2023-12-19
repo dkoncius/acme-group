@@ -288,6 +288,39 @@ main {
 
 
 
+footer {
+    color: var(--blue-extra-light) !important;
+    margin-top: 150px;
+
+    a {
+        color: var(--blue-extra-light) !important;
+    }
+
+    .social {
+        a:before {
+            background: var(--blue-extra-light) !important;
+        }
+    }
+
+
+    .copywrites {
+        color: var(--blue-extra-light) !important;
+        a {
+            color: var(--blue-extra-light) !important;
+            cursor: url("/icons/pointer-blue.svg"), pointer !important;
+
+             &::before {
+
+                background:  var(--blue-extra-light) !important;
+            }
+        }
+    }
+}
+
+
+
+
+
 @media (max-width: 1800px) {
     .section-1 {
         h1 {

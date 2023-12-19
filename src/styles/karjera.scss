@@ -49,7 +49,6 @@ main {
 
     .shape-1 {
         position: absolute;
-        top: -50px;
         left: 0px;
         width: 1735px;
         height: 1578px;
@@ -71,7 +70,7 @@ main {
         width: 521px;
         height: 965px;
         position: absolute;
-        top: 355px;
+        top: 405px;
         left: 1214px;
         z-index: -2;
 
@@ -104,12 +103,12 @@ main {
 
 
     .content-2 {
-        color: var(--burgundy-extra-light);
+        color: var(--burgundy-dark);
         grid-column: 1;
         font-weight: 400;
         grid-column: 1;
         grid-row: 2;
-        transform: translate(295px, 258px);
+        transform: translate(295px, 350px);
         width: 60%;
 
         h2 {
@@ -134,7 +133,7 @@ main {
     display: grid;
     color: var(--burgundy-dark);
     max-width: 1500px;
-    margin-top: -200px;
+    margin-top: -150px;
 
     .icons {
         display: flex;
@@ -204,6 +203,7 @@ main {
         }
 
         .button-outline {
+            width: 250px;
             grid-column: 2;
             border-color: var(--burgundy-dark);
             color: var(--burgundy-dark);
@@ -337,7 +337,7 @@ main {
     margin-bottom: 400px;
     z-index: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-auto-rows: 511px;
     width: 80vw;
     max-width: 1400px;
@@ -458,8 +458,18 @@ footer {
         }
     }
 
-    .copywrites, .copywrites a {
+
+    .copywrites {
         color: var(--burgundy-extra-light) !important;
+        a {
+            color: var(--burgundy-extra-light) !important;
+            cursor: url("/icons/pointer-burgundy.svg"), pointer !important;
+
+             &::before {
+
+                background:  var(--burgundy-extra-light) !important;
+            }
+        }
     }
 }
 

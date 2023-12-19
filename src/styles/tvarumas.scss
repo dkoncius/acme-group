@@ -307,6 +307,11 @@ footer {
     line-height: 25px;
     position: relative;
     margin-bottom: -300px;
+    color: var(--blue-extra-light) !important;
+
+    a {
+        color: var(--blue-extra-light) !important;
+    }
 
   
 
@@ -359,7 +364,7 @@ footer {
 
     .grid {
         display: grid;
-        grid-template-columns: 3fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
         color: var(--blue-extra-light);
     }
 
@@ -442,6 +447,12 @@ footer {
 
 
 @media (max-width: 1000px){
+    footer {
+        .content .contact {
+            left: -50px;
+        }
+    }
+
     .tvarumas-1 {
         right: 0;
         left: -550px;
