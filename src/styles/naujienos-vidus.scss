@@ -35,7 +35,7 @@ main {
 .news-content {
     display: grid;
     grid-template-columns: repeat(6, minmax(230px, 1fr));
-    grid-auto-rows: minmax(420px, auto);
+    grid-auto-rows: minmax(200px, auto);
     color: var(--dark-green);
     max-width: 2043px;
     margin: auto;

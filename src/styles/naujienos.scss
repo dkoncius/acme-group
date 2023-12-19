@@ -116,6 +116,14 @@ main {
         align-items: center;
         gap: 10px;
 
+        span {
+            opacity: 0.5;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+
         svg:hover {
             path {
                 transition: 0.3s;
