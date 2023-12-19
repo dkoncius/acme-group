@@ -10,26 +10,31 @@ button, a, .logo, .right {
     cursor: url('/icons/pointer-blue.svg'), pointer;
 }
 
+.button {
+    background: var(--blue-extra-light);
+    color: var(--blue-dark);
+    cursor: url('/icons/pointer-blue.svg'), pointer !important;
+}
+
 
 header {
     .logo {
-        transform: translateY(0%) !important;
-        clip-path: inset(0 0 0% 0)!important;
+        transform: translateY(0%);
+        clip-path: inset(0 0 0% 0);
     }
 
     .right {
-        transform: translateY(0px) !important;
-        clip-path: inset(0 0 0% 0) !important;
-        color: var(--blue-dark);
+        transform: translateY(0px);
+        clip-path: inset(0 0 0% 0);
+        color: var(--blue-dark) !important;
 
         .menu .line,
         .menu .bubble,
         .language {
-            background: var(--blue-dark);
+            background: var(--blue-dark) !important;
         }
     }
 }
-
 
 
 main {
@@ -63,7 +68,7 @@ main {
             left: -60%;
             width: 100%;
             height: 54%;
-            background: var(--green-spot);
+            background: var(--blue-spot);
             transform: rotate(-4deg);
             z-index: -1;
         }
@@ -71,11 +76,11 @@ main {
         &::after {
             content: "";
             position: absolute;
-            top: 32.59%;
+            top: 33.59%;
             right: -26%;
             width: 32%;
             height: 54.7%;
-            background: var(--dark-green);
+            background: var(--blue-dark);
             transform: rotate(-3deg);
             z-index: -1;
         }
@@ -119,12 +124,6 @@ main {
         p {
             margin-bottom: 20px;
         }
-
-        
-        .button {
-            background: var(--blue-extra-light);
-            color: var(--blue-dark);
-        }
     }
 }
 
@@ -166,7 +165,7 @@ main {
             top: -72px;
             width: 875px;
             height: 168px;
-            background: url('/tvarumas/inovaciju-shape-2.svg');
+            background: url('/tvarumas/verslo-inovaciju-shape-2.svg');
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -226,7 +225,6 @@ main {
     color: var(--blue-dark);
     margin: auto;
     position: relative;
-    background: var(--blue-extra-light);
     transform: rotate(-3deg);
     width: 120%;
     left: -100px;
@@ -287,7 +285,6 @@ main {
 }
 
 
-
 footer {
     color: var(--blue-extra-light) !important;
     margin-top: 150px;
@@ -316,7 +313,6 @@ footer {
         }
     }
 }
-
 
 
 
@@ -391,7 +387,7 @@ footer {
 
         .content {
             grid-column: 3/7;
-            transform: translate(50px, 50px);
+            transform: translate(0, 50px);
         }
     }
 }
