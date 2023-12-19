@@ -30,6 +30,7 @@ function enableScrollAndRemoveOverlay() {
 swiperExit.addEventListener("click", () => {
     gallerySwiper.classList.remove("show");
     enableScrollAndRemoveOverlay();
+    gallerySwiper.style.background = 'rgb(0, 74, 78, 0)'
 });
 
 // Initialize the swiper
@@ -90,9 +91,12 @@ galleryItems.forEach((item, index) => {
         setTimeout(() => {
             swiper.slideTo(index, 0);
             gallerySwiper.classList.add("show");
-            gallerySwiper.style.background = 'rgb(0, 74, 78, 0.8)'
             item.parentElement.classList.remove("active")
         }, 300)
+
+        setTimeout(() => {
+            gallerySwiper.style.background = 'rgb(0, 74, 78, 0.8)'
+        }, 400)
     });
 
     // Show the icon on mouse enter
