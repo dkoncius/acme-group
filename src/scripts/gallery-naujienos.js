@@ -80,9 +80,19 @@ galleryItems.forEach((item, index) => {
 
     // Event listener for opening the swiper on click
     item.addEventListener("click", () => {
-        gallerySwiper.classList.add("show");
+    
         disableScrollAndAddOverlay();
-        swiper.slideToLoop(index);
+        
+        // Expand animation
+        item.parentElement.classList.add("active")
+
+        // Go slide by index
+        setTimeout(() => {
+            swiper.slideTo(index, 0);
+            gallerySwiper.classList.add("show");
+            gallerySwiper.style.background = 'rgb(0, 74, 78, 0.8)'
+            item.parentElement.classList.remove("active")
+        }, 300)
     });
 
     // Show the icon on mouse enter
