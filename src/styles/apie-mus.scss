@@ -367,6 +367,28 @@ main {
         }
     }
 }
+
+@media (max-width: 1600px) {
+
+    .values .foto-1 img {
+        width: 85.8%;
+    }
+
+    .values-2 .shape-4 {
+        top: -134px;
+        left: 120px;
+        width: 1086px;
+        height: 861px;
+        
+        &::before {
+            top: 4px;
+        }
+        &::after {
+            bottom: 49px;
+        }
+    }
+}
+
 @media (max-width: 1025px){
     .section-1 {
         grid-template-columns: repeat(6, 150px);
