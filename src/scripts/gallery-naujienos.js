@@ -77,38 +77,47 @@ function updateSlideCounter(swiper) {
 galleryItems.forEach((item, index) => {
     // Create and append an icon to each item
     const icon = createIcon(item);
+    let clicked = false; // Tracks if the item has been clicked
+
     item.parentNode.insertBefore(icon, item.nextSibling);
 
     // Event listener for opening the swiper on click
     item.addEventListener("click", () => {
-    
+        clicked = true; // Set clicked to true when item is clicked
+        icon.style.display = 'none';
         disableScrollAndAddOverlay();
-        
+
         // Expand animation
-        item.parentElement.classList.add("active")
+        item.parentElement.classList.add("active");
 
         // Go slide by index
         setTimeout(() => {
             swiper.slideTo(index, 0);
             gallerySwiper.classList.add("show");
-            item.parentElement.classList.remove("active")
-        }, 300)
+            item.parentElement.classList.remove("active");
+            clicked = false; // Reset clicked after animation
+        }, 800);
 
         setTimeout(() => {
-            gallerySwiper.style.background = 'rgb(0, 74, 78, 0.8)'
-        }, 400)
+            gallerySwiper.style.background = 'rgb(0, 74, 78, 0.8)';
+        }, 900);
     });
 
-    // Show the icon on mouse enter
+    // Show the icon on mouse enter only if not clicked
     item.addEventListener("mouseenter", () => {
-        icon.style.display = 'block';
+        if (!clicked) {
+            icon.style.display = 'block';
+        }
     });
 
-    // Hide the icon on mouse leave
+    // Hide the icon on mouse leave only if not clicked
     item.addEventListener("mouseleave", () => {
-        icon.style.display = 'none';
+        if (!clicked) {
+            icon.style.display = 'none';
+        }
     });
 });
+
 
 
 function createIcon(item) {

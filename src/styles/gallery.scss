@@ -52,13 +52,25 @@
         right: 960px;
         width: 80%;
         height: 809.95px;
+        transition: 0.8s;
 
         .icon-overlay {
             left: 60%;
         }
         
+            @keyframes expande {
+                from {
+                    width: 0;
+                    height: 0;
+                }
 
-          &.active {
+                to {
+                    width: 80%;
+                    height: 600px;
+                }
+            }
+
+            &.active {
                 position: fixed;
                 max-width: 1200px;
                 transform: translate(0);
@@ -69,7 +81,7 @@
                 margin: auto;
                 z-index: 2;
                 animation-name: expande; /* Specify the name of the animation */
-                animation-duration: 0.3s;
+                animation-duration: 0.8s;
 
                 & > *:not(.icon-overlay) {
                     width: 100%;
@@ -108,7 +120,7 @@
             position: relative;
             top: -5.1px;
             right: -5%;
-            transition: 0.3s;
+            transition: 0.8s;
 
             @keyframes expande {
                 from {
@@ -133,7 +145,7 @@
                 margin: auto;
                 z-index: 2;
                 animation-name: expande; /* Specify the name of the animation */
-                animation-duration: 0.3s;
+                animation-duration: 0.8s;
 
                 & > *:not(.icon-overlay) {
                     width: 100%;
