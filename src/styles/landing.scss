@@ -1,11 +1,27 @@
 body {
     background: var(--green-light);
+    min-height: auto;
+    & > * {
+        cursor: url('/icons/cursor-green.svg'), pointer;
+    }
 }
 
-a {
-    color: var(--green-light);
+button, a, .logo, .right {
+    cursor: url('/icons/pointer-green.svg'), pointer;
 }
 
+
+header {
+    .logo {
+        transform: translateY(0%) !important;
+        clip-path: inset(0 0 0% 0) !important;
+    }
+
+    .right {
+        transform: translateY(0px) !important;
+        clip-path: inset(0 0 0% 0) !important;
+    }
+}
 
 main {
     max-width: 2000px;
