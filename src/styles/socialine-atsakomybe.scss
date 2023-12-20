@@ -263,6 +263,7 @@ header {
         border-radius: 200px 0 0 200px;
         object-fit: cover;
         opacity: 0;
+        z-index: 1;
         transition: 0.3s;
 
         &.visible {
@@ -348,11 +349,13 @@ header {
 
 
         .projects:hover .project {
-            opacity: 0.5; /* Reduce opacity for all projects when any project is hovered */
+            opacity: 0.3; /* Reduce opacity for all projects when any project is hovered */
+            z-index: 0;
         }
           
         .projects .project:hover {
-        opacity: 1; /* Full opacity for the project under the mouse pointer */
+            opacity: 1; /* Full opacity for the project under the mouse pointer */
+            z-index: 1;
         }
         
     }
