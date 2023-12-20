@@ -415,11 +415,13 @@ main {
         cursor: default !important;
     }
   
-    .section-1 .content {
-        grid-column: 1/4;
-        width: 90%;
-        margin: auto;
-        text-align: justify;
+    .section-1 {
+        .content {
+            grid-column: 1/4;
+            width: 90%;
+            margin: auto;
+            text-align: justify;
+        }
     }
 
     .timeline .dates-content {
@@ -498,15 +500,18 @@ main {
 
 
 @media (max-width: 426px){
-  
-
     .section-1 {
-        margin-top: -200px;
+        margin-top: -250px;
+
+        .shape-1 {
+            left: -753px;
+        }
 
         .content {
             width: calc(100vw - 10%);
             grid-column: 1;
             padding-left: 10%;
+            transform: translate(0px, 374px);
         }
     }
 
