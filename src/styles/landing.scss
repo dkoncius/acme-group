@@ -109,7 +109,7 @@ header {
 
         svg {
             position: relative;
-            width: 10vw;
+            width:clamp(100px, 12vw, 140px);
             height: 150px;
             top: 0px;
         }
