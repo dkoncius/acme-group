@@ -36,6 +36,7 @@ src: url("/fonts/CircularXXWeb-Book.woff2") format("woff2");
 	padding: 0;
 	box-sizing: border-box;
 	text-decoration: none;
+	user-select: none;
 }
 
 body {
@@ -64,13 +65,13 @@ h1 {
 }
 
 h2 {
-	font-size: clamp(40px, 3vw, 54px);
+	font-size: clamp(33px, 3vw, 54px);
 	font-weight: 400;
 }
 
 h3 {
 	font-weight: 400;
-	font-size: clamp(24px, 2.2vw, 42px);
+	font-size: clamp(33px, 2.2vw, 42px);
 }
 
 h4 {
