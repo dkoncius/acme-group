@@ -301,6 +301,7 @@ main {
         .tabs-buttons {
            button {
                 color: var(--burgundy-dark);
+                cursor: url(/icons/pointer-burgundy.svg), pointer;
 
                 &::before {
                     border-color: var(--burgundy-dark);;
@@ -532,7 +533,7 @@ footer {
         }
 
         .content-2 {
-            transform: translate(0, -100px);
+            transform: translate(0, -35px);
             width: 70%;
             margin: auto;
         }
@@ -617,7 +618,81 @@ footer {
         padding: 0;
     }
 
- 
+    .acme-human {
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-auto-rows: 0.5fr;
+
+        h2 {
+            width: 100%;
+            font-size: clamp(40px, 7.2vw, 112px);
+        }
+
+        .content, .content-2 {
+            grid-column: 1/3;
+            width: 90%;
+            margin: auto;
+            .acme-shape {
+                display: none;
+            }
+        }
+
+        .content .check-list {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            ul {
+                width: 45%;
+
+                li {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .content-2 {
+            h3 {
+                display: none;
+            }
+            
+            .steps {
+                grid-template-columns: 1fr;
+                width: 90%;
+                margin: auto;
+    
+                .step {
+                    max-width: 50%;
+                    margin: 30px auto;
+    
+                    .number {
+                        color: var(--burgundy-spot) !important;
+                    }
+    
+                    p {
+                        color: var(--burgundy-dark) !important;
+                    }
+                }
+    
+                .step::before {
+                    display: none;
+                }
+            }
+        }
+
+        .recomendation.content {
+            background: var(--burgundy-light);
+            max-width: 100%;
+            width: 100%;
+            padding: 10% 5%;
+        }
+    
+        .recomendation.content:last-of-type {
+            background: transparent;
+            margin-bottom: 150px;
+        }
+	}
 }
 
 
@@ -640,6 +715,27 @@ footer {
 
         .content-2 {
             width: 90%;
+        }
+    }
+
+  
+
+    .acme-human .content {
+        grid-column: 1/2;
+
+        .check-list {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 0;
+    
+            ul {
+                width: 100%;
+    
+                li {
+                    width: 100%;
+                }
+            }
         }
     }
 }
