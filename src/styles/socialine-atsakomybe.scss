@@ -238,12 +238,11 @@ header {
 }
 
 
-.tech-education {
+.tech-education, .sveika-gyvensena, .bendruomenes-projektai {
     position: relative;
     top: 150px;
     background: var(--blue-extra-light);
     color: var(--blue-dark);
-    margin-bottom: 400px;
     z-index: 1;
 
     &::before {
@@ -257,7 +256,7 @@ header {
         transform: rotate(-4deg);
     }
 
-    .tech-shape {
+    .image-shape {
         width: 30vw;
         height: 600px;
         position: absolute;
@@ -346,10 +345,17 @@ header {
 }
 
 
+.sveika-gyvensena, .bendruomenes-projektai {
+    &::before {
+        background: transparent;
+    }
+}
+
 .ataskaitos {
     position: relative;
     width: 75%;
     margin: auto;
+    margin-top: 300px;
     color: var(--blue-dark);
 
     h3 {
