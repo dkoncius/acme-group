@@ -2,8 +2,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-// Landing
 document.addEventListener("DOMContentLoaded", function() {
+  // Visiems
   gsap.utils.toArray('section').forEach((content, index) => {
     gsap.from(content, {
       scrollTrigger: {
@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-
+  
+  // Karjera
   gsap.utils.toArray('.acme-human .content').forEach((content, index) => {
     gsap.from(content, {
       scrollTrigger: {
@@ -43,6 +44,21 @@ document.addEventListener("DOMContentLoaded", function() {
         toggleActions: 'play none none none',
       },
       clipPath: "inset(0 100% 0 0)",
+      duration: 1,
+      ease: "power3.out"
+    });
+  });
+
+  // Soc atsakomybe
+  gsap.utils.toArray('.tech-education .shape, .tech-education .content').forEach((content, index) => {
+    gsap.from(content, {
+      scrollTrigger: {
+        trigger: content,
+        start: 'top 85%',
+        end: 'bottom top',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
       duration: 1,
       ease: "power3.out"
     });

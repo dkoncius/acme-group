@@ -348,6 +348,20 @@
         tl.eventCallback("onComplete", () => {
           document.body.style.overflow = 'auto';
         });
+
+        gsap.utils.toArray('.tabs .tab, .ataskaitos .content').forEach((content, index) => {
+          gsap.from(content, {
+            scrollTrigger: {
+              trigger: content,
+              start: 'top 85%',
+              end: 'bottom top',
+              toggleActions: 'play none none none',
+            },
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+          });
+        });
       });
 
       document.addEventListener("DOMContentLoaded", function() { 

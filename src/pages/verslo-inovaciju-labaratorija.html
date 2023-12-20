@@ -280,6 +280,23 @@
         });
       });
 
+      document.addEventListener("DOMContentLoaded", function() {
+        gsap.utils.toArray('.section-2 .content, .section-3 .content, .foto-2').forEach((content, index) => {
+          gsap.from(content, {
+            scrollTrigger: {
+            trigger: content,
+            start: 'top 85%',
+            end: 'bottom top',
+            toggleActions: 'play none none none',
+          },
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out"
+          });
+        });
+      });
+
       document.addEventListener("DOMContentLoaded", function() { 
          document.querySelectorAll('.next-page-link').forEach(link => {
          link.addEventListener('click', function(e) {
