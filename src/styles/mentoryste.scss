@@ -123,10 +123,9 @@ main {
             .icon {
                 text-align: center;
 
-             
-            img {
-                width: clamp(40px, 6vw, 61px);
-             }
+                img {
+                    width: clamp(40px, 4vw, 81px);
+                }
             }
         }
     }
