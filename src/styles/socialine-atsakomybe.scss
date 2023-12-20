@@ -258,8 +258,11 @@ header {
     .image-shape {
         width: 30vw;
         height: 600px;
-        position: absolute;
+        position: fixed;
+        top: 0;
+        bottom: 0;
         right: 0;
+        margin: auto;
         border-radius: 200px 0 0 200px;
         object-fit: cover;
         opacity: 0;
