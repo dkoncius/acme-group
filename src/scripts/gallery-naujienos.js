@@ -13,14 +13,14 @@ let scrollPosition = 0;
 function disableScrollAndAddOverlay() {
     scrollPosition = window.pageYOffset; // Save the current scroll position
     const body = document.body;
-    body.classList.add("freeze-page", "body-overlay"); // Add both freeze-page and body-overlay classes
+    body.classList.add("body-overlay");
     body.style.top = `-${scrollPosition}px`; // Set top to the negative scroll position
 }
 
 // Function to enable scrolling and remove overlay
 function enableScrollAndRemoveOverlay() {
     const body = document.body;
-    body.classList.remove("freeze-page", "body-overlay"); // Remove both freeze-page and body-overlay classes
+    body.classList.remove("body-overlay");
     body.style.top = '';
     window.scrollTo(0, scrollPosition); // Restore the scroll position
 }
@@ -30,7 +30,6 @@ function enableScrollAndRemoveOverlay() {
 swiperExit.addEventListener("click", () => {
     gallerySwiper.classList.remove("show");
     enableScrollAndRemoveOverlay();
-    gallerySwiper.style.background = 'rgb(0, 74, 78, 0)'
 });
 
 // Initialize the swiper
@@ -77,47 +76,25 @@ function updateSlideCounter(swiper) {
 galleryItems.forEach((item, index) => {
     // Create and append an icon to each item
     const icon = createIcon(item);
-    let clicked = false; // Tracks if the item has been clicked
-
     item.parentNode.insertBefore(icon, item.nextSibling);
 
     // Event listener for opening the swiper on click
     item.addEventListener("click", () => {
-        clicked = true; // Set clicked to true when item is clicked
-        icon.style.display = 'none';
+        gallerySwiper.classList.add("show");
         disableScrollAndAddOverlay();
-
-        // Expand animation
-        item.parentElement.classList.add("active");
-
-        // Go slide by index
-        setTimeout(() => {
-            swiper.slideTo(index, 0);
-            gallerySwiper.classList.add("show");
-            item.parentElement.classList.remove("active");
-            clicked = false; // Reset clicked after animation
-        }, 800);
-
-        setTimeout(() => {
-            gallerySwiper.style.background = 'rgb(0, 74, 78, 0.8)';
-        }, 900);
+        swiper.slideToLoop(index);
     });
 
-    // Show the icon on mouse enter only if not clicked
+    // Show the icon on mouse enter
     item.addEventListener("mouseenter", () => {
-        if (!clicked) {
-            icon.style.display = 'block';
-        }
+        icon.style.display = 'block';
     });
 
-    // Hide the icon on mouse leave only if not clicked
+    // Hide the icon on mouse leave
     item.addEventListener("mouseleave", () => {
-        if (!clicked) {
-            icon.style.display = 'none';
-        }
+        icon.style.display = 'none';
     });
 });
-
 
 
 function createIcon(item) {
@@ -146,14 +123,14 @@ swiperVideos.forEach(video => {
 
 
 function toggleVideoPlayback(video, icon) {
-    console.log(video, icon)
     if (!play) {
       video.play();
+      video.controls = true
+      video.autoplay = true
       icon.classList.add("hidden");
       play = true;
     } else {
       video.pause();
-      icon.classList.remove("hidden");
       play = false;
     }
   }
