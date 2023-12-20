@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 100,
     slidesPerView: 4,
     autoplay: {
-      delay: 100,
+      delay: 1000,
       disableOnInteraction: false,
     },
   
