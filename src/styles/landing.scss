@@ -103,23 +103,25 @@ header {
 
     // Landing brands swiper
     .swiper {
-        width: 70%;
+        width: 90%;
+        position: relative;
+        top: -50px;
 
-        img {
+        svg {
             position: relative;
             width: 10vw;
-            height: 100px;
+            height: 150px;
+            top: 0px;
         }
-        
-        img:nth-of-type(odd){
-            position: relative;
-            top: -50px;
+
+        .swiper-slide {
+            flex-direction: column;
+            height: 200px;
         }
-        .swiper-slide { 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 300px;
+
+        .swiper-slide:nth-of-type(even) svg, 
+        .swiper-slide-duplicate:nth-of-type(even) svg {
+            top: 50px;
         }
     }
 
@@ -737,32 +739,6 @@ footer {
             color: var(--dark-green);
             transform: translate(0, 0);
         }
-
-        .swiper {
-
-            .swiper-wrapper {
-                width: 52%;
-            }
-
-            .swiper-slide {
-                flex-direction: column;
-                height: 200px;
-
-                img {
-                    width: 87px;
-                    height: 63px;
-                    object-fit: contain;
-                }
-
-                img:nth-of-type(odd) {
-                    position: relative;
-                    top: 0px
-                 }
-            }
-
-          
-        }
-        
    }
 
    .active-areas {

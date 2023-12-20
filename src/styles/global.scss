@@ -7,164 +7,151 @@
 font-family: "CircularXXWeb-Book";
 src: url("/fonts/CircularXXWeb-Book.woff2") format("woff2");
 }
+	
+// Variables
+	:root {
+	// Green
+	--green-light: #E6F5E4;
+	--green-spot: #A7F2B5;
+	--green-bright: #00917D;
+	--dark-green: #004A4E;
 
+	// Blue
+	--blue-dark: #15276A;
+	--blue-spot: #307FEA;
+	--blue-light: #B4D7F6;
+	--blue-extra-light: #E7ECFF;
 
-/* subset */
-@font-face {
-font-family: "CircularXXSub-Book";
-src: url("/fonts/CircularXXSub-Book.woff") format("woff");
+	// Burgundy
+	--burgundy-dark: #2E133A;
+	--burgundy-spot: #743557;
+	--burgundy-light: #CCA099;
+	--burgundy-extra-light: #EEE9E6;
+
 }
 
-@font-face {
-font-family: "CircularXXSub-Book";
-src: url("/fonts/CircularXXSub-Book.woff2") format("woff2");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
 }
-	
-	
-	// Variables
-	 :root {
-		// Green
-		--green-light: #E6F5E4;
-		--green-spot: #A7F2B5;
-		--green-bright: #00917D;
-		--dark-green: #004A4E;
-	
-		// Blue
-		--blue-dark: #15276A;
-		--blue-spot: #307FEA;
-		--blue-light: #B4D7F6;
-		--blue-extra-light: #E7ECFF;
 
-		// Burgundy
-		--burgundy-dark: #2E133A;
-		--burgundy-spot: #743557;
-		--burgundy-light: #CCA099;
-		--burgundy-extra-light: #EEE9E6;
-	
-	}
-	
-	
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		text-decoration: none;
-	}
-	
-	body {
-		font-family: "CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
-		position: relative;
-	}
-	
-	body::-webkit-scrollbar {
-		display: none;
-	}
-	
-	button {
-		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
-		height: 50px;
-		font-size: 1.2em;
-	}
-	
-	button, p, a {
-		text-decoration: none;
-		font-size: clamp(16px, 1.2vw, 25px);
-		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
-	}
+body {
+	font-family: "CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
+	position: relative;
+}
 
-	h1 {
-		font-size: clamp(58px, 7.2vw, 112px);
-	}
+body::-webkit-scrollbar {
+	display: none;
+}
 
-	h2 {
-		font-size: clamp(40px, 3vw, 54px);
-        font-weight: 400;
-	}
+button {
+	font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
+	height: 50px;
+	font-size: 1.2em;
+}
 
-	h3 {
-		font-weight: 400;
-		font-size: clamp(24px, 2.2vw, 42px);
-	}
+button, p, a {
+	text-decoration: none;
+	font-size: clamp(16px, 1.2vw, 25px);
+	font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
+}
 
-	h4 {
-		font-weight: 400;
-		font-size: clamp(20px, 1.8vw, 30px);
-	}
+h1 {
+	font-size: clamp(58px, 7.2vw, 112px);
+}
 
-	.button {
-		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 250px;
-		height: 50px;
-		border-radius: 0px 0px 26.5px 0px;
-		background:  var(--green-light);
-		color: var(--green-bright);
-		font-size: clamp(16px, 0.8vw, 25px);
-		border: none;
-		box-sizing: content-box;
-		transition: 0.3s;
-	}
+h2 {
+	font-size: clamp(40px, 3vw, 54px);
+	font-weight: 400;
+}
 
-	.button:hover {
-		border-radius: 0;
-	}
+h3 {
+	font-weight: 400;
+	font-size: clamp(24px, 2.2vw, 42px);
+}
 
-	.button-outline {
-		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
-		text-decoration: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: none;
-		border: 1px solid var(--dark-green);
-		color: var(--dark-green);
-		width: 165px;
-		height: 50px;
-		padding: 0 50px;
-		position: relative;
-		font-size: clamp(16px, 1.2vw, 25px);
-		box-sizing: content-box;
-		transition: 0.3s;
+h4 {
+	font-weight: 400;
+	font-size: clamp(20px, 1.8vw, 30px);
+}
+
+.button {
+	font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+	height: 50px;
+	border-radius: 0px 0px 26.5px 0px;
+	background:  var(--green-light);
+	color: var(--green-bright);
+	font-size: clamp(16px, 0.8vw, 25px);
+	border: none;
+	box-sizing: content-box;
+	transition: 0.3s;
+}
+
+.button:hover {
+	border-radius: 0;
+}
+
+.button-outline {
+	font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	border: 1px solid var(--dark-green);
+	color: var(--dark-green);
+	width: 165px;
+	height: 50px;
+	padding: 0 50px;
+	position: relative;
+	font-size: clamp(16px, 1.2vw, 25px);
+	box-sizing: content-box;
+	transition: 0.3s;
 
 
-		.button-outline-icon {
-			position: absolute;
-			top: -2%;
-			right: -50%;
-			width: 100%;
-			height: 105%;
-		}
+	.button-outline-icon {
+		position: absolute;
+		top: -2%;
+		right: -50%;
+		width: 100%;
+		height: 105%;
 	}
+}
 
-	.button-outline:hover {
-		background: var(--dark-green);
-		color: var(--green-light);
+.button-outline:hover {
+	background: var(--dark-green);
+	color: var(--green-light);
+}
+
+
+.button-left {
+	font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	width: 150px;
+	height: 50px;
+	border: 1px solid var(--dark-green);
+	border-radius:  26.5px 0px 0px 0px;
+	color: var(--dark-green);
+	font-size: clamp(16px, 1.2vw, 25px);
+	transition: 0.3s;
+}
+
+.button-left:hover {
+	background: var(--dark-green);
+	color: var(--green-light);
+
+	svg path {
+		fill:  var(--green-light);
 	}
-
-
-	.button-left {
-		font-family:"CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
-		text-decoration: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 15px;
-		width: 150px;
-		height: 50px;
-		border: 1px solid var(--dark-green);
-		border-radius:  26.5px 0px 0px 0px;
-		color: var(--dark-green);
-		font-size: clamp(16px, 1.2vw, 25px);
-		transition: 0.3s;
-	}
-
-	.button-left:hover {
-		background: var(--dark-green);
-		color: var(--green-light);
-
-		svg path {
-			fill:  var(--green-light);
-		}
-	}
+}
