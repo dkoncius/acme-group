@@ -7,17 +7,17 @@ projects.forEach(project => {
     const projectIndex = projects.indexOf(project);
 
     // Hide all images
-    document.querySelectorAll('.image-shape').forEach(img => img.style.display = 'none');
+    document.querySelectorAll('.image-shape').forEach(img => img.classList.remove('visible'));
 
     // Display the corresponding image
     const images = document.querySelectorAll('.image-shape');
     if (images[projectIndex]) {
-      images[projectIndex].style.display = 'block';
+      images[projectIndex].classList.add('visible');
     }
   });
 
   project.addEventListener('mouseleave', () => {
-    // Optionally, hide the images when the mouse leaves the project
-    document.querySelectorAll('.tech-shape').forEach(img => img.style.display = 'none');
+    // Hide the images when the mouse leaves the project
+    document.querySelectorAll('.image-shape').forEach(img => img.classList.remove('visible'));
   });
 });
