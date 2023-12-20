@@ -188,6 +188,10 @@ main {
 footer {
     color: var(--burgundy-extra-light) !important;
     margin-top: 150px;
+    
+    a {
+        color: var(--burgundy-extra-light) !important;
+    }
 
     .social {
         a:before {
