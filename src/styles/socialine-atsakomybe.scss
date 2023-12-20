@@ -157,28 +157,25 @@ header {
             width: 80vw;
             height: 300px;
             position: relative;
+            top: 20px;
             left: -20px;
-        
-            .swiper-slide {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 400px;
-                height: 200px;
-        
-                img {
-                    width: 150px;
-                    height: 150px;
-                    object-fit: contain;
-                }
-        
-                &:nth-of-type(odd) img {
-                    position: relative;
-                    top: 100px
-                 }
+    
+            svg {
+                position: relative;
+                width: 10vw;
+                height: 150px;
+                top: 0px;
             }
-        
-          
+    
+            .swiper-slide {
+                flex-direction: column;
+                height: 200px;
+            }
+    
+            .swiper-slide:nth-of-type(even) svg, 
+            .swiper-slide-duplicate:nth-of-type(even) svg {
+                top: 100px;
+            }
         }
     }
 

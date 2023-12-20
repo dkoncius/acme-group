@@ -13,7 +13,7 @@ const swiper = new Swiper('.soc-swiper', {
   spaceBetween: 100,
   slidesPerView: 4,
   autoplay: {
-    delay: 1000,
+    delay: 100,
     disableOnInteraction: false,
   },
  
