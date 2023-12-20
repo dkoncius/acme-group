@@ -184,7 +184,7 @@ main {
             grid-template-columns: 150px 1fr 150px 150px 100px;
             align-items: center;
             width: 90vw;
-            height: 130px;
+            min-height: 130px;
         }
 
         .job-title {
@@ -268,7 +268,7 @@ main {
     color: var(--burgundy-dark);
     
     .content {
-        width: 80vw;
+        width: 90%;
         margin: auto;
 
         h2 {
@@ -504,4 +504,142 @@ footer {
 			left: -200px;
 		}
 	}
+}
+
+
+@media (max-width: 769px){
+    .section-1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 602px 427px;
+     
+        .shape-1 {
+            position: absolute;
+            width: 1208px;
+            height: 1115px;
+            right: -360px;
+            left: auto;
+            z-index: -1;
+        }
+
+        
+        .content {
+            width: 60%;
+            transform: translate(120px, 200px);
+
+            .button {
+                width: 200px;
+            }
+        }
+
+        .content-2 {
+            transform: translate(0, -100px);
+            width: 70%;
+            margin: auto;
+        }
+    }
+
+    .section-info {
+        margin-top: 0px;
+    }
+
+    .section-jobs {
+        margin-top: 25px;
+        width: 90%;
+        margin: auto;
+    
+        .jobs-heading {
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 50px;
+    
+            h3 {
+                grid-column: 1/4;
+                margin-bottom: 15px;
+            }
+    
+            p:nth-of-type(1) {
+                grid-column: 1;
+            }
+    
+        }
+    
+        .jobs-main .job {
+            grid-template-columns: repeat(3, 1fr);
+    
+            .job-title, hr {
+                grid-column: 1/4;
+                margin-bottom: 30px;
+            }
+    
+            .job-city, .job-logo, .job-link {
+                grid-row: 2;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .mentorship {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 50px;
+        .mentorship-image {
+            display: none;
+        }
+
+        .content {
+            transform: translate(0);
+            width: 100%;
+        }
+    }
+
+    .section-tabs .content {
+        .tabs-buttons {
+            button {
+                border-color: var(--burgundy-dark);
+                &:hover {
+                    background: var(--burgundy-dark);
+                    color: var(--burgundy-extra-light);
+                }
+    
+                &:active {
+                    background: var(--burgundy-dark);
+                    color: var(--burgundy-extra-light);
+                }
+            }
+        }
+        
+        .tab {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .tabs {
+        padding: 0;
+    }
+
+ 
+}
+
+
+@media (max-width: 426px) {
+    .section-1 {
+
+        .shape-1 {
+            left: -350px;
+        }
+
+        .content {
+            width: 90%;
+            transform: translate(0);
+            margin: auto;
+
+            .button {
+                width: 200px;
+            }
+        }
+
+        .content-2 {
+            width: 90%;
+        }
+    }
 }

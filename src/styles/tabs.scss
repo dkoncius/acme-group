@@ -105,33 +105,32 @@
     }
 }
 
-@media (max-width: 768px){
-    .tabs-buttons {
-        flex-wrap: wrap;
-        gap: 15px;
-        border: none;
 
-        button {
-            width: 45%;
-            height: auto;
-            min-height: 50px;
-            border: 3px solid var(--dark-green);
-            cursor: url('/icons/pointer-green.svg'), pointer;
 
-            &:hover {
-                background: var(--dark-green);
-                color: var(--green-light);
-            }
+@media (min-width: 2200px){
+    .tabs .tab .content-right {
+        right: 0;
+        left: 1500px;
 
-            &:active {
-                background: var(--dark-green);
-                color: var(--green-light);
-            }
-
-            &::before {
-                display: none;
-            }
+        img {
+            border-radius: 200px 200px 0px 0px;
         }
+    }
+}
+
+
+@media (max-width: 2000px){
+    .tabs .tab .content-right {
+        right: 0;
+        left: 1000px;
+    }
+}
+
+
+@media (max-width: 1600px){
+    .tabs .tab .content-right {
+        right: 0;
+        left: 757px;
     }
 }
 
@@ -156,30 +155,33 @@
     }
 }
 
+@media (max-width: 769px){
+    .tabs-buttons {
+        flex-wrap: wrap;
+        gap: 15px;
+        border: none;
+        padding: 0;
 
+        button {
+            width: 45%;
+            height: auto;
+            min-height: 50px;
+            border: 3px solid var(--dark-green);
+            cursor: url('/icons/pointer-green.svg'), pointer;
 
-@media (min-width: 1201px) and (max-width: 1600px){
-    .tabs .tab .content-right {
-        right: 0;
-        left: 757px;
-    }
-}
+            &:hover {
+                background: var(--dark-green);
+                color: var(--green-light);
+            }
 
+            &:active {
+                background: var(--dark-green);
+                color: var(--green-light);
+            }
 
-@media (min-width: 1601px) and (max-width: 2000px){
-    .tabs .tab .content-right {
-        right: 0;
-        left: 1000px;
-    }
-}
-
-@media (min-width: 2200px){
-    .tabs .tab .content-right {
-        right: 0;
-        left: 1500px;
-
-        img {
-            border-radius: 200px 200px 0px 0px;
+            &::before {
+                display: none;
+            }
         }
     }
 }
