@@ -156,6 +156,11 @@
 }
 
 @media (max-width: 769px){
+    * {
+        user-select: none;
+        cursor: default !important;
+    }
+
     .tabs-buttons {
         flex-wrap: wrap;
         gap: 15px;
@@ -167,7 +172,6 @@
             height: auto;
             min-height: 50px;
             border: 3px solid var(--dark-green);
-            cursor: url('/icons/pointer-green.svg'), pointer;
 
             &:hover {
                 background: var(--dark-green);
