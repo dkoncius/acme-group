@@ -125,11 +125,12 @@ swiperVideos.forEach(video => {
 function toggleVideoPlayback(video, icon) {
     if (!play) {
       video.play();
+      video.controls = true
+      video.autoplay = true
       icon.classList.add("hidden");
       play = true;
     } else {
       video.pause();
-      icon.classList.remove("hidden");
       play = false;
     }
   }
