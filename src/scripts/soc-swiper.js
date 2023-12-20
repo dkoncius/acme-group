@@ -11,8 +11,9 @@ const swiper = new Swiper('.soc-swiper', {
   direction: 'horizontal',
   loop: true,
   spaceBetween: 100,
+  slidesPerView: 4,
   autoplay: {
-    delay: false,
+    delay: 1000,
     disableOnInteraction: false,
   },
  

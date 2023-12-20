@@ -172,7 +172,7 @@ header {
                     object-fit: contain;
                 }
         
-                img:nth-of-type(odd) {
+                &:nth-of-type(odd) img {
                     position: relative;
                     top: 100px
                  }
