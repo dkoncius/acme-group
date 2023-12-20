@@ -82,7 +82,7 @@ galleryItems.forEach((item, index) => {
     item.addEventListener("click", () => {
         gallerySwiper.classList.add("show");
         disableScrollAndAddOverlay();
-        swiper.slideToLoop(index);
+        swiper.slideToLoop(index, 0);
     });
 
     // Show the icon on mouse enter
