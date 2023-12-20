@@ -622,6 +622,7 @@ footer {
         grid-template-columns: 1fr;
         width: 100%;
         grid-auto-rows: 0.5fr;
+        text-align: justify;
 
         h2 {
             width: 100%;
@@ -661,6 +662,7 @@ footer {
                 grid-template-columns: 1fr;
                 width: 90%;
                 margin: auto;
+                margin-bottom: 100px;
     
                 .step {
                     max-width: 50%;
