@@ -55,7 +55,4 @@ gsap.from('.partners p', {
     duration: 1,
     ease: 'power3.out'
   });
-  
-  
-  
 });
