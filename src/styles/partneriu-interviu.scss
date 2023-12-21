@@ -21,12 +21,12 @@ header {
     .right {
         transform: translateY(0px);
         clip-path: inset(0 0 0% 0);
-        color: var(--blue-dark) !important;
+        color: var(--blue-dark);
 
         .menu .line,
         .menu .bubble,
         .language {
-            background: var(--blue-dark) !important;
+            background: var(--blue-dark);
         }
     }
 }
@@ -320,4 +320,75 @@ footer {
             grid-column: 4;
         }
     }
+}
+
+@media (max-width: 769px){
+    // header {
+    //     .right {
+    //         .menu {
+    //             color: var(--blue-extra-light) !important;
+    
+    //             .line, .bubble {
+    //                 background: var(--blue-extra-light) !important;
+    //             }
+    //         }
+
+    //         .language {
+    //             background:  var(--blue-extra-light) !important;
+    //             color: var(--blue-dark);
+    //         }
+    //     }
+    // }
+
+    .section-1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 620px 700px;
+        width: 100%;
+        min-height: 600px;
+  
+        .shape-1 {
+          height: 595px;
+          width: 500px;
+          left: auto;
+          right: 200px;
+  
+          &::before {
+              height: 100%;
+              width: 100%;
+              background: var(--blue-dark);
+          }
+  
+          &::after {
+              display: none;
+          }
+  
+          svg {
+              display: none;
+            }
+        }
+        
+        .partneriu-interviu-mobile {
+          background: url("/tvarumas/partneriu-interviu-mobile.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 598px;
+          height: 540px;
+          position: absolute;
+          right: -200px;
+        }
+
+        .content {
+            grid-column: 1;
+            width: 90%;
+            left: 0px;
+            right: 0px;
+            margin: 30px auto;
+            transform: translate(0, 150px);
+            
+            .button {
+                background: var(--dark-green);
+                color: var(--green-light);
+            }
+          }
+    }  
 }
