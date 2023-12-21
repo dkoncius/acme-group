@@ -84,16 +84,6 @@ galleryItems.forEach((item, index) => {
         disableScrollAndAddOverlay();
         swiper.slideToLoop(index, 0);
     });
-
-    // Show the icon on mouse enter
-    item.addEventListener("mouseenter", () => {
-        icon.style.display = 'block';
-    });
-
-    // Hide the icon on mouse leave
-    item.addEventListener("mouseleave", () => {
-        icon.style.display = 'none';
-    });
 });
 
 
@@ -101,7 +91,6 @@ function createIcon(item) {
     const icon = document.createElement("img");
     icon.src = item.tagName.toLowerCase() === 'img' ? "/karjera/image-icon.svg" : "/karjera/video-icon.svg";
     icon.classList.add("icon-overlay");
-    icon.style.display = 'none'; // Initially hide the icon
     return icon;
 }
 
