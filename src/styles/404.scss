@@ -116,6 +116,7 @@ header {
         max-width: 500px;
         transform: translate(13vw, 0vw);
         color: var(--dark-green);
+        top: 100px;
     }
 }
 
@@ -141,6 +142,7 @@ header {
         gap: 20px;
         text-decoration: none;
         color: var(--green-light);
+        height: 50px;
         cursor: url("/icons/pointer-green.svg"), pointer;
         img {
             width: clamp(24px, 2.5vw, 47px);
@@ -232,9 +234,7 @@ header {
         grid-template-columns: repeat(6, 250px);
 
         h1 {
-            font-size: clamp(42px, 10vw, 54px);
             max-width: 250px;
-            top: 100px;
         }
 
         .form-1 {
@@ -281,9 +281,7 @@ header {
         grid-template-columns: repeat(2, 250px);
 
         h1 {
-            font-size: clamp(42px, 10vw, 54px);
             max-width: 250px;
-            top: 100px;
         }
 
         .form-1 {
