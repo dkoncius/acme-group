@@ -162,11 +162,7 @@ main {
 
 
 @media (max-width: 769px){
-    * {
-        cursor: default;
-    }
-
-    .news {
+   .news {
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(420px, auto);
 
