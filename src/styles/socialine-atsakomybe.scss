@@ -447,9 +447,11 @@ footer {
 }
 
 @media (max-width: 1025px){
-    .tech-education .content .projects {
-        grid-template-columns: 200px 1fr;
-        left: 0;
+    .tech-education, .sveika-gyvensena, .bendruomenes-projektai {
+        .content .projects {
+            grid-template-columns: 200px 1fr;
+            left: 0;
+        }
     }
 }
 
