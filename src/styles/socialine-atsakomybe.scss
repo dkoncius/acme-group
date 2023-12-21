@@ -110,7 +110,7 @@ header {
 
     }
 
-    .socialine-atsakomybe-shape {
+    .shape-1 {
         background-position: top;
         width: 1623.882px;
         height: 1839px;
@@ -181,6 +181,7 @@ header {
 
     .content-bottom {
         display: flex;
+        justify-content: space-around;
         grid-row: 2;
       
 
@@ -188,10 +189,11 @@ header {
             display: flex;
             align-items: center;
             flex-direction: column;
+            text-align: center;
             gap: 20px;
             color: var(--blue-dark);
 
-            img {
+            img,svg {
                 width: clamp(40px, 4vw, 81px);
             }
         }
@@ -202,12 +204,10 @@ header {
             color: var(--blue-extra-light);
         }
 
-        .blue-icons {
-            width: 70%;
-            grid-column: 3;
-            display: flex;
-            justify-content: space-around;
-           }
+        .blue-icon {
+            position: relative;
+            left: -100px;
+        }
 
        
     }
@@ -438,7 +438,13 @@ footer {
     }
 }
 
-
+@media (max-width: 1600px) {
+    .section-1 {
+        .shape-1 {
+            top: -100px;
+        }
+    }
+}
 
 @media (max-width: 1025px){
     .tech-education .content .projects {
@@ -447,11 +453,163 @@ footer {
     }
 }
 
-
-@media (max-width: 1600px) {
+@media (max-width: 769px){
     .section-1 {
-        .socialine-atsakomybe-shape {
-            top: -100px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 600px 825px;
+        width: 100%;
+  
+        .shape-1 {
+          height: 691px;
+          width: 525px;
+          left: auto;
+          right: 200px;
+  
+          &::before {
+              top: -2px;
+              right: 49%;
+              height: 100%;
+              width: 100%;
+              background: var(--blue-light);
+              transform: rotate(-4deg);
+          }
+  
+          &::after {
+              display: none;
+          }
+  
+          svg {
+              display: none;
+            }
+        }
+        
+        .socialine-atsakomybe-mobile {
+          background: url("/tvarumas/socialine-atsakomybe-mobile.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 100%;
+          height: 100%;      
+          position: absolute;
+          right: -200px;
+        }
+
+        .content {
+            grid-column: 1;
+            grid-row: 1;
+            width: 90%;
+            left: 0px;
+            right: 0px;
+            margin: 30px auto;
+            transform: translate(0, 150px);
+            
+            .button {
+                background: var(--dark-green);
+                color: var(--green-light);
+            }
+          }
+    } 
+
+
+    .section-2  {
+        display: flex;
+        flex-direction: column;
+
+        .content-bottom {
+            width: 100%;
+            color: var(--blue-dark);
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 100px 0;
+
+            .icon {
+                width: 45%;
+            }
+
+            .white-icon {
+                color: var(--blue-dark);
+                svg path {
+                    fill: var(--blue-dark);
+                }
+            }
+
+            .blue-icon {
+                left: 0;
+            }
+        }
+
+        .content-top {
+            order: 2;
+            color: var(--blue-dark);
+            left: 0;
+            width: 90%;
+            margin: auto;
+            flex-direction: column;
+
+            p {
+                top: 0px;
+                max-width: 200px;
+            }
+
+            .swiper {
+                width: 90vw;
+                left: 0;
+                top: 0;
+                margin: 0;
+            }
+        }
+    }
+
+
+    .section-3 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 50px auto;
+        margin-top: -50px;
+    }
+
+
+    .tech-education, .sveika-gyvensena, .bendruomenes-projektai {
+
+        &::before {
+            background: transparent;
+        }
+        .content {
+            .project-images .image-shape {
+                display: none !important;
+            }
+            .projects {
+                grid-template-columns: 1fr;
+                left: 0;
+                .left {
+                    display: none;
+                }
+    
+                .right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .tech-education .content h2 {
+        margin-top: -50px;
+    }
+    .ataskaitos {
+        margin-top: 200px;
+    }
+}
+
+
+@media (max-width: 426px){
+    .section-1 {
+      .shape-1 {
+          height: 800px;
+  
+          &::before {
+              top: -5px;
+          }
         }
     }
 }
