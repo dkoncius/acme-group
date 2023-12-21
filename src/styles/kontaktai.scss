@@ -145,3 +145,59 @@ main {
         }
     }
 }
+
+
+
+@media (max-width: 769px){
+    .section-1 {
+      grid-template-columns: 1fr;
+      margin-bottom: -200px;
+      
+      .shape-1 {
+        background: url("/kontaktai/mobile-shape.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 598px;
+        height: 540px;
+        right: -6px;
+
+        &::after {
+            background: none;
+        }
+      }
+
+      .content {
+        transform: translate(0px, 178px);
+
+        .contact-title, .contact-2-title {
+            max-width: 550px;
+        }
+      }
+
+      .info-content, .info-content-2 {
+        flex-wrap: wrap;
+
+        .contact {
+            width: 250px !important;
+        }
+     }
+    }
+}
+
+
+@media (max-width: 426px){
+  
+    .section-1 {
+        margin-bottom: -500px;
+        .content {
+            padding: 0;
+            width: 90%;
+            margin: auto;
+    
+            .contact-title, .contact-2-title {
+                max-width: 250px;
+            }
+        }
+    }
+}
+
