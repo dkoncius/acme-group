@@ -348,3 +348,130 @@ main {
         }
     }
 }
+
+@media (max-width: 769px){
+    .section-1 {
+      grid-template-columns: 1fr;
+      grid-template-rows: 620px 700px;
+      width: 100%;
+      min-height: 600px;
+
+      .shape-1 {
+        height: 595px;
+        width: 500px;
+        left: auto;
+        right: 200px;
+
+        &::before {
+            height: 100%;
+            width: 100%;
+            background: var(--green-spot);
+        }
+
+        &::after {
+            display: none;
+        }
+
+        svg {
+            display: none;
+          }
+      }
+      
+      .veiklos-mobile-shape {
+        background: url("/kontaktai/mobile-shape.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 598px;
+        height: 540px;
+        position: absolute;
+        right: -5px;
+      }
+      
+      .shape-2 {
+        width: 120%;
+        height: 200px;
+        transform: rotate(-4deg);
+        top: 550px;
+        left: -10%;
+      }
+
+      .content {
+        color: var(--dark-green);
+        grid-column: 1;
+        width: 90%;
+        left: 0px;
+        right: 0px;
+        margin: 30px auto;
+        transform: translate(0);
+        
+        .button {
+            background: var(--dark-green);
+            color: var(--green-light);
+        }
+      }
+    }
+
+    .section-2, .section-3 {
+        display: block;
+        transform: rotate(0);
+        left: 0;
+        width: 100%;
+        margin: 0;
+        .foto-1, .foto-2 {
+            position: relative;
+            width: 120%;
+            height: 200px;
+            top: 0;
+            left: -10%;
+            border-radius: 0px;
+            transform: rotate(-4deg);
+
+            .shape-2 {
+                display: none;
+            }
+        }
+
+        .content {
+            grid-row: auto;
+            grid-column: 1;
+            width: 90%;
+            top: -50px;
+            left: 0px;
+            margin: 100px auto;
+            transform: rotate(0deg);
+        }
+    }
+}
+
+
+@media (max-width: 426px){
+  
+    .section-1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 450px 850px;
+
+        .veiklos-mobile-shape {
+            width: 428px;
+            height: 380px;
+        }
+
+        h1 {
+            position: static;
+            width: 90%;
+            transform: translate(0);
+            margin: auto;
+        }
+
+        .shape-2 {
+            top: 400px;
+        }
+    }
+
+    .section-3 {
+        margin-top: -100px;
+        
+        .content {
+            margin-bottom: 0;
+        }
+    }
+}
