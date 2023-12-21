@@ -165,3 +165,74 @@ footer {
         }
     }
 }
+
+
+@media (max-width: 1600px){
+    .section-1 {
+        .content {
+            transform: translate(107px, 258px);
+            width: 60%;
+        }
+    }
+}
+
+
+@media (max-width: 1200px){
+    .section-1 {
+        .shape-1 {
+            left: -425px;
+        }
+    }
+}
+
+
+@media (max-width: 1025px){
+    .section-1 {
+        .shape-1 {
+            background: url("/karjera/mentoryste-mobile-shape.svg");
+            left: auto;
+            right: 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 499px;
+            height: 1294px;
+
+            &::before {
+                left: -114%;
+                height: 46.1%;
+                width: 119%;
+            }
+        }
+
+        .content {
+            grid-column: 1/3;
+            width: 90%;
+            margin: auto;
+            transform: translate(0, -100px);
+        }
+
+        .content-2 {
+            top: 100px;
+            transform: translate(40px, -150px);
+        }
+
+        .content-info {
+            grid-column: 1/3;
+            grid-row: 3;
+        }
+    }
+}
+
+@media (max-width: 769px){
+    .section-1 {
+        .content-2 {
+            top: 100px;
+            transform: translate(0, -150px);
+        }
+
+        .content-info .icons {
+            grid-auto-rows: 100px;
+            gap: 25px;
+        }
+    }
+}
