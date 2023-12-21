@@ -377,8 +377,8 @@ main {
           }
       }
       
-      .veiklos-mobile-shape {
-        background: url("/kontaktai/mobile-shape.svg");
+      .mobile-shape {
+        background: url("/kontaktai/veiklos-mobile-shape.svg");
         background-repeat: no-repeat;
         background-size: cover;
         width: 598px;
@@ -448,7 +448,7 @@ main {
   
     .section-1 {
         grid-template-columns: 1fr;
-        grid-template-rows: 450px 850px;
+        grid-template-rows: 600px 850px;
 
         .veiklos-mobile-shape {
             width: 428px;
@@ -456,14 +456,16 @@ main {
         }
 
         h1 {
-            position: static;
+            position: relative;
+            top: -50px;
+            left: 0;
             width: 90%;
             transform: translate(0);
             margin: auto;
         }
 
         .shape-2 {
-            top: 400px;
+            top: 550px;
         }
     }
 

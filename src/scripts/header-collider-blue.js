@@ -49,3 +49,8 @@ function checkCollision(rect1, rect2) {
 }
 
 window.addEventListener('scroll', onScroll);
+window.addEventListener("DOMContentLoaded", () => {
+   setTimeout(() => {
+    onScroll()
+   }, 1000)
+})
