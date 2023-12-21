@@ -322,24 +322,23 @@ footer {
     }
 }
 
+@media (max-width: 1025px){
+    header {
+      
+        .right {
+            color: var(--blue-extra-light);
+            .menu .line,
+            .menu .bubble,
+            .language {
+                background: var(--blue-extra-light);
+                color: var(--blue-dark);
+            }
+        }
+    }
+
+}
+
 @media (max-width: 769px){
-    // header {
-    //     .right {
-    //         .menu {
-    //             color: var(--blue-extra-light) !important;
-    
-    //             .line, .bubble {
-    //                 background: var(--blue-extra-light) !important;
-    //             }
-    //         }
-
-    //         .language {
-    //             background:  var(--blue-extra-light) !important;
-    //             color: var(--blue-dark);
-    //         }
-    //     }
-    // }
-
     .section-1 {
         grid-template-columns: 1fr;
         grid-template-rows: 620px 700px;
