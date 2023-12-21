@@ -299,7 +299,7 @@ main {
 }
 
 // Footer
-footer {
+.footer-1 {
     display: grid;
     grid-template-columns: repeat(6, minmax(190px, 1fr));
     grid-auto-rows: minmax(250px, 1fr);
@@ -308,6 +308,7 @@ footer {
     position: relative;
     margin-bottom: -300px;
     color: var(--blue-extra-light) !important;
+    z-index: -1;
 
     a {
         color: var(--blue-extra-light) !important;
@@ -445,9 +446,67 @@ footer {
     }
 }
 
+.footer-2 {
+    display: none;
+}
+
+
+@media (max-width: 1600px){
+    .section-1 .content {
+        transform: translate(13vw, -200px);
+    }
+    .tvarumas-1 {
+        right: 0;
+        left: -370px;
+    }
+
+    .tvarumas-2 {
+        right: 0;
+        left: 655px;
+    }
+
+    .tvarumas-3 {
+        right: 0;
+        left: 580px;
+    }
+  
+}
+
+
+
+@media (max-width: 1200px){
+    .tvarumas-1 {
+        right: 0;
+        left: -550px;
+    }
+
+    .tvarumas-2 {
+        right: 0;
+        left: 476px;
+    }
+
+    .tvarumas-3 {
+        right: 0;
+        left: 404px;
+    }
+
+    .ataskaitos {
+        margin: 100px auto;
+    }
+    
+    .footer-1 {
+        .footer-shape-1 {
+            left: -645px;
+        }
+
+        .footer-shape-2 {
+            left: 761px;
+        }
+    }
+}
 
 @media (max-width: 1000px){
-    footer {
+    .footer-1 {
         .content .contact {
             left: -50px;
         }
@@ -470,56 +529,102 @@ footer {
     }
 }
 
-@media (min-width: 1001px) and (max-width: 1200px){
-    .tvarumas-1 {
-        right: 0;
-        left: -550px;
+
+@media (max-width: 769px){
+    .section-1 {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 400px;
+        transform: translate(0);
+        position: static;
+        width: 100%;
+        
+        .content {
+            grid-row: 2;
+            width: 90%;
+            margin: auto;
+            transform: translate(0, -200px);
+        }
+
+        .tvarumas-1, .tvarumas-2, .tvarumas-3 {
+            display: none;
+        }
+
+
+        .socialine-atsakomybe-mobile {
+            background: url("/tvarumas/socialine-atsakomybe-mobile.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 730px;
+            width: 800px;
+            position: absolute;
+            left: auto;
+            right: 0px;
+            z-index: -1;
+        }
+    } 
+
+    .section-2 {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: auto;
+
+        .animated-opacity {
+            width: 100%;
+            padding: 0;
+            padding-bottom: 50px;
+            transform: translate(0);
+            margin-top: -50px;
+        }
+
+        .tabs {
+            width: 100%;
+            transform: translate(0);
+            .tab {
+                p {
+                    width: 100%;
+                }
+        
+               .tab-content .icons {
+                    flex-wrap: wrap;
+                    gap: 0px;
+        
+                    .icon {
+                        width: 45%;
+                    }
+                }
+            }
+        }
     }
 
-    .tvarumas-2 {
-        right: 0;
-        left: 476px;
-    }
-
-    .tvarumas-3 {
-        right: 0;
-        left: 404px;
-    }
-}
-
-@media (max-width: 1200px){
     .ataskaitos {
-        margin: 100px auto;
+        margin-top: -50px;
+        width: 90%;
     }
-    
-    footer {
-        .footer-shape-1 {
-            left: -645px;
-        }
 
-        .footer-shape-2 {
-            left: 761px;
-        }
+    .footer-1 {
+        display: none;
+    }
+
+    .footer-2 {
+        display: grid;
     }
 }
 
-@media (min-width: 1201px) and (max-width: 1600px){
-    .section-1 .content {
-        transform: translate(13vw, -200px);
-    }
-    .tvarumas-1 {
-        right: 0;
-        left: -370px;
+
+@media (max-width: 426px){
+    .section-1 {
+        
+        .socialine-atsakomybe-mobile {
+            height: 673px;
+            width: 588px;
+        }
     }
 
-    .tvarumas-2 {
-        right: 0;
-        left: 655px;
+    .section-2 .tabs .tab .show {
+        height: 450px;
     }
 
-    .tvarumas-3 {
-        right: 0;
-        left: 580px;
+    .footer-2 {
+        display: block;
     }
-  
 }
