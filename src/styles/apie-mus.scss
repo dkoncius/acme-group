@@ -167,7 +167,6 @@ main {
             &.selected {
                 p {
                     transform: scale(1.8) translateX(15px) !important;
-                    user-select: none;
                 }
 
                 .line {

@@ -103,7 +103,6 @@
     height: 100%;
     z-index: 1000;
     background: rgba(0, 74, 78, 0.8);
-    user-select: none;
     display: none;
     transition: 1s;
 
@@ -368,7 +367,6 @@
 
 @media (max-width: 769px) {
     * {
-        user-select: none;
         cursor: default;
     }
 
