@@ -20,12 +20,12 @@ header {
     .right {
         transform: translateY(0px);
         clip-path: inset(0 0 0% 0);
-        color: var(--blue-dark) !important;
+        color: var(--blue-dark);
 
         .menu .line,
         .menu .bubble,
         .language {
-            background: var(--blue-dark) !important;
+            background: var(--blue-dark);
         }
     }
 }

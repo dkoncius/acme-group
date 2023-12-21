@@ -15,20 +15,56 @@ const menu = document.getElementById("menu")
 const expandedMenu = document.getElementById("expandedMenu")
 const mainContent = document.getElementById("mainContent")
 
+const logoPathAll = document.querySelectorAll(".logo svg g path")
+const menuText = menu.querySelector("span")
+const line = menu.querySelector(".line")
+const bubble = menu.querySelector(".bubble")
 const language = document.getElementById("language") 
 
 
 let clicked = false
-menu?.addEventListener("click", function(){
-  
+let initialTextColor
+let initialBgColor
 
-    const bubble = this.querySelector(".bubble")
+const changeHeaderColors = () => {
+    const languageElement = document.querySelector(".language")
+    
+
+    if(!clicked) {
+        initialTextColor = language.style.color
+        initialBgColor = language.style.backgroundColor
+
+        console.log(language.style.backgroundColor)
+
+        logoPathAll.forEach(path => path.style.fill = "#004A4E")
+        menuText.style.color = "#004A4E"
+        line.style.background = "#004A4E"
+        bubble.style.background = "#004A4E"
+        language.style.background = "#004A4E"
+        language.style.color = "#E6F5E4"
+        
+        
+    } else {
+        logoPathAll.forEach(path => path.style.fill = initialBgColor)
+        menuText.style.color = initialBgColor
+        line.style.background = initialBgColor
+        bubble.style.background = initialBgColor
+        language.style.background = initialBgColor
+        language.style.color = initialTextColor
+    }
+  
+  
+}
+
+menu.addEventListener("click", function(){
+    // Change colors
+    changeHeaderColors()
+
 
     if(!clicked) {
     expandedMenu.style.display = "block"
     mainContent.style.display = "none"
     document.body.style.minHeight = "100vh"
-    console.log(document.body)
     this.querySelector("span:first-of-type").innerText = "uždaryti"
     
     bubble.innerHTML = 
@@ -36,7 +72,7 @@ menu?.addEventListener("click", function(){
     <div class="x">
             <span class="line"></span>
             <span class="line"></span>
-        </div>
+    </div>
     `;
     clicked = true
 
