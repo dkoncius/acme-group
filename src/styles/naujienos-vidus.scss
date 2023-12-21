@@ -98,3 +98,9 @@ main {
         margin-bottom: 100px;
     }
 }
+
+@media (max-width: 769px){
+    .news-content {
+        grid-auto-rows: minmax(146px, auto);
+    }
+}
