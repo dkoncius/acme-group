@@ -488,6 +488,10 @@ footer {
     z-index: 1;
     margin-top: -362px;
 
+    a {
+        color: var(--green-light);
+    }
+
     .footer-forma {
         grid-column: 1/6;
         grid-row: 1/5;
