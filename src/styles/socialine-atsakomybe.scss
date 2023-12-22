@@ -377,7 +377,7 @@ header {
     position: relative;
     width: 75%;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 250px;
     color: var(--blue-dark);
 
     h3 {
@@ -403,8 +403,17 @@ header {
                 width: clamp(40px, 4vw, 81px);
             }
         }
-      
     }
+    
+    .more {
+        color: var(--blue-dark);
+        text-decoration: underline;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 30px 0;
+    }
+   
   
 }
 
@@ -443,6 +452,11 @@ footer {
         .shape-1 {
             top: -100px;
         }
+    }
+
+    .ataskaitos {
+        margin-top: 200px;
+        margin-bottom: -150px;
     }
 }
 
