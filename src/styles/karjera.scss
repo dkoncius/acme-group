@@ -673,11 +673,11 @@ footer {
                     margin: 30px auto;
     
                     .number {
-                        color: var(--burgundy-spot);
+                        color: var(--burgundy-spot) !important;
                     }
     
                     p {
-                        color: var(--burgundy-dark);
+                        color: var(--burgundy-dark) !important;
                     }
                 }
     
