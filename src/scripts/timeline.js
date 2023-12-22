@@ -89,24 +89,60 @@ class Timeline {
         element.addEventListener('touchend', () => {
             moving = false;
         });
+
+        element.addEventListener('scroll', () => {
+            this.handleScroll();
+        });
     }
+
+
+    handleScroll() {
+        const datesContainer = this.container.querySelector('.dates');
+        const centerOfTimeline = datesContainer.getBoundingClientRect().left + datesContainer.getBoundingClientRect().width / 2;
+    
+        let closestYear = this.startYear;
+        let minDistance = Infinity;
+    
+        const dates = this.container.querySelectorAll('.dates .date');
+        dates.forEach((date, index) => {
+            const year = this.startYear + index;
+            const rect = date.getBoundingClientRect();
+            const centerOfDate = rect.left + rect.width / 2;
+            const distance = Math.abs(centerOfDate - centerOfTimeline);
+    
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestYear = year;
+            }
+        });
+    
+        this.setSelectedDate(closestYear - this.startYear);
+        this.showContent(closestYear - this.startYear);
+    }
+    
+    
 
 
     handleDateClick(year) {
         const index = year - this.startYear;
-        this.setSelectedDate(index);
+        this.setSelectedDate(index, true); // Pass true to center the date
         this.showContent(index);
     }
 
-    setSelectedDate(index) {
+
+    setSelectedDate(index, center = false) {
         const dates = this.container.querySelectorAll('.dates .date');
         if (this.selectedDate !== null) {
             this.selectedDate.classList.remove('selected');
         }
         this.selectedDate = dates[index];
         this.selectedDate.classList.add('selected');
-        this.centerDateItem(this.selectedDate);
+    
+        if (center) {
+            this.centerDateItem(this.selectedDate);
+        }
     }
+    
 
     showContent(index) {
         const contents = this.container.querySelectorAll('.dates-content .year-content');
@@ -114,6 +150,7 @@ class Timeline {
             content.style.display = idx === index ? 'block' : 'none';
         });
     }
+    
 
     centerDateItem(item) {
         const datesContainer = this.container.querySelector('.dates');
