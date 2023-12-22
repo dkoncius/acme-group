@@ -284,6 +284,79 @@
    
 }
 
+
+
+// tvarumas
+.tvarumas .gallery {
+    display: block;
+    margin: 100px auto;
+
+    .gallery-item {
+        cursor: url('/icons/pointer-blue.svg'), pointer;
+        width: 75%;
+        max-width: 1213px;
+        height: 450px;
+        border-radius: 50px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+
+        & > * {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .icon-overlay {
+            width: clamp(70px, 6vw, 100px);
+            height: clamp(70px, 6vw, 100px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform: translate(0);
+        }
+
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+    }
+}
+
+.tvarumas .swiper.gallery-swiper  {
+    background: rgb(21, 39, 106, 0.8);  
+
+    .swiper-button-prev:after {
+        content: url("/tvarumas/swiper-prev-icon.svg");
+    }
+
+    .swiper-button-next:after {
+        content: url("/tvarumas/swiper-next-icon.svg");
+    }
+
+    .swiper-slide-counter {
+        color: var(--blue-extra-light);
+    }
+
+    .swiper-exit {
+        color: var(--blue-extra-light);
+        cursor: url("/icons/pointer-blue.svg"), pointer;
+
+        .line {
+            color: var(--blue-extra-light);
+        }
+    }
+
+    .video-play-icon {
+        background: url('/tvarumas/video-icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }   
+}
+
 // Karjera
 .karjera .gallery {
     .left > *, .right .right-image > * {

@@ -29,10 +29,11 @@
     <link rel="stylesheet" href="/src/styles/global.scss">
     <link rel="stylesheet" href="/src/styles/header.scss">
     <link rel="stylesheet" href="/src/styles/tvarumas.scss">
+    <link rel="stylesheet" href="/src/styles/gallery.scss">
     <link rel="stylesheet" href="/src/styles/footer.scss">
   </head>
   <body>
-  <body>
+  <body class="tvarumas">
     <!-- Navigation -->
     <header>
       <a href="landing.html" class="logo next-page-link">
@@ -150,6 +151,38 @@
                             <p>Informacijos punktas</p>
                         </div>
                     </div>
+
+                    <div class="tab-columns">
+                        <div class="column">
+                          <div class="icon">
+                            <img src="/tvarumas/Acme_ikona_rodyklė_tamsi_mėlyna.svg" alt="">
+                            <p>Informacijos punktas</p>
+                          </div>
+                          <h3>Klimato kaita: švelninimas.</h3>
+                          <p>ACME Grupės bendrovės integruoja veiksmus, skirtus reguliariai vertinti bendrovių prisidėjimo prie klimato kaitos mastą tiesiogiai, netiesiogiai ir per tiekimo/vertės grandines (I, II ir III vertinimo srities, kaip tai nustato GHG Protocol, šiltnamio efektą sukeliančių dujų (ŠESD) skaičiavimais). </p>
+                          <p>Kartu ACME Grupės bendrovės siekia prisidėti prie klimato kaitos švelninimo sudarant ir vykdant ŠESD mažinimo planą.</p>
+                          <p>Kiekvienos ACME Grupės bendrovės ŠESD mažinimo indėlis yra skirtingas ir nustatomas atsižvelgiant į įmonės potencialą reikšmingai prisidėti prie bendrojo grupės tikslo.</p>
+                        </div>
+
+                        <div class="column">
+                          <div class="icon">
+                            <img src="/tvarumas/Acme_ikona_rodyklė_tamsi_mėlyna.svg" alt="">
+                            <p>Informacijos punktas</p>
+                          </div>
+                          <h3>Klimato kaita: švelninimas.</h3>
+                          <p>ACME Grupės bendrovės integruoja veiksmus, skirtus reguliariai vertinti bendrovių prisidėjimo prie klimato kaitos mastą tiesiogiai, netiesiogiai ir per tiekimo/vertės grandines (I, II ir III vertinimo srities, kaip tai nustato GHG Protocol, šiltnamio efektą sukeliančių dujų (ŠESD) skaičiavimais). </p>
+                          <p>ACME Grupės bendrovės integruoja veiksmus, skirtus reguliariai vertinti bendrovių prisidėjimo prie klimato kaitos mastą tiesiogiai, netiesiogiai ir per tiekimo/vertės grandines (I, II ir III vertinimo srities, kaip tai nustato GHG Protocol, šiltnamio efektą sukeliančių dujų (ŠESD) skaičiavimais). </p>
+                        </div>
+                        
+                        <div class="column">
+                          <div class="icon">
+                            <img src="/tvarumas/Acme_ikona_rodyklė_tamsi_mėlyna.svg" alt="">
+                            <p>Informacijos punktas</p>
+                          </div>
+                          <h3>Klimato kaita: švelninimas.</h3>
+                          <p>ACME Grupės bendrovės integruoja veiksmus, skirtus reguliariai vertinti bendrovių prisidėjimo prie klimato kaitos mastą tiesiogiai, netiesiogiai ir per tiekimo/vertės grandines (I, II ir III vertinimo srities, kaip tai nustato GHG Protocol, šiltnamio efektą sukeliančių dujų (ŠESD) skaičiavimais). </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -248,6 +281,43 @@
           </a>
       </div>
     </section>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="/images/activities-2.jpg" alt="activities-2">
+        <!-- <video src="/landing/bg-video.mp4"></video> -->
+      </div>
+    </div>
+  
+    <!-- Gallery swiper -->
+    <div class="swiper gallery-swiper">
+      <div class="swiper-slide-counter"></div>
+      <div class="swiper-exit">
+        <span>uždaryti</span> 
+        <span class="line"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <circle cx="25.5811" cy="25.5811" r="25.5811" fill="#e7ecff"/>
+          <path d="M13.2031 14.0283L37.1338 37.959" stroke="#15276A" stroke-width="2" stroke-linecap="round"/>
+          <path d="M13.2031 37.1338L37.1338 13.2031" stroke="#15276A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="/images/activities-2.jpg" alt="Image 2"></div>
+        <div class="swiper-slide">
+          <video src="/landing/bg-video.mp4" type="video/mp4"></video>
+        </div>
+        <div class="swiper-slide"><img src="/images/activities-1.jpg" alt="Image 1"></div>
+        <div class="swiper-slide"><img src="/images/activities-3.jpg" alt="Image 3"></div>
+        <!-- ... more slides ... -->
+      </div>
+      
+      <!-- If you want navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+
 
     <footer class="footer-1">
         <div class="footer-shape-1"></div>
@@ -375,9 +445,10 @@
     </main>
   
     <script type="module" src="/src/scripts/navigation.js"></script>
-    <script type="module" src="/src/scripts/tvarumas-tabs.js"></script>
-    <script type="module" src="/src/scripts/animated-words.js"></script>
     <script type="module" src="/src/scripts/header-collider-blue.js"></script>
+    <script type="module" src="/src/scripts/animated-words.js"></script>
+    <script type="module" src="/src/scripts/tvarumas-tabs.js"></script>
+    <script type="module" src="/src/scripts/gallery-soc.js"></script>
     <script type="module">
       import gsap from "gsap";
       import ScrollTrigger from "gsap/ScrollTrigger";

@@ -42,6 +42,10 @@ src: url("/fonts/CircularXXWeb-Book.woff2") format("woff2");
 	};
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: "CircularXXWeb-Book", "Plus jakarta sans", sans-serif;
 	position: relative;

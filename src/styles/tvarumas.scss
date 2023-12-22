@@ -170,15 +170,17 @@ main {
             }
     
             .tab-content {
-                height: 0;
+                max-height: 0;
                 overflow: hidden;
                 opacity: 0;
-                transition: height 0.5s ease, opacity 0.5s ease;
+                
+                transition: 1s;
             }
             
             .show {
                 opacity: 1;
-                height: 400px; /* Adjust this value to be greater than the maximum content height */
+                // height: auto;
+                max-height: 2000px; 
             }
 
             .tab-content .icons {
@@ -191,6 +193,23 @@ main {
                     flex-direction: column;
                     align-items: center;
                     gap: 15px;
+                }
+            }
+
+            .tab-columns {
+                display: flex;
+                flex-wrap: wrap;
+
+                .column {
+                    width: 33%;
+
+                    p {
+                        margin-bottom: 10px;
+                    }
+
+                    .icon p {
+                        margin-top: 15px;
+                    }
                 }
             }
     
@@ -297,6 +316,9 @@ main {
     }
   
 }
+
+
+
 
 // Footer
 .footer-1 {
