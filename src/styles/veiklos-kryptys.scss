@@ -352,7 +352,7 @@ main {
 @media (max-width: 769px){
     .section-1 {
       grid-template-columns: 1fr;
-      grid-template-rows: 620px 700px;
+      grid-template-rows: 620px 500px;
       width: 100%;
       min-height: 600px;
 
@@ -448,6 +448,7 @@ main {
             top: -50px;
             left: 0px;
             margin: 100px auto;
+            margin-bottom: 0;
             transform: rotate(0deg);
         }
     }
@@ -458,7 +459,6 @@ main {
   
     .section-1 {
         grid-template-columns: 1fr;
-        grid-template-rows: 600px 850px;
 
         .veiklos-mobile-shape {
             width: 428px;
