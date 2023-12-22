@@ -173,13 +173,11 @@ main {
                 max-height: 0;
                 overflow: hidden;
                 opacity: 0;
-                
                 transition: 1s;
             }
             
             .show {
                 opacity: 1;
-                // height: auto;
                 max-height: 50000px; 
             }
 
