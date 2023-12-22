@@ -393,6 +393,8 @@ main {
     }
 
     .grid .description {
+        grid-column: 1;
+        grid-row: 1;
         font-size: clamp(16px, 1.3vw, 25px);
         line-height: 30px;
     }
@@ -518,6 +520,7 @@ main {
     }
     
     .footer-1 {
+        left: 0px;
         .footer-shape-1 {
             left: -645px;
         }
@@ -532,6 +535,23 @@ main {
     .footer-1 {
         .content .contact {
             left: -50px;
+        }
+
+        .description {
+            width: 100%;
+            padding: 0;
+        }
+
+        .social {
+            margin-left: 0px;
+        }
+
+        hr {
+            transform: translate(0);
+        }
+
+        .copywrites {
+            padding-left: 0;
         }
     }
 
