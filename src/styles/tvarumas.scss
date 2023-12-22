@@ -180,7 +180,7 @@ main {
             .show {
                 opacity: 1;
                 // height: auto;
-                max-height: 2000px; 
+                max-height: 50000px; 
             }
 
             .tab-content .icons {
@@ -637,6 +637,13 @@ main {
                 }
             }
         }
+
+        .tabs .tab .tab-columns {
+            gap: 30px;
+            .column {
+                width: 46%;
+            }
+        }
     }
 
     .ataskaitos {
@@ -663,8 +670,10 @@ main {
         }
     }
 
-    .section-2 .tabs .tab .show {
-        height: 450px;
+    .section-2 .tabs .tab .tab-columns {
+        .column {
+            width: 100%;
+        }
     }
 
     .footer-2 {
