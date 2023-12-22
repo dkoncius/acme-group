@@ -202,13 +202,14 @@ main {
 
                 .column {
                     width: 33%;
+                    margin-bottom: 30px;
+
+                    .icon, h3 {
+                        margin-bottom: 15px;
+                    }
 
                     p {
                         margin-bottom: 10px;
-                    }
-
-                    .icon p {
-                        margin-top: 15px;
                     }
                 }
             }
