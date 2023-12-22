@@ -1,10 +1,10 @@
 const defaultColor = "#01494e";
 const colors = [
-{ color: "#00917D", background: "#E6F5E4", cursor: "/icons/cursor-green.svg"},
-{ color: "#15276A", background: "#E7ECFF", cursor: "/icons/cursor-blue.svg" },
-{ color: "#00917D", background: "#E6F5E4", cursor: "/icons/cursor-green.svg" },
-{ color: "#CCA099", background: "#EEE9E6", cursor: "/icons/cursor-burgundy.svg" },
-{ color: "#00917D", background: "#E6F5E4", cursor: "/icons/cursor-green.svg" }
+{ color: "#00917D", background: "#E6F5E4", cursor: "/icons/pointer-green.svg"},
+{ color: "#15276A", background: "#E7ECFF", cursor: "/icons/pointer-blue.svg" },
+{ color: "#00917D", background: "#E6F5E4", cursor: "/icons/pointer-green.svg" },
+{ color: "#CCA099", background: "#EEE9E6", cursor: "/icons/pointer-burgundy.svg" },
+{ color: "#00917D", background: "#E6F5E4", cursor: "/icons/pointer-green.svg" }
 ];
 
 const links = document.querySelectorAll(".link");
