@@ -135,8 +135,8 @@ main {
         }
 
         .article-category {
-            text-decoration: underline;
-            color: var(--blue-dark);
+            left: 0 !important;
+            align-self: start;
         }
         
 
@@ -202,8 +202,6 @@ main {
     }
 
     .more {
-        color: var(--blue-dark);
-        text-decoration: underline;
         grid-column: 3;
         grid-row: 4;
         margin: 30px 0;

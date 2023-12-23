@@ -127,11 +127,13 @@ main {
         }
 
        .more {
-            display: block;
             color: var(--burgundy-spot);
-            text-decoration: underline;
-            text-align: center;
-            margin: 30px auto;
+
+            &:hover {
+                background: var(--burgundy-spot);
+                color: var(--burgundy-extra-light);
+
+            }
        }
 
        .no-job {
