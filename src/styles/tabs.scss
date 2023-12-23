@@ -47,6 +47,8 @@
         display: none;
      
         .content-left {
+            display: flex;
+            flex-direction: column;
             width: 50%;
             transform: translateY(80px);
             opacity: 0;
@@ -90,7 +92,6 @@
     .button {
         font-family: "CircularXXWeb-Book";
         cursor: url('/icons/pointer-green.svg'), pointer;
-        width: 271px;
         height: 50px;
         border-radius: 0 0 26.5px 0;
         border: none;
