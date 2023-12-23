@@ -75,7 +75,6 @@ main {
             align-self: end;
             position: relative;
             top: 100px;
-            z-index: 2;
 
             .left-top {
                 cursor: url('/icons/pointer-green.svg'), pointer;
@@ -98,6 +97,8 @@ main {
                background: var(--green-spot);
                color: var(--green-light);
                padding: 5px;
+               position: relative;
+               z-index: 2;
                visibility: hidden;
 
                &.show {
