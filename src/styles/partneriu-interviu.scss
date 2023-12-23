@@ -85,6 +85,7 @@ main {
     color: var(--blue-dark);
     max-width: 2560px;
     margin: auto;
+    margin-bottom: -200px;
     position: relative;
 
 
@@ -201,15 +202,20 @@ main {
     }
 
     .more {
-        grid-column: 3;
+        cursor: url("/icons/pointer-blue.svg"), pointer;
+        grid-column: 4;
         grid-row: 4;
-        margin: 30px 0;
         color: var(--blue-dark);
         &:hover {
             text-decoration: none;
             background: var(--blue-dark);
             color: var(--blue-extra-light);
         }
+    }
+    
+    .more:last-of-type {
+        position: relative;
+        top: -100px;
     }
 }
 
@@ -276,21 +282,32 @@ footer {
         }
     }
 
-    .news .content {
-        gap: 0;
-    }
+    .news {
+        margin-bottom: -150px;
+        .content {
+            gap: 0;
+        }
 
-    .news article {
-        gap: 0;
-
-        .article-image {
-            width: 80%;
-
-            .shape-3 {
-                width: 732px;
+        article {
+            gap: 0;
+    
+            .article-image {
+                width: 80%;
+    
+                .shape-3 {
+                    width: 732px;
+                }
             }
         }
+        .more:last-of-type {
+            margin: 30px 0;
+            top: 0;
+            grid-column: 3;
+        }
     }
+
+
+
 }
 
 
@@ -305,10 +322,6 @@ footer {
             .article-image img {
                 width: 100%;
             }
-        }
-
-        .more {
-            grid-column: 4;
         }
     }
 }
@@ -450,6 +463,8 @@ footer {
             .more:last-of-type {
                 grid-column: 1;
                 transform: translateX(20px);
+
+                top: -50px;
             }
         }
     }

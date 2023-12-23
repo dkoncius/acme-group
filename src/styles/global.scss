@@ -172,6 +172,7 @@ h4 {
 
 .more {
 	color: var(--dark-green);
+	cursor: url("/icons/pointer-green.svg"), pointer;
 	text-decoration: underline;
 	display: inline-block;
 	justify-self: start;
