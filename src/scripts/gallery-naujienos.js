@@ -29,6 +29,10 @@ function enableScrollAndRemoveOverlay() {
 // Event listener to close the swiper and remove overlay
 swiperExit.addEventListener("click", () => {
     gallerySwiper.classList.remove("show");
+
+    setTimeout(() => {
+        gallerySwiper.style.opacity = 0
+    })
     enableScrollAndRemoveOverlay();
 });
 
@@ -81,6 +85,9 @@ galleryItems.forEach((item, index) => {
     // Event listener for opening the swiper on click
     item.addEventListener("click", () => {
         gallerySwiper.classList.add("show");
+        setTimeout(() => {
+            gallerySwiper.style.opacity = 1
+        })
         disableScrollAndAddOverlay();
         swiper.slideToLoop(index, 0);
     });
