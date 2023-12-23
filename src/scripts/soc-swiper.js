@@ -1,12 +1,10 @@
-// import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
-
-// import styles bundle
 import 'swiper/css/bundle';
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Your Swiper initialization code here
-  const swiper = new Swiper('.soc-swiper', {
+let swiper;
+
+const initializeSwiper = () => {
+  swiper = new Swiper('.soc-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -16,13 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
       delay: 1000,
       disableOnInteraction: false,
     },
-  
-    // If you want navigation buttons
+    // Navigation buttons
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
-    speed: 50000
+    speed: 50000,
   });
-})
+};
+
+const checkAndInitializeSwiper = () => {
+  if (window.innerWidth > 769 && !swiper) {
+    initializeSwiper();
+  } else if (window.innerWidth <= 769 && swiper) { 
+    swiper.destroy();
+    swiper = null;
+  }
+};
+
+// Listen for DOMContentLoaded to initialize Swiper
+document.addEventListener('DOMContentLoaded', checkAndInitializeSwiper);
+
+// Resize event listener to handle window resize
+window.addEventListener('resize', checkAndInitializeSwiper);
