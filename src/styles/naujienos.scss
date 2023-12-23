@@ -73,6 +73,9 @@ main {
             gap: 10px;
             grid-column: 3;
             align-self: end;
+            position: relative;
+            top: 100px;
+            z-index: 2;
 
             .left-top {
                 cursor: url('/icons/pointer-green.svg'), pointer;
