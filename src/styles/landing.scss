@@ -106,6 +106,8 @@ header {
         width: 90%;
         position: relative;
         top: -50px;
+        opacity: 0;
+        transform: translateX(10px);
 
         svg {
             position: relative;

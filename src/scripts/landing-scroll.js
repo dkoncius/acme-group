@@ -19,9 +19,9 @@ gsap.from('.partners p', {
     ease: "power3.out"
   }, "1"); 
 
-  gsap.from('.swiper', {
-    x: 10,
-    opacity: 0,
+  gsap.to('.swiper', {
+    x: 0,
+    opacity: 1,
     duration: 1,
     ease: "power3.out"
   }, "1")

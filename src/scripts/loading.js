@@ -11,13 +11,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const tl = gsap.timeline();
 
   // Animate the video
-  tl.from('.bg-video', {
+  tl.from('.loading-background', {
       duration: 2,
       opacity: 0,
       x: -40,
       scale: 1.1,
       ease: 'power2.out'
   });
+  
 
  // Animate h1 .fill element
  tl.from('h1 .fill', {
@@ -69,9 +70,9 @@ tl.from('.scroll-down .dot-1', {
 let tl = gsap.timeline({ 
   scrollTrigger: { 
       trigger: '.loading-section', 
-      scrub: 0.3, 
+      scrub: window.innerWidth < 1200 ? false : 0.3, 
       start: "top+=200", 
-      end: "bottom-=50",
+      end:  window.innerWidth < 1200 ? "bottom+=500" : "bottom-=50",
       markers: false,
       onEnter: () => gsap.set(".scroll-down", { opacity: 0, immediateRender: false }) // Instantly hides the element when scrolling starts
   },
