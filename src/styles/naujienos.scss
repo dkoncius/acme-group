@@ -69,6 +69,7 @@ main {
         }
 
         .categories {
+            width: 250px;
             display: flex;
             gap: 10px;
             grid-column: 3;
@@ -243,6 +244,7 @@ main {
         article {
             grid-column: 1;
             grid-template-columns: 1fr;
+            grid-auto-rows: auto;
     
             .article-image {
                 position: relative;
@@ -262,6 +264,10 @@ main {
 
                 h3 {
                     margin: 15px 0;
+                }
+
+                .button-outline {
+                    margin-left: 30px;
                 }
             }
         }
