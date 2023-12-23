@@ -73,7 +73,40 @@ main {
             gap: 10px;
             grid-column: 3;
             align-self: end;
-            margin-bottom: 50px;
+
+            .left-top {
+                cursor: url('/icons/pointer-green.svg'), pointer;
+            }
+
+            .left-bottom {
+               list-style-position: inside;
+               list-style: none;
+               background: var(--green-spot);
+               color: var(--green-light);
+               padding: 5px;
+               visibility: hidden;
+
+               &.show {
+                visibility: visible;
+                transition: 0.3s;
+               }
+              
+               li {
+                display: flex;
+                justify-content: center;
+                padding: 5px;
+                border-bottom: 1px solid var(--green-light);
+                cursor: url('/icons/pointer-green.svg'), pointer;
+               }
+
+               li:last-of-type {
+                border: none;
+               }
+               
+               li:hover {
+                color: var(--dark-green);
+               }
+            }
         }
     }
 

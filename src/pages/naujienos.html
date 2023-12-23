@@ -115,12 +115,25 @@
           <h1>Naujienos</h1>
           <div class="content">
               <div class="categories">
-                <p>Kategorijos:</p>
-                <a href="#">Visos naujienos: 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
-                  <path d="M6.5 9L0.00480915 0.75L12.9952 0.750001L6.5 9Z" fill="#004A4E"/>
-                  </svg>
-                </a>
+                <div class="right">
+                  <p>Kategorijos:</p>
+                </div>
+
+                <ul class="left">
+                  <div id="dropdownMenu" class="left-top">
+                      <span>Visos naujienos: </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                      <path d="M6.5 9L0.00480915 0.75L12.9952 0.750001L6.5 9Z" fill="#004A4E"/>
+                      </svg>
+                  </div>
+
+                  <div id="dropdownMenuBottom" class="left-bottom">    
+                    <li>Kategorija 1</li>
+                    <li>Kategorija 2</li>
+                    <li>Kategorija 3</li>
+                    <li>Kategorija 4</li>
+                  </div>
+                </ul>
               </div>
 
               <article>
@@ -253,6 +266,7 @@
     </main>
 
     <script type="module" src="/src/scripts/navigation.js"></script>
+    <script type="module" src="/src/scripts/dropdown-menu.js"></script>
       <!-- Loading animation -->
       <script type="module">
         import gsap from "gsap";
