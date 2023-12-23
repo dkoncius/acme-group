@@ -26,7 +26,7 @@ header {
 
 main {
     min-height: 100vh;
-    max-width: 2000px;
+    max-width: 2560px;
     margin: auto;
     overflow: hidden;
 }
@@ -63,18 +63,18 @@ main {
         &::after {
             content: "";
             position: absolute;
-            top: 33.59%;
+            top: 32.99%;
             right: -26%;
             width: 32%;
             height: 54.7%;
             background: var(--dark-green);
-            transform: rotate(-3deg);
+            transform: rotate(-4deg);
             z-index: -1;
         }
     }
 
     .shape-2 {
-        width: 1000px;
+        width: 60%;
         height: 812px;
         object-fit: cover;
         object-position: center;
@@ -152,7 +152,7 @@ main {
             position: absolute;
             right: -153px;
             top: -72px;
-            width: 875px;
+            width: 130%;
             height: 168px;
             background: url('/pagrindines-veiklos/shape-2.svg');
             background-repeat: no-repeat;
@@ -279,6 +279,28 @@ main {
 }
 
 
+@media (min-width: 2000px) {
+    .section-1 {
+        .shape-1 {
+            right: auto;
+        }
+
+        h1 {
+            right: auto;
+        }
+
+        .content {
+            right: auto;
+            left: 230px;
+        }
+    }
+
+    .section-2 .foto-1 {
+        right: auto;
+        left: 1716px;
+        width: 33%;
+    }
+}
 
 @media (max-width: 1800px) {
     .section-1 {

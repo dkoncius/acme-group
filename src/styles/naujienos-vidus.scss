@@ -46,6 +46,7 @@ main {
         display: grid;
         grid-template-columns: 1fr;
         width: 70vw;
+        max-width: 1400px;
         font-weight: 400;
         grid-column: 2/6;
         grid-row: 2;
