@@ -235,8 +235,9 @@ main {
         height: 600px;
         border-radius: 200px 0 0 100px;
         position: absolute;
-        right: 0;
+        right: -10%;
         object-fit: cover;
+        transform: rotate(-4deg);
     }
 
     .content {
