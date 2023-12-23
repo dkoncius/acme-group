@@ -360,6 +360,8 @@ main {
     }
 
     .content {
+        display: flex;
+        flex-direction: column;
         color: var(--dark-green);
         grid-column: 1;
         font-weight: 400;

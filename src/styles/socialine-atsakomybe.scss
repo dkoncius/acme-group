@@ -228,6 +228,8 @@ header {
     }
 
     .content-right {
+        display: flex;
+        flex-direction: column;
         p {
             margin-bottom: 50px;
         }

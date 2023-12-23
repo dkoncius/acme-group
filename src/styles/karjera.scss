@@ -83,6 +83,8 @@ main {
     }
 
     .content {
+        display: flex;
+        flex-direction: column;
         color: var(--burgundy-dark);
         grid-column: 1;
         font-weight: 400;
@@ -237,6 +239,8 @@ main {
     }
 
     .content {
+        display: flex;
+        flex-direction: column;
         color: var(--burgundy-dark);
         grid-column: 1;
         font-weight: 400;
