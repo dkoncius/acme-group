@@ -112,8 +112,12 @@ h4 {
 	background: none;
 	border: 1px solid var(--dark-green);
 	color: var(--dark-green);
-	width: 165px;
-	height: 50px;
+	padding: 0 50px;
+	align-self: start;
+	min-width: 120px;
+	min-height: 50px;
+	// width: 165px;
+	// height: 50px;
 	position: relative;
 	font-size: clamp(16px, 1.2vw, 25px);
 	box-sizing: content-box;

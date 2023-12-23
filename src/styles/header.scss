@@ -94,8 +94,6 @@ header .right {
     transition: 0.3s;
 
     nav {
-        position: relative;
-        padding-top: 15vh;
         text-align: center;
     }
 
@@ -134,10 +132,14 @@ header .right {
         width: 90px;
     }
 
-    .expanded-menu nav {
-        padding-top: 150px;
-        .link {
-            padding-left: 25px;
+    .expanded-menu {
+        touch-action: none;
+        nav {
+            padding-top: 150px;
+            .link {
+                padding-left: 25px;
+                line-height: 50px;
+            }
         }
     }
 }

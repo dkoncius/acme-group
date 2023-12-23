@@ -209,7 +209,8 @@ main {
         }
 
         .button-outline {
-            width: 250px;
+            align-self: center;
+            justify-self: start;
             grid-column: 2;
             border-color: var(--burgundy-dark);
             color: var(--burgundy-dark);
