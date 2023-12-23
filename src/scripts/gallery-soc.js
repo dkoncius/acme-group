@@ -30,7 +30,7 @@ function enableScrollAndRemoveOverlay() {
 swiperExit.addEventListener("click", () => {
     gallerySwiper.classList.remove("show");
     setTimeout(() => {
-        gallerySwiper.style.opacity = 1
+        gallerySwiper.style.opacity = 0
     })
     enableScrollAndRemoveOverlay();
 });
