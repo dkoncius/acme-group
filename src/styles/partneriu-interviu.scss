@@ -441,14 +441,15 @@ footer {
                     width: 90%;
                     margin: 50px auto;
                     
+                    .button-outline {
+                        transform: translateX(20px);
+                    }
                 }
             }
 
-            .more {
-                
+            .more:last-of-type {
                 grid-column: 1;
-                text-align: center;
-                
+                transform: translateX(20px);
             }
         }
     }
