@@ -224,7 +224,7 @@ main {
         position: absolute;
         top: 100px;
         left: 0;
-        width: 515px;
+        width: 600px;
         height: 800px;
         border-radius: 0 200px 0 0;
         overflow: hidden;
@@ -286,8 +286,8 @@ main {
         &::before {
             content: "";
             position: absolute;
-            top: -2px;
-            right: -68%;
+            top: -20px;
+            right: -84%;
             width: 100%;
             height: 91.5%;
             background: var(--dark-green);
@@ -298,8 +298,8 @@ main {
         &::after {
             content: "";
             position: absolute;
-            bottom: 59px;
-            right: -68%;
+            bottom: 73px;
+            right: -90%;
             width: 100%;
             height: 20%;
             background: var(--dark-green);
@@ -426,6 +426,10 @@ main {
 
 @media (max-width: 1600px) {
 
+    .values .foto-1 {
+        width: 515px;
+    }
+
     .values-2 .shape-4 {
         top: -134px;
         left: 120px;
@@ -434,9 +438,11 @@ main {
         
         &::before {
             top: 4px;
+            right: -68%;
         }
         &::after {
             bottom: 49px;
+            right: -68%;
         }
     }
 

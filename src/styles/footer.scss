@@ -63,6 +63,8 @@ footer {
         grid-column: 3/4;
         grid-row: 2;
         font-size: clamp(11px, 1vw, 21px);
+        max-width: 300px;
+
     }
 
     .contact-2-img {
@@ -80,6 +82,8 @@ footer {
         grid-row: 2;
         font-size: clamp(11px, 1vw, 21px);
         transform: translate(-78px, 0);
+        max-width: 300px;
+
     }
 
     .contact-title {
@@ -206,11 +210,11 @@ footer {
         font-size: 16px;
     }
 
-    .contact-1, .contact-1-img {
+    .contact-1, .contact-1-img, .contact-icon-1 {
         transform: translate(-120px, 0);
     }
 
-    .contact-2, .contact-2-img {
+    .contact-2, .contact-2-img, .contact-icon-2 {
         transform: translate(-180px, 0);
     }
    }
