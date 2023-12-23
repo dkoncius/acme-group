@@ -8,6 +8,7 @@ footer {
     position: relative;
     color: var(--green-light);
     z-index: 1;
+    overflow: hidden;
 
     a {
         text-decoration: none;
@@ -20,6 +21,7 @@ footer {
         height: 100%;
         width: 92%;
         z-index: -1;
+        user-select: none;
     }
 
     .description {
