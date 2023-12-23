@@ -153,7 +153,7 @@ main {
         }
 
         .article-category {
-            left: 0 !important;
+            left: 0;
             align-self: start;
         }
     }
@@ -292,6 +292,10 @@ main {
     
         .content {
             margin-top: 0px;
+        }
+
+        article .article-category {
+            min-width: 100px
         }
     }
 }
