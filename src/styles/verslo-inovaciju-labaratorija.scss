@@ -40,7 +40,7 @@ header {
 
 main {
     min-height: 100vh;
-    max-width: 2000px;
+    max-width: 2560px;
     margin: auto;
     overflow: hidden;
 }
@@ -73,7 +73,7 @@ main {
             left: -60%;
             width: 100%;
             height: 54%;
-            background: var(--blue-spot);
+            background: var(--blue-light);
             transform: rotate(-4deg);
             z-index: -1;
         }
@@ -81,18 +81,18 @@ main {
         &::after {
             content: "";
             position: absolute;
-            top: 33.59%;
+            top: 32.99%;
             right: -26%;
             width: 32%;
             height: 54.7%;
             background: var(--blue-dark);
-            transform: rotate(-3deg);
+            transform: rotate(-4deg);
             z-index: -1;
         }
     }
 
     .shape-2 {
-        width: 1000px;
+        width: 60%;
         height: 812px;
         object-fit: cover;
         object-position: center;
@@ -167,16 +167,16 @@ main {
         position: absolute;
         top: -96px;
         right: 18px;
-        width: 728.018px;
-        height: 728.019px;
-        border-radius: 200px 0 0 100px;
+        width: 728px;
+        height: 728px;
+        border-radius: 200px 0 0 200px;
         overflow: hidden;
 
         .shape-2 {
             position: absolute;
             right: -153px;
             top: -72px;
-            width: 875px;
+            width: 130%;
             height: 168px;
             background: url('/tvarumas/verslo-inovaciju-shape-2.svg');
             background-repeat: no-repeat;
@@ -349,7 +349,28 @@ footer {
 }
 
 
+@media (min-width: 2000px) {
+    .section-1 {
+        .shape-1 {
+            right: auto;
+        }
 
+        h1 {
+            right: auto;
+        }
+
+        .content {
+            right: auto;
+            left: 230px;
+        }
+    }
+
+    .section-2 .foto-1 {
+        right: auto;
+        left: 1716px;
+        width: 33%;
+    }
+}
 
 @media (max-width: 1800px) {
     .section-1 {
