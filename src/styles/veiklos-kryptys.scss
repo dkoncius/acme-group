@@ -26,7 +26,7 @@ header {
 
 main {
     min-height: 100vh;
-    max-width: 2000px;
+    max-width: 2560px;
     margin: auto;
     overflow: hidden;
 }
@@ -63,18 +63,18 @@ main {
         &::after {
             content: "";
             position: absolute;
-            top: 33.59%;
+            top: 32.99%;
             right: -26%;
             width: 32%;
             height: 54.7%;
             background: var(--dark-green);
-            transform: rotate(-3deg);
+            transform: rotate(-4deg);
             z-index: -1;
         }
     }
 
     .shape-2 {
-        width: 1000px;
+        width: 60%;
         height: 812px;
         object-fit: cover;
         object-position: center;
@@ -119,7 +119,7 @@ main {
 .section-2 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 450px 400px;
+    grid-template-rows: 450px 250px;
     color: var(--dark-green);
     margin: auto;
     position: relative;
@@ -128,23 +128,13 @@ main {
     width: 120%;
     margin-top: -100px;
     left: -100px;
-
-    .shape-3 {
-        position: absolute;
-        top: 50px;
-        right: 221px;
-        width: 511px;
-        height: 506px;
-        object-fit: cover;
-        overflow: hidden;
-    }
     
     .foto-1 {
         position: absolute;
         top: -96px;
         right: 18px;
-        width: 728.018px;
-        height: 728.019px;
+        width: 728px;
+        height: 728px;
         border-radius: 200px 0 0 200px;
         overflow: hidden;
 
@@ -152,7 +142,7 @@ main {
             position: absolute;
             right: -153px;
             top: -72px;
-            width: 875px;
+            width: 130%;
             height: 168px;
             background: url('/pagrindines-veiklos/shape-2.svg');
             background-repeat: no-repeat;
@@ -164,18 +154,6 @@ main {
             height: 100%;
             object-fit: cover;
             object-position: center;
-        }
-    }
-
-    .brands {
-        display: flex;
-        gap: 30px;
-        margin-bottom: 30px;
-
-        img {
-            width: 19%;
-            height: 25px;
-            object-fit: contain;
         }
     }
 
@@ -203,80 +181,31 @@ main {
             color: var(--green-light);
         }
     }
-
-   
 }
 
 
+@media (min-width: 2000px) {
+    .section-1 {
+        .shape-1 {
+            right: auto;
+        }
 
-.section-3 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 400px 400px;
-    color: var(--dark-green);
-    margin: auto;
-    position: relative;
-    background: var(--green-light);
-    transform: rotate(-3deg);
-    width: 120%;
-    left: -100px;
+        h1 {
+            right: auto;
+        }
 
-    .foto-2 {
-        position: absolute;
-        top: 100px;
-        left: 18px;
-        width: 800px;
-        height: 1027.163px;
-        border-radius: 0 200px 0 0;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .content {
+            right: auto;
+            left: 230px;
         }
     }
 
-
-    .brands {
-        display: flex;
-        gap: 30px;
-        margin-bottom: 30px;
-
-        img {
-            width: 19%;
-            height: 25px;
-            object-fit: contain;
-        }
+    .section-2 .foto-1 {
+        right: auto;
+        left: 1716px;
+        width: 33%;
     }
-
-    .content {
-        grid-row: 1;
-        grid-column: 3/5;
-        width: 90%;
-        position: absolute;
-        top: 132px;
-        right: -250px;
-        transform: rotate(3deg);
-
-        h2 {
-            margin-bottom: 30px;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        .button {
-            background: var(--dark-green);
-            color: var(--green-light);
-        }
-    }
-
-   
 }
-
-
 
 @media (max-width: 1800px) {
     .section-1 {
@@ -291,9 +220,6 @@ main {
         }
     }
 
-    .section-2 {
-        grid-template-rows: 400px 400px;
-    }
 }
 
 
