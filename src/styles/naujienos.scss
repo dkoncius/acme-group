@@ -101,7 +101,8 @@ main {
         }
 
         .article-category {
-            text-decoration: underline;
+            left: 0 !important;
+            align-self: start;
         }
     }
 

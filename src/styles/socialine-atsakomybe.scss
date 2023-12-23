@@ -401,8 +401,17 @@ header {
                 width: clamp(40px, 4vw, 81px);
             }
         }
+
     }
-  
+    
+    .more {
+        color: var(--blue-dark);
+        &:hover {
+            text-decoration: none;
+            background: var(--blue-dark);
+            color: var(--blue-extra-light);
+        }
+    }
 }
 
 

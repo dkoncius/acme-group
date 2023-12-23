@@ -127,8 +127,8 @@ main {
         }
 
        .more {
+            text-align: center;
             color: var(--burgundy-spot);
-
             &:hover {
                 background: var(--burgundy-spot);
                 color: var(--burgundy-extra-light);

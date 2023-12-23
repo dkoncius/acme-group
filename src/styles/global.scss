@@ -160,7 +160,7 @@ h4 {
 
 
 .more {
-	color: var(--blue-dark);
+	color: var(--dark-green);
 	text-decoration: underline;
 	display: inline-block;
 	margin: 30px 0;
@@ -169,7 +169,7 @@ h4 {
 
 	&:hover {
 		text-decoration: none;
-		background: var(--blue-dark);
-		color: var(--blue-extra-light);
+		background: var(--dark-green);
+		color: var(--green-light);
 	}
 }
